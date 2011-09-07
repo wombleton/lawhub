@@ -1,0 +1,19 @@
+{
+  "name": "jsdifflib",
+  "description": "Text diffing module loosely based on python's difflib",
+  "version": "0.0.1",
+  "author": "Chas Emerick <cemerick@snowtide.com>",
+  "contributors": [
+    { "name": "Chas Emerick", "email": "cemerick@snowtide.com" }
+    { "name": "Rowan Crawford", "email": "wombleton@gmail.com" }
+  ],
+  "dependencies": {
+    "underscore": ">= 0.0.1"
+  },
+  "devDependencies": {
+  },
+  "keywords": ["diff", "difflib", "text"],
+  "repository": "https://github.com/wombleton/jsdifflib",
+  "main": "index",
+  "engines": { "node": ">= 0.4.1 < 0.5.0" }
+}
