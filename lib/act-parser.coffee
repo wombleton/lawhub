@@ -76,38 +76,38 @@ class Act
   acceptText: (s) ->
     if @matches('title::cover', 'insertwords::title::cover')
       @title += s
-    else if @matches('admin-office::cover.reprint-note')
-      @administeredBy += s
-    else if @matches('ministry::admin-office::cover.reprint-note')
-      @administeredBy += "_#{s}_"
-    # node amendments
-    if node = @currentNode()
-      if @matches('label::prov', 'label::subprov', 'label::part', 'label::schedule')
-        node.label += s
-      else if @matches('heading::part', 'heading::prov', 'insertwords::heading::prov', 'citation::heading::prov', 'heading::schedule', 'heading::head5::schedule.misc')
-        node.heading += s
-      else if @matches('quote.in::heading')
-        node.heading += "__#{s}__"
-      else if @matches('text::para', 'citation::text::para')
-        debugger
-        node.text += s
-      else if @matches('extref::citation', 'intref::citation', 'leg-title::citation::text::para', 'leg-title::citation::insertwords::text::para')
-        node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "[#{s}]$1")
-      else if @matches('atidlm:linkcontent::atidlm:link')
-        if @contains('heading')
-          node.heading += "[#{s}]"
-        else if @contains('para', 'text')
-          node.text += "[#{s}]"
-      else if @matches('quote.in::text::para', 'amend.in::text::para')
-        node.text += "_#{s}_"
-      else if @matches('emphasis')
-        node.text += "_#{s}_"
-      else if @matches('label::label-para')
-        node.text += "#{s}) "
-      else if @matches('def-term')
-        node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "__[#{s}]$1__")
-      else if @matches('entry::row::tbody::tgroup::table')
-        node.text += " #{s}"
+    unless @date_terminated
+      if @matches('admin-office::cover.reprint-note')
+        @administeredBy += s
+      else if @matches('ministry::admin-office::cover.reprint-note')
+        @administeredBy += "_#{s}_"
+      # node amendments
+      if node = @currentNode()
+        if @matches('label::prov', 'label::subprov', 'label::part', 'label::schedule')
+          node.label += s
+        else if @matches('heading::part', 'heading::prov', 'insertwords::heading::prov', 'citation::heading::prov', 'heading::schedule', 'heading::head5::schedule.misc')
+          node.heading += s
+        else if @matches('quote.in::heading')
+          node.heading += "__#{s}__"
+        else if @matches('text::para', 'citation::text::para')
+          node.text += s
+        else if @matches('extref::citation', 'intref::citation', 'leg-title::citation::text::para', 'leg-title::citation::insertwords::text::para')
+          node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "[#{s}]$1")
+        else if @matches('atidlm:linkcontent::atidlm:link')
+          if @contains('heading')
+            node.heading += "[#{s}]"
+          else if @contains('para', 'text')
+            node.text += "[#{s}]"
+        else if @matches('quote.in::text::para', 'amend.in::text::para')
+          node.text += "_#{s}_"
+        else if @matches('emphasis')
+          node.text += "_#{s}_"
+        else if @matches('label::label-para')
+          node.text += "#{s}) "
+        else if @matches('def-term')
+          node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "__[#{s}]$1__")
+        else if @matches('entry::row::tbody::tgroup::table')
+          node.text += " #{s}"
 
   addId: (id) ->
     @ids.push(id) if id
@@ -129,7 +129,10 @@ class Act
   cleanup: ->
     delete @stack
     delete @currentStack
-    _.each(@items, (item) -> item.cleanup())
+    if @date_terminated
+      @items = []
+    else
+      _.each(@items, (item) -> item.cleanup())
 
 module.exports =
   Act: Act

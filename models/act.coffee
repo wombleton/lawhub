@@ -11,6 +11,13 @@ parseTags = (tags) ->
   tags = if _.isArray(tags) then tags.join(' ') else tags || ''
   _.map(_.compact(tags.split(/\s+/)), (tag) -> tag.replace(/[^a-z0-9-_]/gi, ''))
 
+DiffSchema = new Schema(
+  preamble: [ String ]
+  postscript: [ String ]
+  deleted: [ String ]
+  inserted: [ String ]
+)
+
 ItemSchema = new Schema(
   crosshead: String
   heading: String
@@ -23,13 +30,9 @@ ItemSchema = new Schema(
 
 RevisionSchema = new Schema(
   administeredBy: String
-  id: String
-  in_amend: String
-  instructing_office: String
-  irdnumbering: String
   act_no:
     index: true
-    type: Number
+    type: String
   act_type: String
   date_as_at:
     index: true
@@ -40,17 +43,27 @@ RevisionSchema = new Schema(
   date_first_valid:
     index: true
     type: Number
+  date_terminated:
+    index: true
+    type: Number
+  delta: [ DiffSchema ]
   file_path: String
   hard_copy_reprint: String
+  id: String
+  ids: [String]
+  in_amend: String
+  instructing_office: String
+  irdnumbering: String
+  items: [ ItemSchema ]
+  markdown: String
   prospective_consolidation: String
   stage: String
+  title: String
   year:
     index: true
     type: Number
   year_imprint:
     type: Number
-  ids: [String]
-  items: [ ItemSchema ]
   tags:
     default: []
     index: true
@@ -62,6 +75,7 @@ RevisionSchema = new Schema(
       words.sort()
       _.uniq(words)
     type: [ String ]
+  updated: Date
 )
 
 

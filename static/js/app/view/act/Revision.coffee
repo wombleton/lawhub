@@ -46,6 +46,11 @@ Ext.define('LH.view.act.Revision',
           xtype: 'displayfield'
         }
         {
+          fieldLabel: 'Date Updated'
+          value: if @revision.udpated then Ext.Date.format(new Date(@revision.updated), 'j M Y') else ''
+          xtype: 'displayfield'
+        }
+        {
           fieldLabel: 'Status'
           value: @status
           xtype: 'displayfield'
