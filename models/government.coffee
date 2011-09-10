@@ -6,10 +6,16 @@ GovernmentSchema = new Schema(
   description: String
   start:
     index: true
-    type: Date
+    type: Number
   end:
-    index: true
-    type: Date
-  inserted: [ String ]
-  deleted: [ String ]
+    type: Number
+  inserted:
+    default: 0
+    type: Number
+  deleted:
+    default: 0
+    type: Number
 )
+
+mongoose.model('Government', GovernmentSchema)
+module.exports.Government = db.model('Government')

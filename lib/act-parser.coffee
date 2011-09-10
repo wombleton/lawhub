@@ -34,7 +34,7 @@ class Act
       when 'part'
         @addPart(attributes.id)
       when 'prov'
-        if @matches('prov::body', 'prov::part::body', 'prov::schedule.misc')
+        if @matches('prov::body', 'prov::part::body')
           @addProvision(attributes.id)
           @currentNode().repealed = true if attributes['deletion_status'] is 'repealed'
         else if @matches('prov::amend')
@@ -42,10 +42,6 @@ class Act
           @currentNode().repealed = true if attributes['deletion_status'] is 'repealed'
       when 'subprov'
         @currentNode()?.addSubprovision(attributes.id) unless attributes['deletion-status'] is 'repealed'
-      when 'schedule', 'schedule.misc'
-        @addSchedule(attributes.id)
-      when 'head1'
-        @addSchedule(attributes.id) if @matches('head1::schedule.misc')
       when 'extref::citation::heading', 'intref::citation:heading'
         @currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
       when 'extref::citation::text', 'intref::citation::text', 'leg-title'
@@ -68,7 +64,7 @@ class Act
         @currentNode()?.text += '\n' if @matches('row::tbody::tgroup::table')
   closeTag: (tag) ->
     switch tag
-      when 'prov', 'subprov', 'part', 'schedule', 'schedule.misc'
+      when 'prov', 'subprov', 'part'
         @currentStack.pop()
       when 'text'
         @currentNode()?.text += '\n\n'
@@ -83,9 +79,9 @@ class Act
         @administeredBy += "_#{s}_"
       # node amendments
       if node = @currentNode()
-        if @matches('label::prov', 'label::subprov', 'label::part', 'label::schedule')
+        if @matches('label::prov', 'label::subprov', 'label::part')
           node.label += s
-        else if @matches('heading::part', 'heading::prov', 'insertwords::heading::prov', 'citation::heading::prov', 'heading::schedule', 'heading::head5::schedule.misc')
+        else if @matches('heading::part', 'heading::prov', 'insertwords::heading::prov', 'citation::heading::prov')
           node.heading += s
         else if @matches('quote.in::heading')
           node.heading += "__#{s}__"
@@ -115,11 +111,6 @@ class Act
     @addId(id)
     @currentStack.push(new Item(@, id, 'part'))
     @items.push(@currentNode())
-  addSchedule: (id) ->
-    @addId(id)
-    target = @currentNode() or @
-    @currentStack.push(new Item(@, id, 'schedule'))
-    target.items.push(@currentNode())
   addProvision: (id, target) ->
     @addId(id)
     target ?= @currentNode() or @

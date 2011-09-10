@@ -1,22 +1,18 @@
-mongoose = require('mongoose')
-db = require('./db').db
 fs = require('fs')
-path = require('path')
 flow = require('flow')
 sax = require('./sax-js')
-file = require('file')
 _ = require('underscore')
-actParser = require('./act-parser')
-Act = actParser.Act
-Schema = mongoose.Schema
-ActModel = require('../models/act').ActModel
+Act = require('./act-parser').Act
+Revision = require('../models/revision').Revision
 diff = require('./jsdifflib').diff
 
 fixAttributes = (attributes) ->
   _.reduce(_.keys(attributes), (memo, key) ->
     newKey = key.replace(/[^\w]/g, '_')
     if newKey.indexOf('date_') is 0
-      memo[newKey] = new Date(attributes[key]).getTime()
+      val = attributes[key]
+      if val and val isnt 'nulldate'
+        memo[newKey] = new Date(val).getTime()
     else unless key is 'xml:lang'
       memo[newKey] = attributes[key]
     memo
@@ -60,54 +56,48 @@ renderItem = (item, result = [], depth = 1) ->
 activeSaves = {}
 
 saveAct = (act, filename) ->
+  revision = new Revision(act)
   title = act.title
   unless activeSaves[title]
     activeSaves[title] = true
-    ActModel.findOne({title: act.title}, (err, doc) ->
-      if doc
-        existingAct = doc
-      else
-        existingAct = new ActModel({title: act.title})
-      revision = act
+    Revision.find({title: title}, (err, revisions) ->
+      revisions.push(revision)
       delete revision.date_assent unless revision.date_assent
       revision.file_path = filename
-      existingAct.revisions.push(revision)
 
-      existingAct.revisions = _.sortBy(existingAct.revisions, (rev) ->
+      sortedRevisions = _.sortBy(revisions, (rev) ->
         rev.date_as_at or rev.date_first_valid
       )
-      existingAct.save (err, doc) ->
-        unless err
-          flow.serialForEach(doc.revisions,
-            (rev) ->
-              if @curItem <= 1
-                rev.updated = new Date(rev.date_assent or rev.date_first_valid)
-                rev.delta = [
-                  {
-                    inserted: rev.markdown.split('\n')
-                    deleted: []
-                    preamble: []
-                    postscript: []
-                  }
-                ]
-              else
-                rev.updated = new Date(rev.date_as_at or rev.date_first_valid)
-                rev.delta = diff(doc.revisions[@curItem - 2].markdown, rev.markdown, context: 3)
-              doc.save(@)
-          , (err, d) ->
-            debugger if err
-            throw err if err
-          , ->
-            delete activeSaves[title]
-          )
-        else
-          debugger
+      flow.serialForEach(sortedRevisions,
+        (rev) ->
+          if @curItem <= 1
+            rev.updated = rev.date_assent or rev.date_first_valid
+            rev.delta = [
+              {
+                inserted: rev.markdown.split('\n')
+                deleted: []
+                preamble: []
+                postscript: []
+              }
+            ]
+          else
+            rev.updated = rev.date_as_at or rev.date_first_valid
+            previousMarkdown = revisions[@curItem - 2].markdown or ''
+            markdown = rev.markdown or ''
+            rev.delta = diff(previousMarkdown, markdown, context: 3)
+          rev.save(@)
+      , (err, d) ->
+        debugger if err
+        throw err if err
+      , ->
+        delete activeSaves[title]
+      )
     )
   else
-    console.log("Parse collision. Deferring parse one second for #{title}.")
+    console.log("Parse collision. Deferring parse five seconds for #{title}.")
     setTimeout(->
-      saveAct(act, filename)
-    , 1000)
+      saveAct(revision, filename)
+    , 5000)
 
 
 module.exports.parse = (filename) ->
