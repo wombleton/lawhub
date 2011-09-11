@@ -8,7 +8,6 @@ lib/db.js
 lib/extract.js
 lib/parser.js
 lib/provision-parser.js
-lib/scraper.js
 static/js/*.js
 static/js/app/*/*.js
 static/js/app/view/*/*.js
