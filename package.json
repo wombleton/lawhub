@@ -9,7 +9,7 @@
   "dependencies": {
     "cluster": ">= 0.7.1",
     "coffee-script": ">= 1.1.2",
-    "dateformat": ">= 1.0.1"
+    "dateformat": ">= 1.0.1",
     "express": ">= 2.4.6",
     "flow": ">= 0.2.2",
     "glossary": ">= 0.1.0",
