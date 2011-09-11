@@ -1,0 +1,28 @@
+{
+  "name": "lawhub",
+  "description": "Legislation parsing from 1850 to the present day",
+  "version": "0.0.1",
+  "author": "Rowan Crawford <wombleton@gmail.com>",
+  "contributors": [
+    { "name": "Rowan Crawford", "email": "wombleton@gmail.com" }
+  ],
+  "dependencies": {
+    "cluster": ">= 0.7.1"
+    "coffee-script": ">= 1.1.2"
+    "express": ">= 2.4.6"
+    "flow": ">= 0.2.2"
+    "glossary": ">= 0.1.0"
+    "htmlparser": ">= 1.7.3"
+    "mongoose": ">= 2.1.2"
+    "node-markdown": ">= 0.1.0"
+    "querystring": ">= 0.0.4"
+    "request": ">= 2.1.1"
+    "underscore": ">= 1.1.7"
+  },
+  "devDependencies": {
+  },
+  "keywords": ["nz", "new zealand", "legislation", "laws", "diff", "difflib", "text"],
+  "repository": "https://github.com/wombleton/lawhub",
+  "main": "server",
+  "engines": { "node": ">= 0.4.1 < 0.5.0" }
+}
