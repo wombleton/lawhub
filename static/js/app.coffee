@@ -3,8 +3,10 @@ Ext.application(
   appFolder: 'js/app',
   controllers: [
     'Acts'
+    'Governments'
   ]
   views: [
+    'overview'
     'actlist'
     'acttab'
   ]
@@ -12,7 +14,7 @@ Ext.application(
     Ext.create('Ext.container.Viewport',
       items: [
         {
-          xtype: 'acttab'
+          xtype: 'overview'
         }
       ]
       layout: 'fit'

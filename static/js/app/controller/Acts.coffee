@@ -12,11 +12,4 @@ Ext.define('LH.controller.Acts',
     'act.View'
     'act.Revision'
   ]
-  init: ->
-    @control(
-      'viewport > panel':
-        render: @onPanelRendered
-    )
-  onPanelRendered: ->
-    #console.log('rendered!')
 )

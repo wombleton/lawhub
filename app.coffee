@@ -11,7 +11,6 @@ server.configure ->
 
 server.configure 'production', ->
   process.env.server = 'PRODUCTION'
-  server.listen(80)
 
 server.configure 'development', ->
   process.env.server = 'DEVELOPMENT'
@@ -19,7 +18,6 @@ server.configure 'development', ->
     dumpExceptions: true
     showStack: true
   )
-  server.listen 3000
 
 server.configure 'test', ->
   process.env.server = 'TEST'
@@ -28,7 +26,10 @@ server.configure 'test', ->
 server.set('views', "#{__dirname}/views")
 server.set('view engine', 'jade')
 
-module.exports.server = server
+module.exports = server
 
-require './models/act'
-require './controllers/acts'
+require './models/revision'
+require './controllers/revisions'
+require './models/government'
+require './controllers/governments'
+require './controllers/teara'

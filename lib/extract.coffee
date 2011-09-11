@@ -250,46 +250,62 @@ governments = [
   }
 ]
 
+count = 0
+
+scanGovernment = (govt) ->
+    govt = _.extend(govt,
+      inserted: 0
+      deleted: 0
+    )
+    government = new Government(govt)
+    government.save (err, g) ->
+      if err
+        debugger
+      else
+        Revision.find(
+          {
+            updated:
+              $lt: g.end
+              $gt: g.start
+          }
+        ).fields(['_id'])
+        .run (err, docs) ->
+          if err
+            debugger
+          else
+            _.each(docs, (doc) ->
+              setTimeout ->
+                scanRevision(govt, doc._id)
+              , count++ * 25
+            )
+
+scanRevision = (govt, id) ->
+  Revision.findById(id).fields(['title', 'file_path', 'date_terminated', 'updated', 'delta']).run (err, doc) ->
+    _.each(doc.delta, (delt, i) ->
+      deleted = _.compact(delt.deleted).length
+      inserted = _.compact(delt.inserted).length
+      debugger if deleted > 0
+      Government.update(
+        start: govt.start,
+        {
+          $inc:
+            deleted: deleted
+            inserted: inserted
+        },
+        {
+          multi: true
+        },
+        (err, updated) ->
+          console.log("Updated #{govt.description} with #{doc.title}. #{inserted}/#{deleted} inserted/deleted.")
+          if err
+            debugger
+      )
+    )
+
 module.exports.extract = ->
   Government.find({}, (err, govts) ->
     if govts.length is 0
       _.each(governments, (govt) ->
-        govt = _.extend(govt,
-          inserted: 0
-          deleted: 0
-        )
-        government = new Government(govt)
-        government.save (err, g) ->
-          if err
-            debugger
-          else
-            Revision.find({
-              updated:
-                $lt: g.end
-                $gt: g.start
-            }, (err, docs) ->
-              if err
-                debugger
-              else
-                _.each(docs, (doc) ->
-                  _.each(doc.delta, (delt) ->
-                    Government.update(
-                      start: govt.start,
-                      {
-                        $inc:
-                          deleted: delt.deleted.length
-                          inserted: delt.inserted.length
-                      },
-                      {
-                        multi: true
-                      },
-                      (err, updated) ->
-                        console.log("Updated #{govt.description} with #{doc.title}. Had #{govt.inserted}/#{govt.deleted} inserted/deleted.")
-                        if err
-                          debugger
-                    )
-                  )
-                )
-            )
+        scanGovernment(govt)
       )
   )

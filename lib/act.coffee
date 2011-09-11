@@ -82,7 +82,7 @@ saveAct = (act, filename) ->
             ]
           else
             rev.updated = rev.date_as_at or rev.date_first_valid
-            previousMarkdown = revisions[@curItem - 2].markdown or ''
+            previousMarkdown = sortedRevisions[@curItem - 2].markdown or ''
             markdown = rev.markdown or ''
             rev.delta = diff(previousMarkdown, markdown, context: 3)
           rev.save(@)

@@ -1,5 +1,5 @@
-server = require('../app').server
-Act = require('../models/act').ActModel
+server = require('../app')
+Revision = require('../models/revision').Revision
 flow = require('flow')
 _ = require('underscore')
 sys = require('sys')
@@ -27,7 +27,7 @@ server.get '/acts.json', (req, res) ->
 
   flow.exec(
     (->
-      Act.find(filter)
+      Revision.find(filter)
         .limit(limit)
         .desc('updated')
         .fields(['_id', 'updated', 'status', 'title'])
@@ -35,7 +35,7 @@ server.get '/acts.json', (req, res) ->
         .run(this)
     ),
     ((err, @acts) ->
-      Act.count(filter, this)
+      Revision.count(filter, this)
     ),
     ((err, count) ->
       res.charset = 'utf-8'
@@ -70,7 +70,7 @@ renderRevisions = (act) ->
 
 server.get('/acts/:id.json', (req, res) ->
   id = req.params.id
-  Act.findById(id, (err, act) ->
+  Revision.findById(id, (err, act) ->
     debugger
     res.send(
       revisions: renderRevisions(act)

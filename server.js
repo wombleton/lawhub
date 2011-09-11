@@ -1,2 +1,4 @@
 cs = require('coffee-script')
-require('./app')
+cluster = require('cluster')
+
+cluster('app').listen(3000)
