@@ -5,7 +5,9 @@ Ext.define('LH.controller.Governments',
       'governmentstrip':
         governmentselect: (record) ->
           teara = Ext.ComponentQuery.query('teara')[0]
-          teara.fetch(record) if teara
+          teara?.fetch(record)
+          snake = Ext.ComponentQuery.query('snake')[0]
+          snake?.fetch(record)
     )
   models: [ 'Government' ]
   stores: [ 'Governments' ]

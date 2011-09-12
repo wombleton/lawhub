@@ -1,6 +1,7 @@
 Government = require('../models/government').Government
 Revision = require('../models/revision').Revision
 _ = require('underscore')
+glossary = require('glossary')( minFreq: 3, verbose: true, collapse: true )
 
 governments = [
   {
@@ -253,38 +254,45 @@ governments = [
 count = 0
 
 scanGovernment = (govt) ->
-    govt = _.extend(govt,
-      inserted: 0
-      deleted: 0
-    )
-    government = new Government(govt)
-    government.save (err, g) ->
-      if err
-        debugger
-      else
-        Revision.find(
-          {
-            updated:
-              $lt: g.end
-              $gt: g.start
-          }
-        ).fields(['_id'])
-        .run (err, docs) ->
-          if err
-            debugger
-          else
-            _.each(docs, (doc) ->
-              setTimeout ->
-                scanRevision(govt, doc._id)
-              , count++ * 25
-            )
+  govt = _.extend(govt,
+    inserted: 0
+    deleted: 0
+  )
+  government = new Government(govt)
+  government.save (err, g) ->
+    if err
+      debugger
+    else
+      Revision.find(
+        {
+          updated:
+            $lt: g.end
+            $gt: g.start
+        }
+      ).fields(['_id'])
+      .run (err, docs) ->
+        if err
+          debugger
+        else
+          _.each(docs, (doc) ->
+            setTimeout ->
+              scanRevision(govt, doc._id)
+            , count++ * 25
+          )
+
+extractWords = (delt, property) ->
+  _.compact(delt[property].join(' ').replace(/[^a-z0-9- \.]/ig, '').split(' '))
 
 scanRevision = (govt, id) ->
   Revision.findById(id).fields(['title', 'file_path', 'date_terminated', 'updated', 'delta']).run (err, doc) ->
+    inserted_words = []
+    deleted_words = []
     _.each(doc.delta, (delt, i) ->
+      inserted_words = inserted_words.concat(extractWords(delt, 'inserted'))
+      deleted_words = deleted_words.concat(extractWords(delt, 'deleted'))
+
       deleted = _.compact(delt.deleted).length
       inserted = _.compact(delt.inserted).length
-      debugger if deleted > 0
       Government.update(
         start: govt.start,
         {
@@ -296,16 +304,43 @@ scanRevision = (govt, id) ->
           multi: true
         },
         (err, updated) ->
-          console.log("Updated #{govt.description} with #{doc.title}. #{inserted}/#{deleted} inserted/deleted.")
+          #console.log("Updated #{govt.description} with #{doc.title}. #{inserted}/#{deleted} inserted/deleted.")
           if err
             debugger
       )
     )
 
+    keywords = _.sortBy(glossary.extract(inserted_words.join(' ')), (word) -> word.count)
+    keywords = _.sortBy(keywords, (word) -> -word.count)
+    #keep = Math.ceil(Math.pow(keywords.length, -0.25) * keywords.length)
+    #keywords = keywords.slice(0, keep)
+
+    Government.update(
+      start: govt.start,
+      {
+        $push:
+          acts:
+            tags: keywords
+            title: doc.title
+            deleted_wordcount: deleted_words.length
+            inserted_wordcount: inserted_words.length
+      }
+      {
+        multi: true
+      }
+      (err, updated) ->
+        if err
+          console.log(err)
+          throw err
+        else
+          console.log("Updated #{govt.description} with #{deleted_words.length}/#{inserted_words.length} deleted/inserted words.")
+    )
+
 module.exports.extract = ->
-  Government.find({}, (err, govts) ->
-    if govts.length is 0
-      _.each(governments, (govt) ->
+  _.each(governments, (govt) ->
+    Government.remove(
+      start: govt.start
+      (err, doc) ->
         scanGovernment(govt)
-      )
+    )
   )

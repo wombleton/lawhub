@@ -12,5 +12,6 @@ Ext.define('LH.model.Government',
     'end'
     'inserted'
     'deleted'
+    'acts'
   ]
 )

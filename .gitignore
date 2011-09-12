@@ -6,6 +6,7 @@ lib/act-parser.js
 lib/bill.js
 lib/db.js
 lib/extract.js
+lib/detail-miner.js
 lib/parser.js
 lib/provision-parser.js
 static/js/*.js

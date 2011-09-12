@@ -26,7 +26,7 @@ writeFile = (filePath, body) ->
 directoryUrls = [BASE_URL]
 
 readFile = (fileUrl) ->
-  filePath = fileUrl.replace(DOMAIN, '').replace(/^\/subscribe, 'raw').toLowerCase()
+  filePath = fileUrl.replace(DOMAIN, '').replace(/^\/subscribe/, 'raw').toLowerCase()
   path.exists(filePath, (exists) ->
     if exists
       console.log("Skipping #{filePath} as it already exists.")
