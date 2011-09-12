@@ -1,7 +1,7 @@
 Government = require('../models/government').Government
 Revision = require('../models/revision').Revision
 _ = require('underscore')
-glossary = require('glossary')( minFreq: 3, verbose: true, collapse: true )
+glossary = require('glossary')( minFreq: 3, verbose: true, collapse: true, blacklist: [ 'act', 'provision', 'time', 'subject', 'respect', 'authority', 'date', 'case', 'subsection', 'part', 'accordance', 'schedule', 'schedules', 'section', 'effect' ] )
 
 governments = [
   {
@@ -277,7 +277,7 @@ scanGovernment = (govt) ->
           _.each(docs, (doc) ->
             setTimeout ->
               scanRevision(govt, doc._id)
-            , count++ * 25
+            , count++ * 50
           )
 
 extractWords = (delt, property) ->
@@ -304,7 +304,7 @@ scanRevision = (govt, id) ->
           multi: true
         },
         (err, updated) ->
-          #console.log("Updated #{govt.description} with #{doc.title}. #{inserted}/#{deleted} inserted/deleted.")
+          console.log("Updated #{govt.description} with #{doc.title}. #{inserted}/#{deleted} inserted/deleted.")
           if err
             debugger
       )

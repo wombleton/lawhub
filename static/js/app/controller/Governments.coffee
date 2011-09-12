@@ -8,9 +8,11 @@ Ext.define('LH.controller.Governments',
           teara?.fetch(record)
           snake = Ext.ComponentQuery.query('snake')[0]
           snake?.fetch(record)
+          keywords = Ext.ComponentQuery.query('keywords')[0]
+          keywords?.fetch(record)
     )
-  models: [ 'Government' ]
-  stores: [ 'Governments' ]
+  models: [ 'ActDetail', 'Detail', 'KeyWord', 'Government' ]
+  stores: [ 'ActDetails', 'Details', 'KeyWords', 'Governments' ]
   views: [
     'government.Overview'
     'government.Detail'

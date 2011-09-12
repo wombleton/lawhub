@@ -9,9 +9,13 @@ Ext.define('LH.model.Government',
       convert: (v) ->
         new Date(v)
     }
-    'end'
+    {
+      name: 'end'
+      type: 'date'
+      convert: (v) ->
+        new Date(v)
+    }
     'inserted'
     'deleted'
-    'acts'
   ]
 )

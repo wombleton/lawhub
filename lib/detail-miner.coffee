@@ -17,28 +17,27 @@ mangleGovernment = (govt) ->
           acts.push(
             title: act.title
             inserted: act.inserted_wordcount
-            deleted: act.inserted_wordcount
+            deleted: act.deleted_wordcount
           )
         _.each(act.tags, (tag) ->
           prevTag = _.detect(tags, (el) -> el.word is tag.word)
           if prevTag
             prevTag.count += tag.count
-            tag_bag[tag.word]++
+            tag_bag[tag.word.toLowerCase()]++
           else
-            tags.push(tag)
-            tag_bag[tag.word] = 1
+            tags.push(tag) unless tag.word.match(/DLM/i)
+            tag_bag[tag.word.toLowerCase()] = 1 unless tag.word.match(/DLM/i)
         )
       )
-      debugger
-      if tags.length > 10
+      if acts.length > 10
         _.each(tags, (tag) ->
-          if tag_bag[tag.word] > tags.length * 0.9
+          if tag_bag[tag.word.toLowerCase()] > acts.length * 0.9
             tags = _.without(tags, tag)
         )
       new Detail(
         acts: _.sortBy(acts, (act) -> -act.inserted)
         key: govt._id
-        tags: _.sortBy(tags, (tag) -> -tag.count)
+        tags: _.sortBy(tags, (tag) -> -tag.count).slice(0, 100)
         title: govt.description
       ).save (err, dtl) ->
         console.log("Saved detail #{dtl.title}.")
@@ -51,6 +50,6 @@ module.exports.mine = ->
       _.each(govts, (govt) ->
         setTimeout ->
           mangleGovernment(govt)
-        , count++ * 100
+        , count++ * 15000
       )
 

@@ -11,6 +11,13 @@ server.get('/', (req, res) ->
   res.render('index')
 )
 
+server.get('/diffs/:keywords', (req, res) ->
+  search = req.params.search
+  page = req.params.page
+
+
+)
+
 server.get '/acts.json', (req, res) ->
   start = req.query.start
   limit = req.query.limit
