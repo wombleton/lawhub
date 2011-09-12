@@ -8,15 +8,15 @@ Ext.define('LH.view.government.Detail',
     type: 'hbox'
   items: [
     {
-      flex: 2
+      flex: 3
       xtype: 'teara'
     }
     {
-      flex: 2
+      flex: 4
       xtype: 'snake'
     }
     {
-      flex: 1
+      flex: 2
       xtype: 'keywords'
     }
   ]

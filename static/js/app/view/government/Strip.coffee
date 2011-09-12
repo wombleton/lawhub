@@ -16,7 +16,7 @@ Ext.define('LH.view.government.Strip',
         govt.on('render', (c) ->
           c.body.on('click', ->
             @react(c.record)
-          , @, single: true)
+          , @)
         , @)
 
         @add(govt)

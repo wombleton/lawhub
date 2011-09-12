@@ -8,6 +8,7 @@ Ext.define('LH.view.government.KeyWords',
   fetch: ->
     @removeAll()
     detail_store = Ext.StoreManager.get('Details')
+    @setLoading(true)
     detail_store.on('datachanged', (s) ->
       records = s.getRange()
       tags = records[0]?.get('tags') or []
@@ -18,6 +19,7 @@ Ext.define('LH.view.government.KeyWords',
             text: tag.word
           ))
       , @)
+      @setLoading(false)
     , @, single: true)
   margins: 8
 )
