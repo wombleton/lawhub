@@ -24,7 +24,11 @@ Ext.define('LH.view.government.Snake',
       @store.removeAll()
       acts = records[0]?.get('acts')
       if acts
+        @view.refresh()
         @store.add(acts)
+        _.each(@store.getRange(), (r) ->
+          r.commit()
+        )
     , @)
     detail_store.proxy.record = record
     detail_store.load()

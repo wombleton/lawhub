@@ -11,11 +11,12 @@ Ext.define('LH.view.government.KeyWords',
     detail_store.on('datachanged', (s) ->
       records = s.getRange()
       tags = records[0]?.get('tags') or []
-      _.each(tags, (tag) ->
-        @add(new Ext.button.Button(
-          margin: 5
-          text: tag.word
-        ))
+      _.each(tags, (tag, i) ->
+        if i < 50
+          @add(new Ext.button.Button(
+            margin: 5
+            text: tag.word
+          ))
       , @)
     , @, single: true)
   margins: 8

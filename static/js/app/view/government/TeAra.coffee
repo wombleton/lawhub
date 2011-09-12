@@ -23,5 +23,5 @@ Ext.define('LH.view.government.TeAra',
     )
   layout: 'fit'
   margins: 8
-  title: 'This is for content from TeAra for the selected year'
+  title: 'Context'
 )

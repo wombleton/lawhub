@@ -8,11 +8,11 @@ Ext.define('LH.view.government.Detail',
     type: 'hbox'
   items: [
     {
-      flex: 1
+      flex: 2
       xtype: 'teara'
     }
     {
-      flex: 1
+      flex: 2
       xtype: 'snake'
     }
     {
