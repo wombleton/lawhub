@@ -26,7 +26,6 @@ Ext.define('LH.view.government.Graph',
         @store.add(
           description: record.get('description')
           inserted: record.get('inserted')
-          pm: 'Wonky Donky'
           start: record.get('start')
           end: record.get('end')
           total: total
@@ -52,7 +51,7 @@ Ext.define('LH.view.government.Graph',
       renderer: (record) ->
         start = Ext.Date.format(record.get('start'), 'j M Y')
         end = Ext.Date.format(record.get('end'), 'j M Y')
-        this.setTitle("#{record.get('description')} #{start} - #{end}: Added #{record.get('inserted')} lines under Prime Minister #{record.get('pm')}")
+        this.setTitle("#{record.get('description')} #{start} - #{end}: Added #{record.get('inserted')} lines")
       width: 100
       trackMouse: true
     }

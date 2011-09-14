@@ -4505,11 +4505,16 @@ body {
 
 .introduction {
   .x-panel-body {
+    font-family:Georgia, "Times New Roman", Times, serif;
     font-size: 20px;
     line-height: 1.6;
     margin: 8px;
     padding: 1em;
     @include background(linear-gradient(lighten($dark-color, 72), lighten($dark-color, 64)));
+    em {
+      color: black;
+      font-size: 1.1em;
+    }
     h1 {
       font-size: 1.4em;
       margin: 0.5em 0 ;

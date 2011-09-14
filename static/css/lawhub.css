@@ -6337,6 +6337,7 @@ body {
 
 /* line 4507, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   line-height: 1.6;
   margin: 8px;
@@ -6348,12 +6349,17 @@ body {
   background: -ms-linear-gradient(#fdfaf6, #f7e5d3);
   background: linear-gradient(#fdfaf6, #f7e5d3);
 }
-/* line 4513, ../../resources/sass/lawhub.scss */
+/* line 4514, ../../resources/sass/lawhub.scss */
+.introduction .x-panel-body em {
+  color: black;
+  font-size: 1.1em;
+}
+/* line 4519, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body h1 {
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-/* line 4517, ../../resources/sass/lawhub.scss */
+/* line 4523, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body p {
   margin: 0 0 1em;
 }
