@@ -6,7 +6,7 @@ Ext.define('LH.view.government.TeAra',
   fetch: (record) ->
     start = record.get('start')
     end = new Date(record.get('end'))
-    @setTitle("Te Ara content for the years #{Ext.Date.format(start, 'Y')} - #{Ext.Date.format(end, 'Y')}")
+    @setTitle("Te Ara search: years #{Ext.Date.format(start, 'Y')} - #{Ext.Date.format(end, 'Y')}")
     tokens = []
     while start < end
       tokens.push(Ext.Date.format(start, 'Y'))
