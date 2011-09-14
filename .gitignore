@@ -15,3 +15,4 @@ static/js/app/view/*/*.js
 raw
 db.js
 app.js
+resources/.sass-cache

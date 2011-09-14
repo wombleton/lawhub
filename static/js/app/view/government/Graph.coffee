@@ -19,6 +19,7 @@ Ext.define('LH.view.government.Graph',
     )
     total = 0
     government_store.on('load', (s, records) ->
+      Ext.getBody().unmask()
       _.each(records, (record) ->
         total += record.get('inserted')
         total -= record.get('deleted')

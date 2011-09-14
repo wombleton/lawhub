@@ -1,5 +1,6 @@
 Ext.define('LH.view.government.Strip',
   alias: 'widget.governmentstrip'
+  cls: 'lh-govt-strip'
   extend: 'Ext.panel.Panel'
   initComponent: ->
     @callParent(arguments)
@@ -8,8 +9,9 @@ Ext.define('LH.view.government.Strip',
     @store.on('load', (store, records) ->
       _.each(records, (record) ->
         govt = new Ext.panel.Panel(
+          border: false
+          cls: 'lh-govt'
           flex: 1
-          html: Ext.Date.format(record.get('start'), 'Y')
           layout: 'fit'
           record: record
         )

@@ -8,8 +8,12 @@ _ = require('underscore')
 DiffSchema = new Schema(
   preamble: [ String ]
   postscript: [ String ]
-  deleted: [ String ]
-  inserted: [ String ]
+  deleted:
+    index: true
+    type: [ String ]
+  inserted:
+    index: true
+    type: [ String ]
 )
 
 ItemSchema = new Schema(
