@@ -33,7 +33,7 @@ Ext.define('LH.view.government.Snake',
     detail_store.proxy.record = record
     detail_store.load()
   layout: 'fit'
-  title: false
+  title: 'Acts Affected'
   margins: 8
   store: 'ActDetails'
 )

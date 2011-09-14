@@ -63,6 +63,7 @@ class Act
       when 'label-para'
         @currentNode()?.text += '\n' if @matches('label-para::para')
       when 'def-term'
+        debugger
         @currentNode()?.text += "(/byid/#{attributes.id})"
       when 'def-para'
         @currentNode()?.text += '\n * '

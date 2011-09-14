@@ -16,7 +16,7 @@ Ext.define('LH.view.revision.List',
             fn: @onFilterChange
             scope: @
         name: 'filter'
-        width: 200
+        width: 600
         xtype: 'textfield'
       ,
       '->'
@@ -66,5 +66,5 @@ Ext.define('LH.view.revision.List',
     @store.filter('q', @textfield.value)
   setUrl: (record) ->
     @store.proxy.url = "/revisions/#{record.get('_id')}.json"
-  title: 'omg'
+  title: false
 )

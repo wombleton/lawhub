@@ -8,14 +8,20 @@ Ext.define('LH.view.government.Strip',
     @addEvents('governmentselect')
     @store = Ext.data.StoreManager.get('Governments')
     @store.on('load', (store, records) ->
-      _.each(records, (record) ->
+      _.each(records, (record, i) ->
         govt = new Ext.panel.Panel(
           cls: "lh-govt #{record.get('theme')}"
           flex: 1
+          html: "#{i+1}"
           layout: 'fit'
+          qtip: 'x'
           record: record
         )
         govt.on('render', (c) ->
+          Ext.create('Ext.tip.ToolTip',
+            target: c.body
+            html: "#{record.get('description')}"
+          )
           c.body.on('click', ->
             @react(c.record, c)
           , @)

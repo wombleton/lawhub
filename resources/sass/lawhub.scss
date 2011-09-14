@@ -3,8 +3,8 @@
 
 $base-font-size: 14px;
 $body-text-font-size: $base-font-size + 1;
-$base-color: #ff0000;
-$font-color: font-color-from-background-color($base-color);
+$neutral-color: #f8f8f8;
+$dark-color: #704214;
 
 html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
@@ -64,7 +64,7 @@ input, textarea, select {
     -webkit-box-sizing: border-box; } }
 
 .x-body {
-  color: black;
+  color: $dark-color;
   font-size: $base-font-size;
   font-family: tahoma, arial, verdana, sans-serif; }
 
@@ -334,7 +334,7 @@ input, textarea, select {
   left: 0;
   padding: 2px;
   border: 1px solid;
-  border-color: #99bce8;
+  border-color: $dark-color;
   background-image: none;
   background-color: #dfe9f6;
   div {
@@ -501,13 +501,12 @@ input, textarea, select {
     background-image: url("../../resources/themes/images/default/button/s-arrow-bo.gif"); } }
 
 .x-btn-default-small {
-  border-color: darken($base-color, 16);
+  color: white;
   @include border-radius(5px);
   padding: 5px;
   border-width: 1px;
   border-style: solid;
-  background-image: none;
-  @include background(linear-gradient(top, #fff, #555));
+  @include background(linear-gradient(top, lighten($dark-color, 8), $dark-color));
 }
 
 .x-nlg .x-btn-default-small-mc {
@@ -540,7 +539,7 @@ input, textarea, select {
   font-size: $base-font-size;
   font-weight: normal;
   font-family: tahoma, arial, verdana, sans-serif;
-  color: #333333;
+  color: #fff;
   background-repeat: no-repeat;
   padding: 0 4px; }
 
@@ -632,12 +631,8 @@ input, textarea, select {
   width: 16px; }
 
 .x-btn-default-small-over {
-  border-color: #b0ccf2;
-  background-image: none;
-  background-color: #e4f3ff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4f3ff), color-stop(48%, #d9edff), color-stop(52%, #c2d8f2), color-stop(100%, #c6dcf6));
-  background-image: -moz-linear-gradient(top, #e4f3ff, #d9edff 48%, #c2d8f2 52%, #c6dcf6);
-  background-image: linear-gradient(top, #e4f3ff, #d9edff 48%, #c2d8f2 52%, #c6dcf6); }
+  @include background(linear-gradient(top, lighten($dark-color, 16), $dark-color));
+}
 
 .x-btn-default-small-focus {
   border-color: #b0ccf2;
@@ -1238,28 +1233,28 @@ input, textarea, select {
   font-size: $base-font-size;
   font-weight: normal;
   font-family: tahoma, arial, verdana, sans-serif;
-  color: #333333;
+  color: white;
   background-repeat: no-repeat;
   padding: 0 4px; }
 
 .x-btn-default-toolbar-small-icon {
   button, .x-btn-inner {
-    height: 16px;
-    line-height: 16px; } }
+    height: $base-font-size + 8;
+    line-height: $base-font-size + 8; } }
 
 .x-btn-default-toolbar-small-noicon {
   button, .x-btn-inner {
-    height: 16px;
-    line-height: 16px; } }
+    height: $base-font-size + 8;
+    line-height: $base-font-size + 8; } }
 
 .x-btn-default-toolbar-small-icon {
   button {
     padding: 0;
     width: 16px !important;
-    height: 16px; }
+    height: 22px; }
   .x-btn-icon {
     width: 16px;
-    height: 16px;
+    height: 22px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1330,12 +1325,9 @@ input, textarea, select {
   width: 16px; }
 
 .x-btn-default-toolbar-small-over {
-  border-color: #81a4d0;
-  background-image: none;
-  background-color: #dbeeff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dbeeff), color-stop(48%, #d0e7ff), color-stop(52%, #bbd2f0), color-stop(100%, #bed6f5));
-  background-image: -moz-linear-gradient(top, #dbeeff, #d0e7ff 48%, #bbd2f0 52%, #bed6f5);
-  background-image: linear-gradient(top, #dbeeff, #d0e7ff 48%, #bbd2f0 52%, #bed6f5); }
+  border-color: $dark-color;
+  @include background(linear-gradient(top, lighten($dark-color, 8), lighten($dark-color, 24)));
+}
 
 .x-btn-default-toolbar-small-focus {
   border-color: #81a4d0;
@@ -1450,7 +1442,7 @@ input, textarea, select {
     padding: 0px 0px 0px 0px; } }
 
 .x-btn-default-toolbar-medium .x-btn-inner {
-  font-size: $base-font-size;
+  font-size: $base-font-size + 8;
   font-weight: normal;
   font-family: tahoma, arial, verdana, sans-serif;
   color: #333333;
@@ -1936,7 +1928,7 @@ input, textarea, select {
 .x-panel {
   .x-grid-body {
     background: white;
-    border-color: #99bce8;
+    border-color: $dark-color;
     border-style: solid;
     border-width: 1px;
     border-top-color: #c5c5c5; }
@@ -1944,7 +1936,7 @@ input, textarea, select {
     border-top-width: 0 !important; } }
 
 .x-grid-header-hidden .x-grid-body {
-  border-top-color: #99bce8 !important; }
+  border-top-color: $dark-color !important; }
 
 .x-grid-view {
   overflow: hidden;
@@ -1965,7 +1957,7 @@ input, textarea, select {
   cursor: default;
   zoom: 1;
   padding: 0;
-  border: 1px solid #99bce8;
+  border: 1px solid $dark-color;
   background-image: none;
   background-color: #c5c5c5;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #e3e4e6));
@@ -2434,8 +2426,8 @@ input, textarea, select {
     padding-top: 0; }
   .x-panel-body {
     background-color: #eaf1fb;
-    border-top: 1px solid #99bce8 !important;
-    border-bottom: 1px solid #99bce8 !important; }
+    border-top: 1px solid $dark-color !important;
+    border-bottom: 1px solid $dark-color !important; }
   .x-form-text {
     padding-left: 2px; } }
 
@@ -2478,13 +2470,13 @@ input, textarea, select {
   bottom: 0px;
   width: 192px;
   height: 1px;
-  background-color: #99bce8; }
+  background-color: $dark-color; }
 
 .x-grid-row-editor-buttons-ml, .x-grid-row-editor-buttons-mr {
   height: 27px;
   width: 1px;
   top: 1px;
-  background-color: #99bce8; }
+  background-color: $dark-color; }
 
 .x-grid-row-editor-buttons-ml {
   left: 0px; }
@@ -2623,18 +2615,16 @@ input, textarea, select {
   background-repeat: repeat-y; }
 
 .x-panel-default {
-  border-color: #99bce8; }
+  border-color: $dark-color; }
 
 .x-panel-header-default {
-  font-size: $base-font-size + 4;
   line-height: 24px;
   text-align: center;
-  border-color: #99bce8;
+  border: none;
   border-width: 0;
   border-style: solid;
-  $header-background-gradient: linear-gradient(top, $base-color, darken($base-color, 16));
-  @include background($header-background-gradient);
-  @include box-shadow(darken($base-color, 16), 1px, 1px, 1px);
+  background: none;
+  @include box-shadow(darken($dark-color, 16), 1px, 1px, 4px);
 }
 
 .x-nlg {
@@ -2648,24 +2638,25 @@ input, textarea, select {
     background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-right-bg.gif"); } }
 
 .x-panel-header-text-default {
-  color: #04408c;
-  font-size: $base-font-size;
+  color: $dark-color;
+  font-size: $base-font-size + 8;
   font-weight: bold;
   font-family: tahoma, arial, verdana, sans-serif; }
 
 .x-panel-body-default {
   background: white;
-  border-color: #99bce8;
-  color: black;
+  border-color: $dark-color;
+  color: $dark-color;
+  line-height: 1.3;
   border-width: 1px;
   border-style: solid; }
 
 .x-panel-collapsed {
   .x-window-header-default, .x-panel-header-default {
-    border-color: #99bce8; } }
+    border-color: $dark-color; } }
 
 .x-panel-header-default-vertical {
-  border-color: #99bce8; }
+  border-color: $dark-color; }
 
 .x-panel-header-default-left, .x-panel-header-default-right {
   background-image: none;
@@ -2765,12 +2756,12 @@ input, textarea, select {
   background-position: 0 bottom; }
 
 .x-panel-default-framed {
-  border-color: #99bce8; }
+  border-color: $dark-color; }
 
 .x-panel-header-default-framed {
   font-size: $base-font-size;
   line-height: 15px;
-  border-color: #99bce8;
+  border-color: $dark-color;
   border-width: 1px;
   border-style: solid;
   background-image: none;
@@ -2801,17 +2792,17 @@ input, textarea, select {
 
 .x-panel-body-default-framed {
   background: #dfe9f6;
-  border-color: #99bce8;
+  border-color: $dark-color;
   color: black;
   border-width: 0;
   border-style: solid; }
 
 .x-panel-collapsed {
   .x-window-header-default-framed, .x-panel-header-default-framed {
-    border-color: #99bce8; } }
+    border-color: $dark-color; } }
 
 .x-panel-header-default-framed-vertical {
-  border-color: #99bce8; }
+  border-color: $dark-color; }
 
 .x-panel-header-default-framed-left, .x-panel-header-default-framed-right {
   background-image: none;
@@ -3519,22 +3510,22 @@ input, textarea, select {
   _filter: chroma(color = pink); }
 
 .x-toolbar {
-  font-size: $base-font-size;
+  font-size: $base-font-size + 8;
   border: 1px solid;
   padding: 2px 0 2px 2px;
   .x-form-item-label {
-    font-size: $base-font-size;
-    line-height: 15px; }
+    font-size: $base-font-size + 8;
+    line-height: 24px; }
   .x-toolbar-item {
     margin: 0 2px 0 0; }
   .x-toolbar-text {
     margin-left: 4px;
     margin-right: 6px;
     white-space: nowrap;
-    color: #4c4c4c !important;
-    line-height: 16px;
+    color: #fff !important;
+    line-height: $base-font-size + 12;
     font-family: tahoma, arial, verdana, sans-serif;
-    font-size: $base-font-size;
+    font-size: $base-font-size + 8;
     font-weight: normal; }
   .x-toolbar-separator {
     display: block;
@@ -3589,12 +3580,9 @@ input, textarea, select {
   background-repeat: no-repeat; }
 
 .x-toolbar-default {
-  border-color: #99bce8;
-  background-image: none;
-  background-color: #d3e1f1;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dfe9f5), color-stop(100%, #d3e1f1));
-  background-image: -moz-linear-gradient(top, #dfe9f5, #d3e1f1);
-  background-image: linear-gradient(top, #dfe9f5, #d3e1f1); }
+  border-color: $dark-color;
+  @include background(linear-gradient($dark-color, lighten($dark-color, 16)));
+}
 
 .x-nlg .x-toolbar-default {
   background-image: url("../../resources/themes/images/default/toolbar/toolbar-default-bg.gif") !important;
@@ -3978,7 +3966,8 @@ input, textarea, select {
   position: absolute; }
 
 .x-border-layout-ct {
-  background-color: #dfe8f6; }
+  @include background(linear-gradient(top, lighten($dark-color, 72), lighten($dark-color, 80)));
+}
 
 .x-border-region-slide-in {
   z-index: 5; }
@@ -4012,7 +4001,7 @@ input, textarea, select {
   border-width: 0 !important; }
 
 .x-accordion-hd-sibling-expanded {
-  border-top-color: #99bce8 !important;
+  border-top-color: $dark-color !important;
   -moz-box-shadow: inset 0 1px 0 0 #f3f7fb;
   -webkit-box-shadow: inset 0 1px 0 0 #f3f7fb;
   -o-box-shadow: inset 0 1px 0 0 #f3f7fb;
@@ -4312,11 +4301,11 @@ input, textarea, select {
   overflow: hidden; }
 
 .x-scroller-vertical {
-  border: 1px solid #99bce8;
+  border: 1px solid $dark-color;
   border-top-color: #c5c5c5; }
 
 .x-scroller-horizontal {
-  border: 1px solid #99bce8; }
+  border: 1px solid $dark-color; }
 
 .x-vertical-scroller-present .x-scroller-horizontal {
   border-right-width: 0px; }
@@ -4458,8 +4447,21 @@ input, textarea, select {
       unicode-bidi: bidi-override; } } }
 
 .lh-govt-strip {
-  .lh-strip {
+  .lh-govt {
     cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    .x-panel-body {
+      color: white;
+      line-height: 36px;
+      @include background(linear-gradient(top, #CECECE, darken(#CECECE, 16)));
+      &.labour {
+        @include background(linear-gradient(top, #CE0808, darken(#CE0808, 16)));
+      }
+      &.national {
+        @include background(linear-gradient(top, #6699cc, darken(#6699cc, 16)));
+      }
+    }
   }
 }
 
@@ -4467,10 +4469,40 @@ input, textarea, select {
   @include background(linear-gradient(top, #fff, #eee));
   margin: 0 0 0.5em;
   padding: 1em;
+  line-height: 1.4em;
+  & > div {
+    padding: 1em;
+  }
+  h2, h3, h4 {
+    margin: 0.5em 0 0.2em;
+  }
 }
 .deleted {
-  background-color: red;
+  background-color: #FDD;
 }
 .inserted {
-  background-color: green;
+  background-color: #DFD;
+}
+
+body {
+  min-height: 400px;
+  background: white url(/images/lawhub.png) no-repeat center center;
+}
+
+.introduction {
+  .x-panel-body {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 8px;
+    padding: 1em;
+    border: 1px solid $dark-color;
+    @include background(linear-gradient(lighten($dark-color, 64), lighten($dark-color, 80)));
+    h1 {
+      font-size: 1.4em;
+      margin: 0.5em 0 ;
+    }
+    p {
+      margin: 0 0 1em;
+    }
+  }
 }
