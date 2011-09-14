@@ -17,5 +17,6 @@ Ext.define('LH.model.Government',
     }
     'inserted'
     'deleted'
+    'theme'
   ]
 )

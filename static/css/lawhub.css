@@ -6246,6 +6246,24 @@ input, textarea, select {
   text-align: center;
 }
 /* line 4454, ../../resources/sass/lawhub.scss */
+.lh-govt-strip .lh-govt.labour .x-panel-body {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ce0808), color-stop(100%, #7f0505));
+  background: -webkit-linear-gradient(top, #ce0808, #7f0505);
+  background: -moz-linear-gradient(top, #ce0808, #7f0505);
+  background: -o-linear-gradient(top, #ce0808, #7f0505);
+  background: -ms-linear-gradient(top, #ce0808, #7f0505);
+  background: linear-gradient(top, #ce0808, #7f0505);
+}
+/* line 4457, ../../resources/sass/lawhub.scss */
+.lh-govt-strip .lh-govt.national .x-panel-body {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6699cc), color-stop(100%, #3870a8));
+  background: -webkit-linear-gradient(top, #6699cc, #3870a8);
+  background: -moz-linear-gradient(top, #6699cc, #3870a8);
+  background: -o-linear-gradient(top, #6699cc, #3870a8);
+  background: -ms-linear-gradient(top, #6699cc, #3870a8);
+  background: linear-gradient(top, #6699cc, #3870a8);
+}
+/* line 4460, ../../resources/sass/lawhub.scss */
 .lh-govt-strip .lh-govt .x-panel-body {
   color: white;
   line-height: 36px;
@@ -6255,24 +6273,6 @@ input, textarea, select {
   background: -o-linear-gradient(top, #cecece, #a5a5a5);
   background: -ms-linear-gradient(top, #cecece, #a5a5a5);
   background: linear-gradient(top, #cecece, #a5a5a5);
-}
-/* line 4458, ../../resources/sass/lawhub.scss */
-.lh-govt-strip .lh-govt .x-panel-body.labour {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ce0808), color-stop(100%, #7f0505));
-  background: -webkit-linear-gradient(top, #ce0808, #7f0505);
-  background: -moz-linear-gradient(top, #ce0808, #7f0505);
-  background: -o-linear-gradient(top, #ce0808, #7f0505);
-  background: -ms-linear-gradient(top, #ce0808, #7f0505);
-  background: linear-gradient(top, #ce0808, #7f0505);
-}
-/* line 4461, ../../resources/sass/lawhub.scss */
-.lh-govt-strip .lh-govt .x-panel-body.national {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6699cc), color-stop(100%, #3870a8));
-  background: -webkit-linear-gradient(top, #6699cc, #3870a8);
-  background: -moz-linear-gradient(top, #6699cc, #3870a8);
-  background: -o-linear-gradient(top, #6699cc, #3870a8);
-  background: -ms-linear-gradient(top, #6699cc, #3870a8);
-  background: linear-gradient(top, #6699cc, #3870a8);
 }
 
 /* line 4468, ../../resources/sass/lawhub.scss */
@@ -6296,42 +6296,41 @@ input, textarea, select {
   margin: 0.5em 0 0.2em;
 }
 
-/* line 4481, ../../resources/sass/lawhub.scss */
+/* line 4480, ../../resources/sass/lawhub.scss */
 .deleted {
   background-color: #FDD;
 }
 
-/* line 4484, ../../resources/sass/lawhub.scss */
+/* line 4483, ../../resources/sass/lawhub.scss */
 .inserted {
   background-color: #DFD;
 }
 
-/* line 4488, ../../resources/sass/lawhub.scss */
+/* line 4487, ../../resources/sass/lawhub.scss */
 body {
   min-height: 400px;
   background: white url(/images/lawhub.png) no-repeat center center;
 }
 
-/* line 4494, ../../resources/sass/lawhub.scss */
+/* line 4493, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body {
   font-size: 20px;
   line-height: 1.6;
   margin: 8px;
   padding: 1em;
-  border: 1px solid #704214;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7e5d3), color-stop(100%, #ffffff));
-  background: -webkit-linear-gradient(#f7e5d3, #ffffff);
-  background: -moz-linear-gradient(#f7e5d3, #ffffff);
-  background: -o-linear-gradient(#f7e5d3, #ffffff);
-  background: -ms-linear-gradient(#f7e5d3, #ffffff);
-  background: linear-gradient(#f7e5d3, #ffffff);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfaf6), color-stop(100%, #f7e5d3));
+  background: -webkit-linear-gradient(#fdfaf6, #f7e5d3);
+  background: -moz-linear-gradient(#fdfaf6, #f7e5d3);
+  background: -o-linear-gradient(#fdfaf6, #f7e5d3);
+  background: -ms-linear-gradient(#fdfaf6, #f7e5d3);
+  background: linear-gradient(#fdfaf6, #f7e5d3);
 }
-/* line 4501, ../../resources/sass/lawhub.scss */
+/* line 4499, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body h1 {
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-/* line 4505, ../../resources/sass/lawhub.scss */
+/* line 4503, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body p {
   margin: 0 0 1em;
 }

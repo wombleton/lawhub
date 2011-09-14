@@ -4451,16 +4451,16 @@ input, textarea, select {
     cursor: pointer;
     font-weight: bold;
     text-align: center;
+    &.labour  .x-panel-body {
+      @include background(linear-gradient(top, #CE0808, darken(#CE0808, 16)));
+    }
+    &.national .x-panel-body {
+      @include background(linear-gradient(top, #6699cc, darken(#6699cc, 16)));
+    }
     .x-panel-body {
       color: white;
       line-height: 36px;
       @include background(linear-gradient(top, #CECECE, darken(#CECECE, 16)));
-      &.labour {
-        @include background(linear-gradient(top, #CE0808, darken(#CE0808, 16)));
-      }
-      &.national {
-        @include background(linear-gradient(top, #6699cc, darken(#6699cc, 16)));
-      }
     }
   }
 }
@@ -4495,8 +4495,7 @@ body {
     line-height: 1.6;
     margin: 8px;
     padding: 1em;
-    border: 1px solid $dark-color;
-    @include background(linear-gradient(lighten($dark-color, 64), lighten($dark-color, 80)));
+    @include background(linear-gradient(lighten($dark-color, 72), lighten($dark-color, 64)));
     h1 {
       font-size: 1.4em;
       margin: 0.5em 0 ;

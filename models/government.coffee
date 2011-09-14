@@ -34,6 +34,7 @@ GovernmentSchema = new Schema(
   deleted:
     default: 0
     type: Number
+  theme: String
 )
 
 mongoose.model('Government', GovernmentSchema)

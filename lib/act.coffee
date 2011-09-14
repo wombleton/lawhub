@@ -83,10 +83,10 @@ saveAct = (act, filename) ->
           else
             rev.updated = rev.date_as_at or rev.date_first_valid
             previousMarkdown = sortedRevisions[@curItem - 2].markdown or ''
-            previousMarkdown = previousMarkdown.replace(/\[([^\]]+)\]\([^\)]+?/g, $1)
+            previousMarkdown = previousMarkdown.replace(/\[([^\]]+)\]\([^\)]+?/g, '$1')
             markdown = rev.markdown or ''
-            markdown = markdown.replace(/\[([^\]]+)\]\([^\)]+?/g, $1)
-            rev.delta = diff(previousMarkdown, markdown, context: 3)
+            markdown = markdown.replace(/\[([^\]]+)\]\([^\)]+?/g, '$1')
+            rev.delta = diff(previousMarkdown, markdown, context: 5)
           rev.save(@)
       , (err, d) ->
         debugger if err
