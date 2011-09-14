@@ -7,13 +7,12 @@ Ext.application(
   ]
   views: [
     'overview'
-    'revisionlist'
   ]
   launch: ->
     Ext.create('Ext.container.Viewport',
       items: [
         {
-          xtype: 'revisionlist'
+          xtype: 'overview'
         }
       ]
       layout:

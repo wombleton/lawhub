@@ -20,10 +20,8 @@ Ext.define('LH.view.government.Strip',
             @react(c.record)
           , @)
         , @)
-
         @add(govt)
       , @)
-      @react(@store.getRange()[Math.floor(Math.random() * @store.getCount())])
     , @)
   react: (record) ->
     @fireEvent('governmentselect', record)

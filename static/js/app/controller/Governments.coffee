@@ -4,6 +4,8 @@ Ext.define('LH.controller.Governments',
     @control(
       'governmentstrip':
         governmentselect: (record) ->
+          govttab = Ext.ComponentQuery.query('governmenttab')[0]
+          govttab?.layout.setActiveItem(1)
           teara = Ext.ComponentQuery.query('teara')[0]
           teara?.fetch(record)
           snake = Ext.ComponentQuery.query('snake')[0]
@@ -21,5 +23,7 @@ Ext.define('LH.controller.Governments',
     'government.Snake'
     'government.KeyWords'
     'government.Graph'
+    'government.Introduction'
+    'government.Tab'
   ]
 )

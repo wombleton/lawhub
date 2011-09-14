@@ -5,18 +5,18 @@ Ext.define('LH.view.government.Detail',
   flex: 1
   layout:
     align: 'stretch'
-    type: 'hbox'
+    type: 'border'
   items: [
     {
-      flex: 3
+      region: 'west'
       xtype: 'teara'
     }
     {
-      flex: 4
+      region: 'center'
       xtype: 'snake'
     }
     {
-      flex: 2
+      region: 'east'
       xtype: 'keywords'
     }
   ]

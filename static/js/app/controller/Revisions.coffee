@@ -9,5 +9,6 @@ Ext.define('LH.controller.Revisions',
   ]
   views: [
     'revision.List'
+    'revision.View'
   ]
 )

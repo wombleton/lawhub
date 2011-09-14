@@ -3,6 +3,8 @@ Ext.define('LH.view.government.Overview'
   border: false
   extend: 'Ext.panel.Panel'
   padding: '0 100'
+  setActive: (num) ->
+    @get(1).setActiveTab(num)
   items: [
     {
       border: false
@@ -19,7 +21,7 @@ Ext.define('LH.view.government.Overview'
     }
     {
       flex: 1
-      xtype: 'governmentdetail'
+      xtype: 'governmenttab'
     }
   ]
   layout:
