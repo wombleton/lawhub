@@ -1,9 +1,13 @@
 Ext.define('LH.view.government.Tab'
   alias: 'widget.governmenttab'
   border: false
+  doTitleSearch: (el) ->
+    @layout.setActiveItem(2)
+    @query('revisionlist')[0].doSearch("title:\"#{el.lastSelected.get('title').replace(/\(.*\)/, '')}\"")
+  doSearch: (el) ->
+    @layout.setActiveItem(2)
+    @query('revisionlist')[0].doSearch(el.text)
   extend: 'Ext.panel.Panel'
-  setActive: (num) ->
-    @get(1).setActiveTab(num)
   items: [
     {
       xtype: 'introduction'
@@ -12,7 +16,7 @@ Ext.define('LH.view.government.Tab'
       xtype: 'governmentdetail'
     }
     {
-      xtype: 'revisionlist'
+      xtype: 'revisioncontainer'
     }
   ]
   flex: 1

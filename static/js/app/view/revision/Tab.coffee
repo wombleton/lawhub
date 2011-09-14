@@ -1,6 +1,9 @@
 Ext.define('LH.view.act.Tab',
   alias: 'widget.acttab'
   border: false
+  doSearch: (el) ->
+    @layout.setActiveTab(3)
+    debugger
   extend: 'Ext.panel.Panel'
   initComponent: ->
     @tbar = [

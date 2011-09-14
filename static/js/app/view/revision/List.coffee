@@ -2,6 +2,9 @@ Ext.define('LH.view.revision.List',
   afterRender: ->
     @textfield = @down('textfield[name=filter]')
   alias: 'widget.revisionlist'
+  doSearch: (s) ->
+    @textfield.setValue(s)
+    @onFilterChange()
   extend: 'Ext.panel.Panel'
   initComponent: ->
     @tbar = [
@@ -15,6 +18,15 @@ Ext.define('LH.view.revision.List',
         name: 'filter'
         width: 200
         xtype: 'textfield'
+      ,
+      '->'
+      ,
+        cls: 'back'
+        handler: ->
+          govttab = Ext.ComponentQuery.query('governmenttab')[0]
+          govttab?.layout.setActiveItem(1)
+        text: 'Back'
+        xtype: 'button'
     ]
     @store = Ext.StoreManager.get('Revisions')
     @dockedItems = [
@@ -28,11 +40,11 @@ Ext.define('LH.view.revision.List',
     @panel = new Ext.panel.Panel(
       autoScroll: true
       layout: 'auto'
+      region: 'center'
     )
     @items = @panel
     @callParent(arguments)
     @store.on('datachanged', @updateContent, @)
-    @store.load()
   layout:
     type: 'fit'
   updateContent: (s) ->
@@ -52,5 +64,7 @@ Ext.define('LH.view.revision.List',
     , @)
     @store.filters.clear()
     @store.filter('q', @textfield.value)
+  setUrl: (record) ->
+    @store.proxy.url = "/revisions/#{record.get('_id')}.json"
   title: 'omg'
 )

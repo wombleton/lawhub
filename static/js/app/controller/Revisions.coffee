@@ -1,5 +1,4 @@
 Ext.define('LH.controller.Revisions',
-
   extend: 'Ext.app.Controller'
   models: [
     'Revision'
@@ -10,5 +9,6 @@ Ext.define('LH.controller.Revisions',
   views: [
     'revision.List'
     'revision.View'
+    'revision.Container'
   ]
 )

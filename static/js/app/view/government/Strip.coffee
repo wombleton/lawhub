@@ -1,5 +1,6 @@
 Ext.define('LH.view.government.Strip',
   alias: 'widget.governmentstrip'
+  border: false
   cls: 'lh-govt-strip'
   extend: 'Ext.panel.Panel'
   initComponent: ->
@@ -9,21 +10,24 @@ Ext.define('LH.view.government.Strip',
     @store.on('load', (store, records) ->
       _.each(records, (record) ->
         govt = new Ext.panel.Panel(
-          border: false
-          cls: 'lh-govt'
+          cls: "lh-govt #{record.get('theme')}"
           flex: 1
           layout: 'fit'
           record: record
         )
         govt.on('render', (c) ->
           c.body.on('click', ->
-            @react(c.record)
+            @react(c.record, c)
           , @)
         , @)
         @add(govt)
       , @)
     , @)
-  react: (record) ->
+  react: (record, c) ->
+    _.each(@items.getRange(), (item) ->
+      item.removeCls('active')
+    )
+    c.addCls('active')
     @fireEvent('governmentselect', record)
   layout:
     align: 'stretch'
