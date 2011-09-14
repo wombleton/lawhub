@@ -66,10 +66,10 @@ server.get('/revisions/:key.json', (req, res) ->
                 )
               revisions = _.map(revisions, (revision) ->
                 deltas = _.map(revision.delta, (delta) ->
-                  preamble = md(_.flatten(delta.preamble).join('\n').replace(/\[([^\]]+)\]\([^\)]+?/g, '$1'))
-                  postscript = md(_.flatten(delta.postscript).join('\n').replace(/\[([^\]]+)\]\([^\)]+?/g, '$1'))
-                  deleted = md(_.flatten(delta.deleted).join('\n').replace(/\[([^\]]+)\]\([^\)]+?/g, '$1'))
-                  inserted = md(_.flatten(delta.inserted).join('\n').replace(/\[([^\]]+)\]\([^\)]+?/g, '$1'))
+                  preamble = md(_.flatten(delta.preamble).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
+                  postscript = md(_.flatten(delta.postscript).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
+                  deleted = md(_.flatten(delta.deleted).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
+                  inserted = md(_.flatten(delta.inserted).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
                   h = [preamble, "<div class=\"inserted\">#{inserted}</div>", "<div class=\"deleted\">#{deleted}</div>", postscript].join('')
                   "<div class=\"delta\">#{h}</div>"
                 )
