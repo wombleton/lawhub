@@ -16,7 +16,7 @@ Ext.define('LH.view.government.Overview'
       height: 150
     }
     {
-      height: 50
+      height: 36
       xtype: 'governmentstrip'
     }
     {

@@ -8,7 +8,7 @@ Ext.define('LH.view.government.Detail',
     type: 'border'
   items: [
     {
-      height: 30
+      height: 36
       region: 'north'
       xtype: 'governmentsummary'
     }

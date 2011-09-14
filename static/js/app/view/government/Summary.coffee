@@ -1,6 +1,7 @@
 Ext.define('LH.view.government.Summary',
   alias: 'widget.governmentsummary'
   border: false
+  cls: 'governmentsummary'
   extend: 'Ext.panel.Panel'
   items: [
     {
@@ -17,6 +18,7 @@ Ext.define('LH.view.government.Summary',
     }
   ]
   layout:
+    align: 'stretch'
     type: 'hbox'
   setText: (record) ->
     start = Ext.Date.format(record.get('start'), 'j M Y')

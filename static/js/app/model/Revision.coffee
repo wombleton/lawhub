@@ -10,5 +10,11 @@ Ext.define('LH.model.Revision',
         new Date(v)
     }
     'html'
+    {
+      name: 'file_path'
+      dataIndex: 'file_path'
+      convert: (v) ->
+        "http://www.legislation.govt.nz/subscribe/#{v.match(/.*\/raw\/(.+\/).*/, '$1')[1]}"
+    }
   ]
 )

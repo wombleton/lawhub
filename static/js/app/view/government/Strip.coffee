@@ -38,5 +38,5 @@ Ext.define('LH.view.government.Strip',
   layout:
     align: 'stretch'
     type: 'hbox'
-  padding: 8
+  padding: '0 8'
 )

@@ -2693,7 +2693,7 @@ input, textarea, select {
   background: white;
   border-color: #704214;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0;
   border-top-color: #c5c5c5;
 }
 /* line 1935, ../../resources/sass/lawhub.scss */
@@ -2880,6 +2880,7 @@ input, textarea, select {
 }
 /* line 2068, ../../resources/sass/lawhub.scss */
 .x-grid-row .x-grid-cell {
+  cursor: pointer;
   color: null;
   font: normal 14px tahoma, arial, verdana, sans-serif;
   border-color: #ededed;
@@ -2888,7 +2889,7 @@ input, textarea, select {
   border-top-color: #fafafa;
 }
 
-/* line 2076, ../../resources/sass/lawhub.scss */
+/* line 2077, ../../resources/sass/lawhub.scss */
 .x-grid-rowwrap-div {
   border-width: 1px 0;
   border-color: #ededed;
@@ -2897,52 +2898,52 @@ input, textarea, select {
   overflow: hidden;
 }
 
-/* line 2084, ../../resources/sass/lawhub.scss */
+/* line 2085, ../../resources/sass/lawhub.scss */
 .x-grid-row-alt .x-grid-cell, .x-grid-row-alt .x-grid-rowwrap-div {
   background-color: #fafafa;
 }
 
-/* line 2088, ../../resources/sass/lawhub.scss */
+/* line 2089, ../../resources/sass/lawhub.scss */
 .x-grid-row-over .x-grid-cell, .x-grid-row-over .x-grid-rowwrap-div {
   border-color: #dddddd;
   background-color: #efefef;
 }
 
-/* line 2093, ../../resources/sass/lawhub.scss */
+/* line 2094, ../../resources/sass/lawhub.scss */
 .x-grid-row-focused .x-grid-cell, .x-grid-row-focused .x-grid-rowwrap-div {
   border-color: #dddddd;
   background-color: #efefef;
 }
 
-/* line 2098, ../../resources/sass/lawhub.scss */
+/* line 2099, ../../resources/sass/lawhub.scss */
 .x-grid-row-selected .x-grid-cell, .x-grid-row-selected .x-grid-rowwrap-div {
   border-style: dotted;
   border-color: #a3bae9;
   background-color: #dfe8f6 !important;
 }
 
-/* line 2104, ../../resources/sass/lawhub.scss */
+/* line 2105, ../../resources/sass/lawhub.scss */
 .x-grid-rowwrap-div .x-grid-cell, .x-grid-rowwrap-div .x-grid-cell-inner {
   border-width: 0;
   background: transparent;
 }
 
-/* line 2108, ../../resources/sass/lawhub.scss */
+/* line 2109, ../../resources/sass/lawhub.scss */
 .x-grid-row-body-hidden {
   display: none;
 }
 
-/* line 2111, ../../resources/sass/lawhub.scss */
+/* line 2112, ../../resources/sass/lawhub.scss */
 .x-grid-rowbody {
   font: normal 11px/13px tahoma, arial, verdana, sans-serif;
   padding: 4px;
 }
-/* line 2114, ../../resources/sass/lawhub.scss */
+/* line 2115, ../../resources/sass/lawhub.scss */
 .x-grid-rowbody p {
   margin: 5px 5px 10px 5px;
 }
 
-/* line 2117, ../../resources/sass/lawhub.scss */
+/* line 2118, ../../resources/sass/lawhub.scss */
 .x-grid-cell {
   overflow: hidden;
   font: normal 13px tahoma, arial, verdana, sans-serif;
@@ -2951,7 +2952,7 @@ input, textarea, select {
   -webkit-user-select: ignore;
 }
 
-/* line 2124, ../../resources/sass/lawhub.scss */
+/* line 2125, ../../resources/sass/lawhub.scss */
 .x-grid-cell-inner {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -2960,27 +2961,27 @@ input, textarea, select {
   white-space: nowrap;
 }
 
-/* line 2131, ../../resources/sass/lawhub.scss */
+/* line 2132, ../../resources/sass/lawhub.scss */
 .x-action-col-cell .x-grid-cell-inner {
   padding: 1px 2px 0 2px;
 }
 
-/* line 2134, ../../resources/sass/lawhub.scss */
+/* line 2135, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-action-col-cell .x-grid-cell-inner, .x-ie7 .x-action-col-cell .x-grid-cell-inner {
   padding: 2px 2px 1px 2px;
 }
 
-/* line 2138, ../../resources/sass/lawhub.scss */
+/* line 2139, ../../resources/sass/lawhub.scss */
 .x-quirks .x-ie9 .x-action-col-cell .x-grid-cell-inner, .x-quirks .x-ie8 .x-action-col-cell .x-grid-cell-inner {
   padding: 2px 2px 1px 2px;
 }
 
-/* line 2141, ../../resources/sass/lawhub.scss */
+/* line 2142, ../../resources/sass/lawhub.scss */
 .x-strict .x-ie8 .x-action-col-cell .x-grid-cell-inner {
   padding: 2px 2px 1px 2px;
 }
 
-/* line 2144, ../../resources/sass/lawhub.scss */
+/* line 2145, ../../resources/sass/lawhub.scss */
 .x-grid-row .x-grid-cell-special {
   padding: 0;
   border-right: 1px solid #d0d0d0;
@@ -2991,12 +2992,12 @@ input, textarea, select {
   background-image: linear-gradient(left, #f6f6f6, #e9e9e9);
 }
 
-/* line 2153, ../../resources/sass/lawhub.scss */
+/* line 2154, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-grid-header-row, .x-ie7 .x-grid-header-row, .x-quirks .x-ie8 .x-grid-header-row, .x-strict .x-ie8 .x-grid-header-row {
   position: absolute;
 }
 
-/* line 2156, ../../resources/sass/lawhub.scss */
+/* line 2157, ../../resources/sass/lawhub.scss */
 .x-grid-row-selected .x-grid-cell-special {
   border-right: 1px solid #aaccf6;
   background-image: none;
@@ -3006,55 +3007,55 @@ input, textarea, select {
   background-image: linear-gradient(left, #dfe8f6, #cbdaf0);
 }
 
-/* line 2164, ../../resources/sass/lawhub.scss */
+/* line 2165, ../../resources/sass/lawhub.scss */
 .x-grid-dirty-cell {
   background-image: url("../../resources/themes/images/default/grid/dirty.gif");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
-/* line 2169, ../../resources/sass/lawhub.scss */
+/* line 2170, ../../resources/sass/lawhub.scss */
 .x-grid-cell-selected {
   background-color: #b8cfee !important;
 }
 
-/* line 2173, ../../resources/sass/lawhub.scss */
+/* line 2174, ../../resources/sass/lawhub.scss */
 .x-nlg .x-grid-cell-special {
   background-repeat: repeat-y;
   background-position: top right;
 }
-/* line 2176, ../../resources/sass/lawhub.scss */
+/* line 2177, ../../resources/sass/lawhub.scss */
 .x-nlg .x-grid-row .x-grid-cell-special, .x-nlg .x-grid-row-over .x-grid-cell-special {
   background-image: url("../../resources/themes/images/default/grid/cell-special-bg.gif");
 }
-/* line 2178, ../../resources/sass/lawhub.scss */
+/* line 2179, ../../resources/sass/lawhub.scss */
 .x-nlg .x-grid-row-focused .x-grid-cell-special, .x-nlg .x-grid-row-selected .x-grid-cell-special {
   background-image: url("../../resources/themes/images/default/grid/cell-special-selected-bg.gif");
 }
 
-/* line 2181, ../../resources/sass/lawhub.scss */
+/* line 2182, ../../resources/sass/lawhub.scss */
 .x-panel-with-col-lines .x-grid-row .x-grid-cell {
   padding-right: 0;
   border-right: 1px solid #d0d0d0;
 }
 
-/* line 2185, ../../resources/sass/lawhub.scss */
+/* line 2186, ../../resources/sass/lawhub.scss */
 .x-ie .x-grid-cell-special {
   border-right-width: 0 !important;
 }
 
-/* line 2190, ../../resources/sass/lawhub.scss */
+/* line 2191, ../../resources/sass/lawhub.scss */
 .x-property-grid .x-grid-row .x-grid-cell-inner {
   padding: 3px 6px 5px;
 }
-/* line 2192, ../../resources/sass/lawhub.scss */
+/* line 2193, ../../resources/sass/lawhub.scss */
 .x-property-grid .x-grid-row .x-grid-property-name .x-grid-cell-inner {
   padding-left: 12px;
   background-image: url("../../resources/themes/images/default/grid/property-cell-bg.gif");
   background-repeat: no-repeat;
   background-position: -16px 1px;
 }
-/* line 2197, ../../resources/sass/lawhub.scss */
+/* line 2198, ../../resources/sass/lawhub.scss */
 .x-property-grid .x-grid-row-over .x-grid-property-name .x-grid-cell-inner {
   padding-left: 12px;
   background-image: url("../../resources/themes/images/default/grid/property-cell-bg.gif");
@@ -3062,39 +3063,39 @@ input, textarea, select {
   background-position: -16px 1px;
 }
 
-/* line 2203, ../../resources/sass/lawhub.scss */
+/* line 2204, ../../resources/sass/lawhub.scss */
 .x-quirks .x-ie .x-grid-row .x-grid-property-name .x-grid-cell-inner {
   background-position: -16px 2px;
 }
 
-/* line 2206, ../../resources/sass/lawhub.scss */
+/* line 2207, ../../resources/sass/lawhub.scss */
 .x-unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: ignore;
 }
 
-/* line 2211, ../../resources/sass/lawhub.scss */
+/* line 2212, ../../resources/sass/lawhub.scss */
 .x-grid-row-body-hidden, .x-grid-group-collapsed {
   display: none;
 }
 
-/* line 2214, ../../resources/sass/lawhub.scss */
+/* line 2215, ../../resources/sass/lawhub.scss */
 .x-grid-view .x-grid-td-expander {
   vertical-align: top;
 }
 
-/* line 2217, ../../resources/sass/lawhub.scss */
+/* line 2218, ../../resources/sass/lawhub.scss */
 .x-grid-td-expander {
   background: repeat-y right transparent;
 }
 
-/* line 2220, ../../resources/sass/lawhub.scss */
+/* line 2221, ../../resources/sass/lawhub.scss */
 .x-grid-view .x-grid-td-expander .x-grid-cell-inner {
   padding: 0 !important;
 }
 
-/* line 2223, ../../resources/sass/lawhub.scss */
+/* line 2224, ../../resources/sass/lawhub.scss */
 .x-grid-row-expander {
   background-image: url("../../resources/themes/images/default/grid/group-collapse.gif");
   background-color: transparent;
@@ -3105,12 +3106,12 @@ input, textarea, select {
   background-position: 0 -2px;
 }
 
-/* line 2232, ../../resources/sass/lawhub.scss */
+/* line 2233, ../../resources/sass/lawhub.scss */
 .x-grid-row-collapsed .x-grid-row-expander {
   background-image: url("../../resources/themes/images/default/grid/group-expand.gif");
 }
 
-/* line 2235, ../../resources/sass/lawhub.scss */
+/* line 2236, ../../resources/sass/lawhub.scss */
 .x-grid-resize-marker {
   position: absolute;
   z-index: 5;
@@ -3119,7 +3120,7 @@ input, textarea, select {
   background-color: #0f0f0f;
 }
 
-/* line 2242, ../../resources/sass/lawhub.scss */
+/* line 2243, ../../resources/sass/lawhub.scss */
 .col-move-top, .col-move-bottom {
   width: 9px;
   height: 9px;
@@ -3132,32 +3133,32 @@ input, textarea, select {
   background: no-repeat left top transparent;
 }
 
-/* line 2253, ../../resources/sass/lawhub.scss */
+/* line 2254, ../../resources/sass/lawhub.scss */
 .col-move-top {
   background-image: url("../../resources/themes/images/default/grid/col-move-top.gif");
 }
 
-/* line 2256, ../../resources/sass/lawhub.scss */
+/* line 2257, ../../resources/sass/lawhub.scss */
 .col-move-bottom {
   background-image: url("../../resources/themes/images/default/grid/col-move-bottom.gif");
 }
 
-/* line 2259, ../../resources/sass/lawhub.scss */
+/* line 2260, ../../resources/sass/lawhub.scss */
 .x-tbar-page-number {
   width: 30px;
 }
 
-/* line 2262, ../../resources/sass/lawhub.scss */
+/* line 2263, ../../resources/sass/lawhub.scss */
 .x-grid-group, .x-grid-group-body {
   zoom: 1;
 }
 
-/* line 2265, ../../resources/sass/lawhub.scss */
+/* line 2266, ../../resources/sass/lawhub.scss */
 .x-grid-group-hd {
   zoom: 1;
   padding-top: 6px;
 }
-/* line 2268, ../../resources/sass/lawhub.scss */
+/* line 2269, ../../resources/sass/lawhub.scss */
 .x-grid-group-hd .x-grid-cell-inner {
   padding: 10px 4px 4px 4px;
   background: white;
@@ -3167,7 +3168,7 @@ input, textarea, select {
   cursor: pointer;
 }
 
-/* line 2276, ../../resources/sass/lawhub.scss */
+/* line 2277, ../../resources/sass/lawhub.scss */
 .x-grid-group-title {
   background: transparent no-repeat 0 -1px;
   background-image: url("../../resources/themes/images/default/grid/group-collapse.gif");
@@ -3176,36 +3177,36 @@ input, textarea, select {
   padding: 0 0 0 14px;
 }
 
-/* line 2283, ../../resources/sass/lawhub.scss */
+/* line 2284, ../../resources/sass/lawhub.scss */
 .x-grid-group-hd-collapsed .x-grid-group-title {
   background-image: url("../../resources/themes/images/default/grid/group-expand.gif");
 }
 
-/* line 2287, ../../resources/sass/lawhub.scss */
+/* line 2288, ../../resources/sass/lawhub.scss */
 .x-grid-group-collapsed .x-grid-group-body {
   display: none;
 }
-/* line 2289, ../../resources/sass/lawhub.scss */
+/* line 2290, ../../resources/sass/lawhub.scss */
 .x-grid-group-collapsed .x-grid-group-title {
   background-image: url("../../resources/themes/images/default/grid/group-expand.gif");
 }
 
-/* line 2292, ../../resources/sass/lawhub.scss */
+/* line 2293, ../../resources/sass/lawhub.scss */
 .x-group-by-icon, .x-show-groups-icon {
   background-image: url("../../resources/themes/images/default/grid/group-by.gif");
 }
 
-/* line 2295, ../../resources/sass/lawhub.scss */
+/* line 2296, ../../resources/sass/lawhub.scss */
 .x-column-header-checkbox .x-column-header-inner {
   padding: 1px;
 }
 
-/* line 2298, ../../resources/sass/lawhub.scss */
+/* line 2299, ../../resources/sass/lawhub.scss */
 .x-grid-cell-special .x-grid-cell-inner {
   padding: 4px;
 }
 
-/* line 2301, ../../resources/sass/lawhub.scss */
+/* line 2302, ../../resources/sass/lawhub.scss */
 .x-grid-row-checker {
   height: 14px;
   width: 14px;
@@ -3215,7 +3216,7 @@ input, textarea, select {
   background-color: transparent;
 }
 
-/* line 2309, ../../resources/sass/lawhub.scss */
+/* line 2310, ../../resources/sass/lawhub.scss */
 .x-column-header-checkbox .x-column-header-text {
   height: 14px;
   width: 14px;
@@ -3228,123 +3229,123 @@ input, textarea, select {
   margin-left: 4px;
 }
 
-/* line 2320, ../../resources/sass/lawhub.scss */
+/* line 2321, ../../resources/sass/lawhub.scss */
 .x-quirks .x-ie .x-column-header-checkbox .x-column-header-inner {
   line-height: 18px;
 }
 
-/* line 2324, ../../resources/sass/lawhub.scss */
+/* line 2325, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-column-header-checkbox .x-column-header-inner {
   line-height: 18px;
 }
-/* line 2326, ../../resources/sass/lawhub.scss */
+/* line 2327, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-column-header-checkbox .x-column-header-text {
   margin-left: 3px;
 }
 
-/* line 2329, ../../resources/sass/lawhub.scss */
+/* line 2330, ../../resources/sass/lawhub.scss */
 .x-ie7 .x-column-header-checkbox .x-column-header-text, .x-ie9 .x-column-header-checkbox .x-column-header-text {
   margin-left: 3px;
 }
 
-/* line 2332, ../../resources/sass/lawhub.scss */
+/* line 2333, ../../resources/sass/lawhub.scss */
 .x-grid-hd-checker-on .x-column-header-text {
   background-image: url("../../resources/themes/images/default/grid/checked.gif");
 }
 
-/* line 2335, ../../resources/sass/lawhub.scss */
+/* line 2336, ../../resources/sass/lawhub.scss */
 .x-grid-row-checker {
   margin-left: 1px;
   background-position: 50% -2px;
 }
 
-/* line 2339, ../../resources/sass/lawhub.scss */
+/* line 2340, ../../resources/sass/lawhub.scss */
 .x-grid-row-selected .x-grid-row-checker, .x-grid-row-checked .x-grid-row-checker {
   background-image: url("../../resources/themes/images/default/grid/checked.gif");
 }
 
-/* line 2342, ../../resources/sass/lawhub.scss */
+/* line 2343, ../../resources/sass/lawhub.scss */
 .x-tbar-page-first {
   background-image: url("../../resources/themes/images/default/grid/page-first.gif") !important;
 }
 
-/* line 2345, ../../resources/sass/lawhub.scss */
+/* line 2346, ../../resources/sass/lawhub.scss */
 .x-tbar-loading {
   background-image: url("../../resources/themes/images/default/grid/refresh.gif") !important;
 }
 
-/* line 2348, ../../resources/sass/lawhub.scss */
+/* line 2349, ../../resources/sass/lawhub.scss */
 .x-tbar-page-last {
   background-image: url("../../resources/themes/images/default/grid/page-last.gif") !important;
 }
 
-/* line 2351, ../../resources/sass/lawhub.scss */
+/* line 2352, ../../resources/sass/lawhub.scss */
 .x-tbar-page-next {
   background-image: url("../../resources/themes/images/default/grid/page-next.gif") !important;
 }
 
-/* line 2354, ../../resources/sass/lawhub.scss */
+/* line 2355, ../../resources/sass/lawhub.scss */
 .x-tbar-page-prev {
   background-image: url("../../resources/themes/images/default/grid/page-prev.gif") !important;
 }
 
-/* line 2358, ../../resources/sass/lawhub.scss */
+/* line 2359, ../../resources/sass/lawhub.scss */
 .x-item-disabled .x-tbar-loading {
   background-image: url("../../resources/themes/images/default/grid/refresh-disabled.gif") !important;
 }
-/* line 2360, ../../resources/sass/lawhub.scss */
+/* line 2361, ../../resources/sass/lawhub.scss */
 .x-item-disabled .x-tbar-page-first {
   background-image: url("../../resources/themes/images/default/grid/page-first-disabled.gif") !important;
 }
-/* line 2362, ../../resources/sass/lawhub.scss */
+/* line 2363, ../../resources/sass/lawhub.scss */
 .x-item-disabled .x-tbar-page-last {
   background-image: url("../../resources/themes/images/default/grid/page-last-disabled.gif") !important;
 }
-/* line 2364, ../../resources/sass/lawhub.scss */
+/* line 2365, ../../resources/sass/lawhub.scss */
 .x-item-disabled .x-tbar-page-next {
   background-image: url("../../resources/themes/images/default/grid/page-next-disabled.gif") !important;
 }
-/* line 2366, ../../resources/sass/lawhub.scss */
+/* line 2367, ../../resources/sass/lawhub.scss */
 .x-item-disabled .x-tbar-page-prev {
   background-image: url("../../resources/themes/images/default/grid/page-prev-disabled.gif") !important;
 }
 
-/* line 2369, ../../resources/sass/lawhub.scss */
+/* line 2370, ../../resources/sass/lawhub.scss */
 .xg-hmenu-sort-asc .x-menu-item-icon {
   background-image: url("../../resources/themes/images/default/grid/hmenu-asc.gif");
 }
 
-/* line 2372, ../../resources/sass/lawhub.scss */
+/* line 2373, ../../resources/sass/lawhub.scss */
 .xg-hmenu-sort-desc .x-menu-item-icon {
   background-image: url("../../resources/themes/images/default/grid/hmenu-desc.gif");
 }
 
-/* line 2375, ../../resources/sass/lawhub.scss */
+/* line 2376, ../../resources/sass/lawhub.scss */
 .xg-hmenu-lock .x-menu-item-icon {
   background-image: url("../../resources/themes/images/default/grid/hmenu-lock.gif");
 }
 
-/* line 2378, ../../resources/sass/lawhub.scss */
+/* line 2379, ../../resources/sass/lawhub.scss */
 .xg-hmenu-unlock .x-menu-item-icon {
   background-image: url("../../resources/themes/images/default/grid/hmenu-unlock.gif");
 }
 
-/* line 2381, ../../resources/sass/lawhub.scss */
+/* line 2382, ../../resources/sass/lawhub.scss */
 .x-group-by-icon {
   background-image: url("../../resources/themes/images/default/grid/group-by.gif");
 }
 
-/* line 2384, ../../resources/sass/lawhub.scss */
+/* line 2385, ../../resources/sass/lawhub.scss */
 .x-cols-icon .x-menu-item-icon {
   background-image: url("../../resources/themes/images/default/grid/columns.gif");
 }
 
-/* line 2387, ../../resources/sass/lawhub.scss */
+/* line 2388, ../../resources/sass/lawhub.scss */
 .x-show-groups-icon {
   background-image: url("../../resources/themes/images/default/grid/group-by.gif");
 }
 
-/* line 2390, ../../resources/sass/lawhub.scss */
+/* line 2391, ../../resources/sass/lawhub.scss */
 .x-grid-drop-indicator {
   position: absolute;
   height: 1px;
@@ -3352,7 +3353,7 @@ input, textarea, select {
   background-color: #77bc71;
   overflow: visible;
 }
-/* line 2396, ../../resources/sass/lawhub.scss */
+/* line 2397, ../../resources/sass/lawhub.scss */
 .x-grid-drop-indicator .x-grid-drop-indicator-left {
   position: absolute;
   top: -8px;
@@ -3361,7 +3362,7 @@ input, textarea, select {
   height: 16px;
   width: 16px;
 }
-/* line 2403, ../../resources/sass/lawhub.scss */
+/* line 2404, ../../resources/sass/lawhub.scss */
 .x-grid-drop-indicator .x-grid-drop-indicator-right {
   position: absolute;
   top: -8px;
@@ -3371,48 +3372,48 @@ input, textarea, select {
   width: 16px;
 }
 
-/* line 2412, ../../resources/sass/lawhub.scss */
+/* line 2413, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-grid-drop-indicator-left {
   background-image: url("../../resources/themes/images/default/grid/dd-insert-arrow-right.gif");
 }
-/* line 2414, ../../resources/sass/lawhub.scss */
+/* line 2415, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-grid-drop-indicator-right {
   background-image: url("../../resources/themes/images/default/grid/dd-insert-arrow-left.gif");
 }
 
-/* line 2417, ../../resources/sass/lawhub.scss */
+/* line 2418, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor {
   position: absolute !important;
   z-index: 1;
   zoom: 1;
   overflow: visible !important;
 }
-/* line 2422, ../../resources/sass/lawhub.scss */
+/* line 2423, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor .x-form-field {
   font: normal 11px tahoma, arial, verdana, sans-serif !important;
 }
-/* line 2424, ../../resources/sass/lawhub.scss */
+/* line 2425, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor .x-form-display-field {
   font: normal 11px tahoma, arial, verdana, sans-serif !important;
   padding-top: 0;
 }
-/* line 2427, ../../resources/sass/lawhub.scss */
+/* line 2428, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor .x-panel-body {
   background-color: #eaf1fb;
   border-top: 1px solid #704214 !important;
   border-bottom: 1px solid #704214 !important;
 }
-/* line 2431, ../../resources/sass/lawhub.scss */
+/* line 2432, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor .x-form-text {
   padding-left: 2px;
 }
 
-/* line 2434, ../../resources/sass/lawhub.scss */
+/* line 2435, ../../resources/sass/lawhub.scss */
 .x-grid-editor .x-form-cb-wrap {
   text-align: center;
 }
 
-/* line 2437, ../../resources/sass/lawhub.scss */
+/* line 2438, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons {
   background-color: #eaf1fb;
   position: absolute;
@@ -3422,19 +3423,19 @@ input, textarea, select {
   height: 32px;
 }
 
-/* line 2445, ../../resources/sass/lawhub.scss */
+/* line 2446, ../../resources/sass/lawhub.scss */
 .x-strict .x-grid-row-editor-buttons {
   width: 192px;
   height: 24px;
 }
 
-/* line 2449, ../../resources/sass/lawhub.scss */
+/* line 2450, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-ml, .x-grid-row-editor-buttons-mr, .x-grid-row-editor-buttons-bl, .x-grid-row-editor-buttons-br, .x-grid-row-editor-buttons-bc {
   position: absolute;
   overflow: hidden;
 }
 
-/* line 2453, ../../resources/sass/lawhub.scss */
+/* line 2454, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-bl, .x-grid-row-editor-buttons-br {
   width: 4px;
   height: 4px;
@@ -3442,19 +3443,19 @@ input, textarea, select {
   background-image: url("../../resources/themes/images/default/panel/panel-default-framed-corners.gif");
 }
 
-/* line 2459, ../../resources/sass/lawhub.scss */
+/* line 2460, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-bl {
   left: 0px;
   background-position: 0px -16px;
 }
 
-/* line 2463, ../../resources/sass/lawhub.scss */
+/* line 2464, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-br {
   right: 0px;
   background-position: 0px -20px;
 }
 
-/* line 2467, ../../resources/sass/lawhub.scss */
+/* line 2468, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-bc {
   position: absolute;
   left: 4px;
@@ -3464,7 +3465,7 @@ input, textarea, select {
   background-color: #704214;
 }
 
-/* line 2475, ../../resources/sass/lawhub.scss */
+/* line 2476, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-ml, .x-grid-row-editor-buttons-mr {
   height: 27px;
   width: 1px;
@@ -3472,54 +3473,54 @@ input, textarea, select {
   background-color: #704214;
 }
 
-/* line 2481, ../../resources/sass/lawhub.scss */
+/* line 2482, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-ml {
   left: 0px;
 }
 
-/* line 2484, ../../resources/sass/lawhub.scss */
+/* line 2485, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-buttons-mr {
   background-position: 0px -20px;
   right: 0px;
 }
 
-/* line 2489, ../../resources/sass/lawhub.scss */
+/* line 2490, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-errors ul {
   margin-left: 5px;
 }
-/* line 2491, ../../resources/sass/lawhub.scss */
+/* line 2492, ../../resources/sass/lawhub.scss */
 .x-grid-row-editor-errors li {
   list-style: disc;
   margin-left: 15px;
 }
 
-/* line 2495, ../../resources/sass/lawhub.scss */
+/* line 2496, ../../resources/sass/lawhub.scss */
 .x-webkit *:focus {
   outline: none !important;
 }
 
-/* line 2498, ../../resources/sass/lawhub.scss */
+/* line 2499, ../../resources/sass/lawhub.scss */
 .x-panel, .x-plain {
   overflow: hidden;
   position: relative;
 }
 
-/* line 2503, ../../resources/sass/lawhub.scss */
+/* line 2504, ../../resources/sass/lawhub.scss */
 .x-ie .x-panel-header, .x-ie .x-panel-header-tl, .x-ie .x-panel-header-tc, .x-ie .x-panel-header-tr, .x-ie .x-panel-header-ml, .x-ie .x-panel-header-mc, .x-ie .x-panel-header-mr, .x-ie .x-panel-header-bl, .x-ie .x-panel-header-bc, .x-ie .x-panel-header-br {
   zoom: 1;
 }
 
-/* line 2506, ../../resources/sass/lawhub.scss */
+/* line 2507, ../../resources/sass/lawhub.scss */
 .x-ie8 td.x-frame-mc {
   vertical-align: top;
 }
 
-/* line 2509, ../../resources/sass/lawhub.scss */
+/* line 2510, ../../resources/sass/lawhub.scss */
 .x-panel-header {
   padding: 5px 4px 4px 5px;
 }
 
-/* line 2512, ../../resources/sass/lawhub.scss */
+/* line 2513, ../../resources/sass/lawhub.scss */
 .x-panel-header-icon, .x-window-header-icon {
   width: 16px;
   height: 16px;
@@ -3531,25 +3532,25 @@ input, textarea, select {
   margin-bottom: -1px;
 }
 
-/* line 2522, ../../resources/sass/lawhub.scss */
+/* line 2523, ../../resources/sass/lawhub.scss */
 .x-panel-header-draggable {
   cursor: move;
 }
-/* line 2524, ../../resources/sass/lawhub.scss */
+/* line 2525, ../../resources/sass/lawhub.scss */
 .x-panel-header-draggable .x-panel-header-text {
   cursor: move;
 }
 
-/* line 2527, ../../resources/sass/lawhub.scss */
+/* line 2528, ../../resources/sass/lawhub.scss */
 .x-window-header-draggable {
   cursor: move;
 }
-/* line 2529, ../../resources/sass/lawhub.scss */
+/* line 2530, ../../resources/sass/lawhub.scss */
 .x-window-header-draggable .x-window-header-text {
   cursor: move;
 }
 
-/* line 2532, ../../resources/sass/lawhub.scss */
+/* line 2533, ../../resources/sass/lawhub.scss */
 .x-panel-ghost, .x-window-ghost {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
@@ -3557,70 +3558,70 @@ input, textarea, select {
   cursor: move;
 }
 
-/* line 2539, ../../resources/sass/lawhub.scss */
+/* line 2540, ../../resources/sass/lawhub.scss */
 .x-panel-header-horizontal .x-panel-header-body, .x-panel-header-horizontal .x-window-header-body, .x-panel-header-horizontal .x-btn-group-header-body {
   width: 100%;
 }
 
-/* line 2543, ../../resources/sass/lawhub.scss */
+/* line 2544, ../../resources/sass/lawhub.scss */
 .x-window-header-horizontal .x-panel-header-body, .x-window-header-horizontal .x-window-header-body, .x-window-header-horizontal .x-btn-group-header-body {
   width: 100%;
 }
 
-/* line 2547, ../../resources/sass/lawhub.scss */
+/* line 2548, ../../resources/sass/lawhub.scss */
 .x-btn-group-header-horizontal .x-panel-header-body, .x-btn-group-header-horizontal .x-window-header-body, .x-btn-group-header-horizontal .x-btn-group-header-body {
   width: 100%;
 }
 
-/* line 2551, ../../resources/sass/lawhub.scss */
+/* line 2552, ../../resources/sass/lawhub.scss */
 .x-panel-header-vertical .x-panel-header-body, .x-panel-header-vertical .x-window-header-body, .x-panel-header-vertical .x-btn-group-header-body {
   height: 100%;
 }
 
-/* line 2555, ../../resources/sass/lawhub.scss */
+/* line 2556, ../../resources/sass/lawhub.scss */
 .x-window-header-vertical .x-panel-header-body, .x-window-header-vertical .x-window-header-body, .x-window-header-vertical .x-btn-group-header-body {
   height: 100%;
 }
 
-/* line 2559, ../../resources/sass/lawhub.scss */
+/* line 2560, ../../resources/sass/lawhub.scss */
 .x-btn-group-header-vertical .x-panel-header-body, .x-btn-group-header-vertical .x-window-header-body, .x-btn-group-header-vertical .x-btn-group-header-body {
   height: 100%;
 }
 
-/* line 2562, ../../resources/sass/lawhub.scss */
+/* line 2563, ../../resources/sass/lawhub.scss */
 .x-panel-header-vertical {
   display: -moz-inline-stack;
   display: inline-block;
 }
-/* line 2565, ../../resources/sass/lawhub.scss */
+/* line 2566, ../../resources/sass/lawhub.scss */
 .x-panel-header-vertical .x-panel-header-body {
   display: -moz-inline-stack;
   display: inline-block;
 }
 
-/* line 2569, ../../resources/sass/lawhub.scss */
+/* line 2570, ../../resources/sass/lawhub.scss */
 .x-btn-group-header-vertical {
   display: -moz-inline-stack;
   display: inline-block;
 }
-/* line 2572, ../../resources/sass/lawhub.scss */
+/* line 2573, ../../resources/sass/lawhub.scss */
 .x-btn-group-header-vertical .x-btn-group-header-body {
   display: -moz-inline-stack;
   display: inline-block;
 }
 
-/* line 2576, ../../resources/sass/lawhub.scss */
+/* line 2577, ../../resources/sass/lawhub.scss */
 .x-window-header-vertical {
   display: -moz-inline-stack;
   display: inline-block;
 }
-/* line 2579, ../../resources/sass/lawhub.scss */
+/* line 2580, ../../resources/sass/lawhub.scss */
 .x-window-header-vertical .x-window-header-body {
   display: -moz-inline-stack;
   display: inline-block;
 }
 
-/* line 2583, ../../resources/sass/lawhub.scss */
+/* line 2584, ../../resources/sass/lawhub.scss */
 .x-panel-header-text {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -3629,56 +3630,56 @@ input, textarea, select {
   white-space: nowrap;
 }
 
-/* line 2590, ../../resources/sass/lawhub.scss */
+/* line 2591, ../../resources/sass/lawhub.scss */
 .x-panel-header-left .x-vml-base, .x-panel-header-right .x-vml-base {
   left: -3px !important;
 }
 
-/* line 2593, ../../resources/sass/lawhub.scss */
+/* line 2594, ../../resources/sass/lawhub.scss */
 .x-panel-body {
   overflow: hidden;
   position: relative;
   font-size: 15px;
 }
 
-/* line 2598, ../../resources/sass/lawhub.scss */
+/* line 2599, ../../resources/sass/lawhub.scss */
 .x-panel-header-vertical .x-surface {
   margin-top: 2px;
 }
 
-/* line 2601, ../../resources/sass/lawhub.scss */
+/* line 2602, ../../resources/sass/lawhub.scss */
 .x-panel-header-plain-vertical .x-surface {
   margin-top: 0;
 }
 
-/* line 2605, ../../resources/sass/lawhub.scss */
+/* line 2606, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-collapsed-border-top {
   border-bottom-width: 1px !important;
 }
-/* line 2607, ../../resources/sass/lawhub.scss */
+/* line 2608, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-collapsed-border-right {
   border-left-width: 1px !important;
 }
-/* line 2609, ../../resources/sass/lawhub.scss */
+/* line 2610, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-collapsed-border-bottom {
   border-top-width: 1px !important;
 }
-/* line 2611, ../../resources/sass/lawhub.scss */
+/* line 2612, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-collapsed-border-left {
   border-right-width: 1px !important;
 }
 
-/* line 2614, ../../resources/sass/lawhub.scss */
+/* line 2615, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-vertical .x-frame-mc {
   background-repeat: repeat-y;
 }
 
-/* line 2617, ../../resources/sass/lawhub.scss */
+/* line 2618, ../../resources/sass/lawhub.scss */
 .x-panel-default {
   border-color: #704214;
 }
 
-/* line 2620, ../../resources/sass/lawhub.scss */
+/* line 2621, ../../resources/sass/lawhub.scss */
 .x-panel-header-default {
   line-height: 24px;
   text-align: center;
@@ -3692,24 +3693,24 @@ input, textarea, select {
   box-shadow: 1px 1px 4px #2b1908;
 }
 
-/* line 2631, ../../resources/sass/lawhub.scss */
+/* line 2632, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-top {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-top-bg.gif");
 }
-/* line 2633, ../../resources/sass/lawhub.scss */
+/* line 2634, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-bottom {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-bottom-bg.gif");
 }
-/* line 2635, ../../resources/sass/lawhub.scss */
+/* line 2636, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-left {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-left-bg.gif");
 }
-/* line 2637, ../../resources/sass/lawhub.scss */
+/* line 2638, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-right {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-right-bg.gif");
 }
 
-/* line 2640, ../../resources/sass/lawhub.scss */
+/* line 2641, ../../resources/sass/lawhub.scss */
 .x-panel-header-text-default {
   color: #704214;
   font-size: 22px;
@@ -3717,27 +3718,27 @@ input, textarea, select {
   font-family: tahoma, arial, verdana, sans-serif;
 }
 
-/* line 2646, ../../resources/sass/lawhub.scss */
+/* line 2647, ../../resources/sass/lawhub.scss */
 .x-panel-body-default {
   background: white;
   border-color: #704214;
   color: #704214;
   line-height: 1.3;
-  border-width: 1px;
+  border-width: 0;
   border-style: solid;
 }
 
-/* line 2655, ../../resources/sass/lawhub.scss */
+/* line 2656, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-window-header-default, .x-panel-collapsed .x-panel-header-default {
   border-color: #704214;
 }
 
-/* line 2658, ../../resources/sass/lawhub.scss */
+/* line 2659, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-vertical {
   border-color: #704214;
 }
 
-/* line 2661, ../../resources/sass/lawhub.scss */
+/* line 2662, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-left, .x-panel-header-default-right {
   background-image: none;
   background-color: #cbddf3;
@@ -3746,7 +3747,7 @@ input, textarea, select {
   background-image: linear-gradient(right, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 2669, ../../resources/sass/lawhub.scss */
+/* line 2670, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-default-top {
   -moz-border-radius-bottomleft: null;
   -webkit-border-bottom-left-radius: null;
@@ -3761,7 +3762,7 @@ input, textarea, select {
   -khtml-border-bottom-right-radius: null;
   border-bottom-right-radius: null;
 }
-/* line 2682, ../../resources/sass/lawhub.scss */
+/* line 2683, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-default-right {
   -moz-border-radius-topleft: null;
   -webkit-border-top-left-radius: null;
@@ -3776,7 +3777,7 @@ input, textarea, select {
   -khtml-border-bottom-left-radius: null;
   border-bottom-left-radius: null;
 }
-/* line 2695, ../../resources/sass/lawhub.scss */
+/* line 2696, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-default-bottom {
   -moz-border-radius-topleft: null;
   -webkit-border-top-left-radius: null;
@@ -3791,7 +3792,7 @@ input, textarea, select {
   -khtml-border-top-right-radius: null;
   border-top-right-radius: null;
 }
-/* line 2708, ../../resources/sass/lawhub.scss */
+/* line 2709, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-panel-header-default-left {
   -moz-border-radius-topright: null;
   -webkit-border-top-right-radius: null;
@@ -3807,12 +3808,12 @@ input, textarea, select {
   border-bottom-right-radius: null;
 }
 
-/* line 2722, ../../resources/sass/lawhub.scss */
+/* line 2723, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-right {
   background-position: top right;
 }
 
-/* line 2725, ../../resources/sass/lawhub.scss */
+/* line 2726, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-top {
   -moz-box-shadow: #f4f8fd 0 1px 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 0 1px 0px 0 inset;
@@ -3820,7 +3821,7 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 1px 0px 0 inset;
 }
 
-/* line 2731, ../../resources/sass/lawhub.scss */
+/* line 2732, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-right {
   -moz-box-shadow: #f4f8fd -1px 0 0px 0 inset;
   -webkit-box-shadow: #f4f8fd -1px 0 0px 0 inset;
@@ -3828,7 +3829,7 @@ input, textarea, select {
   box-shadow: #f4f8fd -1px 0 0px 0 inset;
 }
 
-/* line 2737, ../../resources/sass/lawhub.scss */
+/* line 2738, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-bottom {
   -moz-box-shadow: #f4f8fd 0 -1px 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 0 -1px 0px 0 inset;
@@ -3836,7 +3837,7 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 -1px 0px 0 inset;
 }
 
-/* line 2743, ../../resources/sass/lawhub.scss */
+/* line 2744, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-left {
   -moz-box-shadow: #f4f8fd 1px 0 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 1px 0 0px 0 inset;
@@ -3844,27 +3845,27 @@ input, textarea, select {
   box-shadow: #f4f8fd 1px 0 0px 0 inset;
 }
 
-/* line 2749, ../../resources/sass/lawhub.scss */
+/* line 2750, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-bottom {
   background-position: bottom left;
 }
 
-/* line 2752, ../../resources/sass/lawhub.scss */
+/* line 2753, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-right-tc, .x-panel-header-default-right-mc, .x-panel-header-default-right-bc {
   background-position: right 0;
 }
 
-/* line 2755, ../../resources/sass/lawhub.scss */
+/* line 2756, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-bottom-tc, .x-panel-header-default-bottom-mc, .x-panel-header-default-bottom-bc {
   background-position: 0 bottom;
 }
 
-/* line 2758, ../../resources/sass/lawhub.scss */
+/* line 2759, ../../resources/sass/lawhub.scss */
 .x-panel-default-framed {
   border-color: #704214;
 }
 
-/* line 2761, ../../resources/sass/lawhub.scss */
+/* line 2762, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed {
   font-size: 14px;
   line-height: 15px;
@@ -3882,24 +3883,24 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 1px 0px 0 inset;
 }
 
-/* line 2778, ../../resources/sass/lawhub.scss */
+/* line 2779, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-top {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-top-bg.gif");
 }
-/* line 2780, ../../resources/sass/lawhub.scss */
+/* line 2781, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-bottom {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-bottom-bg.gif");
 }
-/* line 2782, ../../resources/sass/lawhub.scss */
+/* line 2783, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-left {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-left-bg.gif");
 }
-/* line 2784, ../../resources/sass/lawhub.scss */
+/* line 2785, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-right {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-right-bg.gif");
 }
 
-/* line 2787, ../../resources/sass/lawhub.scss */
+/* line 2788, ../../resources/sass/lawhub.scss */
 .x-panel-header-text-default-framed {
   color: #04408c;
   font-size: 14px;
@@ -3907,7 +3908,7 @@ input, textarea, select {
   font-family: tahoma, arial, verdana, sans-serif;
 }
 
-/* line 2793, ../../resources/sass/lawhub.scss */
+/* line 2794, ../../resources/sass/lawhub.scss */
 .x-panel-body-default-framed {
   background: #dfe9f6;
   border-color: #704214;
@@ -3916,17 +3917,17 @@ input, textarea, select {
   border-style: solid;
 }
 
-/* line 2801, ../../resources/sass/lawhub.scss */
+/* line 2802, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-window-header-default-framed, .x-panel-collapsed .x-panel-header-default-framed {
   border-color: #704214;
 }
 
-/* line 2804, ../../resources/sass/lawhub.scss */
+/* line 2805, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-vertical {
   border-color: #704214;
 }
 
-/* line 2807, ../../resources/sass/lawhub.scss */
+/* line 2808, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-left, .x-panel-header-default-framed-right {
   background-image: none;
   background-color: #cbddf3;
@@ -3935,7 +3936,7 @@ input, textarea, select {
   background-image: linear-gradient(right, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 2814, ../../resources/sass/lawhub.scss */
+/* line 2815, ../../resources/sass/lawhub.scss */
 .x-panel-default-framed {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -3949,12 +3950,12 @@ input, textarea, select {
   background-color: #dfe9f6;
 }
 
-/* line 2826, ../../resources/sass/lawhub.scss */
+/* line 2827, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-default-framed-mc {
   background-color: #dfe9f6;
 }
 
-/* line 2830, ../../resources/sass/lawhub.scss */
+/* line 2831, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-default-framed {
   padding: 0 !important;
   border-width: 0 !important;
@@ -3967,24 +3968,24 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000404px 1000404px;
 }
-/* line 2841, ../../resources/sass/lawhub.scss */
+/* line 2842, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-default-framed-tl, .x-nbr .x-panel-default-framed-bl, .x-nbr .x-panel-default-framed-tr, .x-nbr .x-panel-default-framed-br, .x-nbr .x-panel-default-framed-tc, .x-nbr .x-panel-default-framed-bc, .x-nbr .x-panel-default-framed-ml, .x-nbr .x-panel-default-framed-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel/panel-default-framed-corners.gif");
 }
-/* line 2844, ../../resources/sass/lawhub.scss */
+/* line 2845, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-default-framed-ml, .x-nbr .x-panel-default-framed-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel/panel-default-framed-sides.gif");
   background-position: 0 0;
   background-repeat: repeat-y;
 }
-/* line 2849, ../../resources/sass/lawhub.scss */
+/* line 2850, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-default-framed-mc {
   padding: 0px 0px 0px 0px;
 }
 
-/* line 2852, ../../resources/sass/lawhub.scss */
+/* line 2853, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-top {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -4020,13 +4021,13 @@ input, textarea, select {
   background-image: linear-gradient(top, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 2886, ../../resources/sass/lawhub.scss */
+/* line 2887, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-top-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-top-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 2891, ../../resources/sass/lawhub.scss */
+/* line 2892, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-top {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4039,23 +4040,23 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000404px 1000000px;
 }
-/* line 2902, ../../resources/sass/lawhub.scss */
+/* line 2903, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-top-tl, .x-nbr .x-panel-header-default-framed-top-bl, .x-nbr .x-panel-header-default-framed-top-tr, .x-nbr .x-panel-header-default-framed-top-br, .x-nbr .x-panel-header-default-framed-top-tc, .x-nbr .x-panel-header-default-framed-top-bc, .x-nbr .x-panel-header-default-framed-top-ml, .x-nbr .x-panel-header-default-framed-top-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-top-corners.gif");
 }
-/* line 2905, ../../resources/sass/lawhub.scss */
+/* line 2906, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-top-ml, .x-nbr .x-panel-header-default-framed-top-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-top-sides.gif");
   background-position: 0 0;
 }
-/* line 2909, ../../resources/sass/lawhub.scss */
+/* line 2910, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-top-mc {
   padding: 0px 1px 4px 1px;
 }
 
-/* line 2912, ../../resources/sass/lawhub.scss */
+/* line 2913, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-right {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -4091,13 +4092,13 @@ input, textarea, select {
   background-image: linear-gradient(right, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 2946, ../../resources/sass/lawhub.scss */
+/* line 2947, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-right-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-right-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 2951, ../../resources/sass/lawhub.scss */
+/* line 2952, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-right {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4110,24 +4111,24 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000004px 1100400px;
 }
-/* line 2962, ../../resources/sass/lawhub.scss */
+/* line 2963, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-right-tl, .x-nbr .x-panel-header-default-framed-right-bl, .x-nbr .x-panel-header-default-framed-right-tr, .x-nbr .x-panel-header-default-framed-right-br, .x-nbr .x-panel-header-default-framed-right-tc, .x-nbr .x-panel-header-default-framed-right-bc, .x-nbr .x-panel-header-default-framed-right-ml, .x-nbr .x-panel-header-default-framed-right-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-right-corners.gif");
 }
-/* line 2965, ../../resources/sass/lawhub.scss */
+/* line 2966, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-right-tc, .x-nbr .x-panel-header-default-framed-right-bc {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-right-sides.gif");
   background-position: 0 0;
   background-repeat: repeat-x;
 }
-/* line 2970, ../../resources/sass/lawhub.scss */
+/* line 2971, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-right-mc {
   padding: 0px 1px 0px 5px;
 }
 
-/* line 2973, ../../resources/sass/lawhub.scss */
+/* line 2974, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-bottom {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -4163,13 +4164,13 @@ input, textarea, select {
   background-image: linear-gradient(top, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 3007, ../../resources/sass/lawhub.scss */
+/* line 3008, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-bottom-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-bottom-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 3012, ../../resources/sass/lawhub.scss */
+/* line 3013, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-bottom {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4182,23 +4183,23 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000000px 1000404px;
 }
-/* line 3023, ../../resources/sass/lawhub.scss */
+/* line 3024, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-bottom-tl, .x-nbr .x-panel-header-default-framed-bottom-bl, .x-nbr .x-panel-header-default-framed-bottom-tr, .x-nbr .x-panel-header-default-framed-bottom-br, .x-nbr .x-panel-header-default-framed-bottom-tc, .x-nbr .x-panel-header-default-framed-bottom-bc, .x-nbr .x-panel-header-default-framed-bottom-ml, .x-nbr .x-panel-header-default-framed-bottom-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-bottom-corners.gif");
 }
-/* line 3026, ../../resources/sass/lawhub.scss */
+/* line 3027, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-bottom-ml, .x-nbr .x-panel-header-default-framed-bottom-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-bottom-sides.gif");
   background-position: 0 0;
 }
-/* line 3030, ../../resources/sass/lawhub.scss */
+/* line 3031, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-bottom-mc {
   padding: 4px 1px 0px 1px;
 }
 
-/* line 3033, ../../resources/sass/lawhub.scss */
+/* line 3034, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-left {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -4234,13 +4235,13 @@ input, textarea, select {
   background-image: linear-gradient(right, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 3067, ../../resources/sass/lawhub.scss */
+/* line 3068, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-left-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-left-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 3072, ../../resources/sass/lawhub.scss */
+/* line 3073, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-left {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4253,24 +4254,24 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000400px 1100004px;
 }
-/* line 3083, ../../resources/sass/lawhub.scss */
+/* line 3084, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-left-tl, .x-nbr .x-panel-header-default-framed-left-bl, .x-nbr .x-panel-header-default-framed-left-tr, .x-nbr .x-panel-header-default-framed-left-br, .x-nbr .x-panel-header-default-framed-left-tc, .x-nbr .x-panel-header-default-framed-left-bc, .x-nbr .x-panel-header-default-framed-left-ml, .x-nbr .x-panel-header-default-framed-left-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-left-corners.gif");
 }
-/* line 3086, ../../resources/sass/lawhub.scss */
+/* line 3087, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-left-tc, .x-nbr .x-panel-header-default-framed-left-bc {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-left-sides.gif");
   background-position: 0 0;
   background-repeat: repeat-x;
 }
-/* line 3091, ../../resources/sass/lawhub.scss */
+/* line 3092, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-left-mc {
   padding: 0px 5px 0px 1px;
 }
 
-/* line 3094, ../../resources/sass/lawhub.scss */
+/* line 3095, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-top {
   -moz-box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
@@ -4278,7 +4279,7 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
 }
 
-/* line 3100, ../../resources/sass/lawhub.scss */
+/* line 3101, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-right {
   -moz-box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd 0 -1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd 0 -1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset;
@@ -4286,7 +4287,7 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd 0 -1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset;
 }
 
-/* line 3106, ../../resources/sass/lawhub.scss */
+/* line 3107, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-bottom {
   -moz-box-shadow: #f4f8fd 0 -1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 0 -1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
@@ -4294,7 +4295,7 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 -1px 0px 0 inset, #f4f8fd -1px 0 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
 }
 
-/* line 3112, ../../resources/sass/lawhub.scss */
+/* line 3113, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-left {
   -moz-box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd 0 -1px 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
   -webkit-box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd 0 -1px 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
@@ -4302,29 +4303,29 @@ input, textarea, select {
   box-shadow: #f4f8fd 0 1px 0px 0 inset, #f4f8fd 0 -1px 0px 0 inset, #f4f8fd 1px 0 0px 0 inset;
 }
 
-/* line 3118, ../../resources/sass/lawhub.scss */
+/* line 3119, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-bottom {
   background-position: bottom left;
 }
 
-/* line 3122, ../../resources/sass/lawhub.scss */
+/* line 3123, ../../resources/sass/lawhub.scss */
 .x-panel .x-panel-header-default-framed-top {
   border-bottom-width: 1px !important;
 }
-/* line 3124, ../../resources/sass/lawhub.scss */
+/* line 3125, ../../resources/sass/lawhub.scss */
 .x-panel .x-panel-header-default-framed-right {
   border-left-width: 1px !important;
 }
-/* line 3126, ../../resources/sass/lawhub.scss */
+/* line 3127, ../../resources/sass/lawhub.scss */
 .x-panel .x-panel-header-default-framed-bottom {
   border-top-width: 1px !important;
 }
-/* line 3128, ../../resources/sass/lawhub.scss */
+/* line 3129, ../../resources/sass/lawhub.scss */
 .x-panel .x-panel-header-default-framed-left {
   border-right-width: 1px !important;
 }
 
-/* line 3131, ../../resources/sass/lawhub.scss */
+/* line 3132, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-collapsed {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -4334,7 +4335,7 @@ input, textarea, select {
   border-radius: 4px;
 }
 
-/* line 3139, ../../resources/sass/lawhub.scss */
+/* line 3140, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-collapsed-top {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -4370,13 +4371,13 @@ input, textarea, select {
   background-image: linear-gradient(top, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 3173, ../../resources/sass/lawhub.scss */
+/* line 3174, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-collapsed-top-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-top-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 3178, ../../resources/sass/lawhub.scss */
+/* line 3179, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-top {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4389,23 +4390,23 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000404px 1000404px;
 }
-/* line 3189, ../../resources/sass/lawhub.scss */
+/* line 3190, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-top-tl, .x-nbr .x-panel-header-default-framed-collapsed-top-bl, .x-nbr .x-panel-header-default-framed-collapsed-top-tr, .x-nbr .x-panel-header-default-framed-collapsed-top-br, .x-nbr .x-panel-header-default-framed-collapsed-top-tc, .x-nbr .x-panel-header-default-framed-collapsed-top-bc, .x-nbr .x-panel-header-default-framed-collapsed-top-ml, .x-nbr .x-panel-header-default-framed-collapsed-top-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-top-corners.gif");
 }
-/* line 3192, ../../resources/sass/lawhub.scss */
+/* line 3193, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-top-ml, .x-nbr .x-panel-header-default-framed-collapsed-top-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-top-sides.gif");
   background-position: 0 0;
 }
-/* line 3196, ../../resources/sass/lawhub.scss */
+/* line 3197, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-top-mc {
   padding: 0px 1px 0px 1px;
 }
 
-/* line 3199, ../../resources/sass/lawhub.scss */
+/* line 3200, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-collapsed-right {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -4441,13 +4442,13 @@ input, textarea, select {
   background-image: linear-gradient(right, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 3233, ../../resources/sass/lawhub.scss */
+/* line 3234, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-collapsed-right-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-right-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 3238, ../../resources/sass/lawhub.scss */
+/* line 3239, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-right {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4460,24 +4461,24 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000404px 1100404px;
 }
-/* line 3249, ../../resources/sass/lawhub.scss */
+/* line 3250, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-right-tl, .x-nbr .x-panel-header-default-framed-collapsed-right-bl, .x-nbr .x-panel-header-default-framed-collapsed-right-tr, .x-nbr .x-panel-header-default-framed-collapsed-right-br, .x-nbr .x-panel-header-default-framed-collapsed-right-tc, .x-nbr .x-panel-header-default-framed-collapsed-right-bc, .x-nbr .x-panel-header-default-framed-collapsed-right-ml, .x-nbr .x-panel-header-default-framed-collapsed-right-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-right-corners.gif");
 }
-/* line 3252, ../../resources/sass/lawhub.scss */
+/* line 3253, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-right-tc, .x-nbr .x-panel-header-default-framed-collapsed-right-bc {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-right-sides.gif");
   background-position: 0 0;
   background-repeat: repeat-x;
 }
-/* line 3257, ../../resources/sass/lawhub.scss */
+/* line 3258, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-right-mc {
   padding: 0px 1px 0px 1px;
 }
 
-/* line 3260, ../../resources/sass/lawhub.scss */
+/* line 3261, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-collapsed-bottom {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -4513,13 +4514,13 @@ input, textarea, select {
   background-image: linear-gradient(top, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 3294, ../../resources/sass/lawhub.scss */
+/* line 3295, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-collapsed-bottom-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-bottom-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 3299, ../../resources/sass/lawhub.scss */
+/* line 3300, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-bottom {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4532,23 +4533,23 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000404px 1000404px;
 }
-/* line 3310, ../../resources/sass/lawhub.scss */
+/* line 3311, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-bottom-tl, .x-nbr .x-panel-header-default-framed-collapsed-bottom-bl, .x-nbr .x-panel-header-default-framed-collapsed-bottom-tr, .x-nbr .x-panel-header-default-framed-collapsed-bottom-br, .x-nbr .x-panel-header-default-framed-collapsed-bottom-tc, .x-nbr .x-panel-header-default-framed-collapsed-bottom-bc, .x-nbr .x-panel-header-default-framed-collapsed-bottom-ml, .x-nbr .x-panel-header-default-framed-collapsed-bottom-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-bottom-corners.gif");
 }
-/* line 3313, ../../resources/sass/lawhub.scss */
+/* line 3314, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-bottom-ml, .x-nbr .x-panel-header-default-framed-collapsed-bottom-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-bottom-sides.gif");
   background-position: 0 0;
 }
-/* line 3317, ../../resources/sass/lawhub.scss */
+/* line 3318, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-bottom-mc {
   padding: 0px 1px 0px 1px;
 }
 
-/* line 3320, ../../resources/sass/lawhub.scss */
+/* line 3321, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-collapsed-left {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -4584,13 +4585,13 @@ input, textarea, select {
   background-image: linear-gradient(right, #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
 }
 
-/* line 3354, ../../resources/sass/lawhub.scss */
+/* line 3355, ../../resources/sass/lawhub.scss */
 .x-nlg .x-panel-header-default-framed-collapsed-left-mc {
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-left-bg.gif");
   background-color: #cbddf3;
 }
 
-/* line 3359, ../../resources/sass/lawhub.scss */
+/* line 3360, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-left {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4603,40 +4604,40 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1000404px 1100404px;
 }
-/* line 3370, ../../resources/sass/lawhub.scss */
+/* line 3371, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-left-tl, .x-nbr .x-panel-header-default-framed-collapsed-left-bl, .x-nbr .x-panel-header-default-framed-collapsed-left-tr, .x-nbr .x-panel-header-default-framed-collapsed-left-br, .x-nbr .x-panel-header-default-framed-collapsed-left-tc, .x-nbr .x-panel-header-default-framed-collapsed-left-bc, .x-nbr .x-panel-header-default-framed-collapsed-left-ml, .x-nbr .x-panel-header-default-framed-collapsed-left-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-left-corners.gif");
 }
-/* line 3373, ../../resources/sass/lawhub.scss */
+/* line 3374, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-left-tc, .x-nbr .x-panel-header-default-framed-collapsed-left-bc {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/panel-header/panel-header-default-framed-collapsed-left-sides.gif");
   background-position: 0 0;
   background-repeat: repeat-x;
 }
-/* line 3378, ../../resources/sass/lawhub.scss */
+/* line 3379, ../../resources/sass/lawhub.scss */
 .x-nbr .x-panel-header-default-framed-collapsed-left-mc {
   padding: 0px 1px 0px 1px;
 }
 
-/* line 3381, ../../resources/sass/lawhub.scss */
+/* line 3382, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-right-tc, .x-panel-header-default-framed-right-mc, .x-panel-header-default-framed-right-bc {
   background-position: right 0;
 }
 
-/* line 3384, ../../resources/sass/lawhub.scss */
+/* line 3385, ../../resources/sass/lawhub.scss */
 .x-panel-header-default-framed-bottom-tc, .x-panel-header-default-framed-bottom-mc, .x-panel-header-default-framed-bottom-bc {
   background-position: 0 bottom;
 }
 
-/* line 3387, ../../resources/sass/lawhub.scss */
+/* line 3388, ../../resources/sass/lawhub.scss */
 .x-panel-header-plain, .x-panel-body-plain {
   border: 0;
   padding: 0;
 }
 
-/* line 3391, ../../resources/sass/lawhub.scss */
+/* line 3392, ../../resources/sass/lawhub.scss */
 .x-tip {
   position: absolute;
   overflow: visible;
@@ -4652,21 +4653,21 @@ input, textarea, select {
   border-style: solid;
   background-color: #e9f2ff;
 }
-/* line 3396, ../../resources/sass/lawhub.scss */
+/* line 3397, ../../resources/sass/lawhub.scss */
 .x-tip .x-tip-header .x-box-item {
   padding: 3px 3px 0;
 }
-/* line 3398, ../../resources/sass/lawhub.scss */
+/* line 3399, ../../resources/sass/lawhub.scss */
 .x-tip .x-tip-header .x-tool {
   padding: 0px 1px 0 0 !important;
 }
 
-/* line 3411, ../../resources/sass/lawhub.scss */
+/* line 3412, ../../resources/sass/lawhub.scss */
 .x-nlg .x-tip-mc {
   background-color: #e9f2ff;
 }
 
-/* line 3415, ../../resources/sass/lawhub.scss */
+/* line 3416, ../../resources/sass/lawhub.scss */
 .x-nbr .x-tip {
   padding: 0 !important;
   border-width: 0 !important;
@@ -4679,24 +4680,24 @@ input, textarea, select {
   background-color: transparent;
   background-position: 1100303px 1000303px;
 }
-/* line 3426, ../../resources/sass/lawhub.scss */
+/* line 3427, ../../resources/sass/lawhub.scss */
 .x-nbr .x-tip-tl, .x-nbr .x-tip-bl, .x-nbr .x-tip-tr, .x-nbr .x-tip-br, .x-nbr .x-tip-tc, .x-nbr .x-tip-bc, .x-nbr .x-tip-ml, .x-nbr .x-tip-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/tip/tip-corners.gif");
 }
-/* line 3429, ../../resources/sass/lawhub.scss */
+/* line 3430, ../../resources/sass/lawhub.scss */
 .x-nbr .x-tip-ml, .x-nbr .x-tip-mr {
   zoom: 1;
   background-image: url("../../resources/themes/images/default/tip/tip-sides.gif");
   background-position: 0 0;
   background-repeat: repeat-y;
 }
-/* line 3434, ../../resources/sass/lawhub.scss */
+/* line 3435, ../../resources/sass/lawhub.scss */
 .x-nbr .x-tip-mc {
   padding: 0 0 0 0;
 }
 
-/* line 3437, ../../resources/sass/lawhub.scss */
+/* line 3438, ../../resources/sass/lawhub.scss */
 .x-tip-header-text {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -4707,31 +4708,31 @@ input, textarea, select {
   font-weight: bold;
 }
 
-/* line 3446, ../../resources/sass/lawhub.scss */
+/* line 3447, ../../resources/sass/lawhub.scss */
 .x-tip-header-draggable .x-tip-header-text {
   cursor: move;
 }
 
-/* line 3449, ../../resources/sass/lawhub.scss */
+/* line 3450, ../../resources/sass/lawhub.scss */
 .x-tip-body, .x-form-invalid-tip-body {
   overflow: hidden;
   position: relative;
   padding: 3px;
 }
 
-/* line 3454, ../../resources/sass/lawhub.scss */
+/* line 3455, ../../resources/sass/lawhub.scss */
 .x-tip-header, .x-tip-body, .x-form-invalid-tip-body {
   color: #444444;
   font-size: 14px;
   font-weight: normal;
 }
 
-/* line 3459, ../../resources/sass/lawhub.scss */
+/* line 3460, ../../resources/sass/lawhub.scss */
 .x-tip-header a, .x-tip-body a, .x-form-invalid-tip-body a {
   color: #2a2a2a;
 }
 
-/* line 3462, ../../resources/sass/lawhub.scss */
+/* line 3463, ../../resources/sass/lawhub.scss */
 .x-tip-anchor {
   position: absolute;
   overflow: hidden;
@@ -4743,13 +4744,13 @@ input, textarea, select {
   zoom: 1;
 }
 
-/* line 3472, ../../resources/sass/lawhub.scss */
+/* line 3473, ../../resources/sass/lawhub.scss */
 .x-border-box .x-tip-anchor {
   width: 10px;
   height: 10px;
 }
 
-/* line 3476, ../../resources/sass/lawhub.scss */
+/* line 3477, ../../resources/sass/lawhub.scss */
 .x-tip-anchor-top {
   border-top-color: transparent;
   border-left-color: transparent;
@@ -4760,7 +4761,7 @@ input, textarea, select {
   _filter: chroma(color=pink);
 }
 
-/* line 3485, ../../resources/sass/lawhub.scss */
+/* line 3486, ../../resources/sass/lawhub.scss */
 .x-tip-anchor-bottom {
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -4771,7 +4772,7 @@ input, textarea, select {
   _filter: chroma(color=pink);
 }
 
-/* line 3494, ../../resources/sass/lawhub.scss */
+/* line 3495, ../../resources/sass/lawhub.scss */
 .x-tip-anchor-left {
   border-top-color: transparent;
   border-bottom-color: transparent;
@@ -4782,7 +4783,7 @@ input, textarea, select {
   _filter: chroma(color=pink);
 }
 
-/* line 3503, ../../resources/sass/lawhub.scss */
+/* line 3504, ../../resources/sass/lawhub.scss */
 .x-tip-anchor-right {
   border-top-color: transparent;
   border-bottom-color: transparent;
@@ -4793,22 +4794,22 @@ input, textarea, select {
   _filter: chroma(color=pink);
 }
 
-/* line 3512, ../../resources/sass/lawhub.scss */
+/* line 3513, ../../resources/sass/lawhub.scss */
 .x-toolbar {
   font-size: 22px;
   border: 1px solid;
   padding: 2px 0 2px 2px;
 }
-/* line 3516, ../../resources/sass/lawhub.scss */
+/* line 3517, ../../resources/sass/lawhub.scss */
 .x-toolbar .x-form-item-label {
   font-size: 22px;
   line-height: 24px;
 }
-/* line 3519, ../../resources/sass/lawhub.scss */
+/* line 3520, ../../resources/sass/lawhub.scss */
 .x-toolbar .x-toolbar-item {
   margin: 0 2px 0 0;
 }
-/* line 3521, ../../resources/sass/lawhub.scss */
+/* line 3522, ../../resources/sass/lawhub.scss */
 .x-toolbar .x-toolbar-text {
   margin-left: 4px;
   margin-right: 6px;
@@ -4819,7 +4820,7 @@ input, textarea, select {
   font-size: 22px;
   font-weight: normal;
 }
-/* line 3530, ../../resources/sass/lawhub.scss */
+/* line 3531, ../../resources/sass/lawhub.scss */
 .x-toolbar .x-toolbar-separator {
   display: block;
   font-size: 1px;
@@ -4827,7 +4828,7 @@ input, textarea, select {
   cursor: default;
   border: 0;
 }
-/* line 3536, ../../resources/sass/lawhub.scss */
+/* line 3537, ../../resources/sass/lawhub.scss */
 .x-toolbar .x-toolbar-separator-horizontal {
   margin: 0 3px 0 2px;
   height: 14px;
@@ -4836,41 +4837,41 @@ input, textarea, select {
   border-right: 1px solid white;
 }
 
-/* line 3543, ../../resources/sass/lawhub.scss */
+/* line 3544, ../../resources/sass/lawhub.scss */
 .x-quirks .x-ie .x-toolbar .x-toolbar-separator-horizontal {
   width: 2px;
 }
 
-/* line 3546, ../../resources/sass/lawhub.scss */
+/* line 3547, ../../resources/sass/lawhub.scss */
 .x-toolbar-footer {
   background: transparent;
   border: 0px none;
   margin-top: 3px;
   padding: 2px 0 2px 6px;
 }
-/* line 3551, ../../resources/sass/lawhub.scss */
+/* line 3552, ../../resources/sass/lawhub.scss */
 .x-toolbar-footer .x-box-inner {
   border-width: 0;
 }
-/* line 3553, ../../resources/sass/lawhub.scss */
+/* line 3554, ../../resources/sass/lawhub.scss */
 .x-toolbar-footer .x-toolbar-item {
   margin: 0 6px 0 0;
 }
 
-/* line 3556, ../../resources/sass/lawhub.scss */
+/* line 3557, ../../resources/sass/lawhub.scss */
 .x-toolbar-vertical {
   padding: 2px 2px 0 2px;
 }
-/* line 3558, ../../resources/sass/lawhub.scss */
+/* line 3559, ../../resources/sass/lawhub.scss */
 .x-toolbar-vertical .x-toolbar-item {
   margin: 0 0 2px 0;
 }
-/* line 3560, ../../resources/sass/lawhub.scss */
+/* line 3561, ../../resources/sass/lawhub.scss */
 .x-toolbar-vertical .x-toolbar-text {
   margin-top: 4px;
   margin-bottom: 6px;
 }
-/* line 3563, ../../resources/sass/lawhub.scss */
+/* line 3564, ../../resources/sass/lawhub.scss */
 .x-toolbar-vertical .x-toolbar-separator-vertical {
   margin: 2px 5px 3px 5px;
   height: 0px;
@@ -4880,24 +4881,24 @@ input, textarea, select {
   border-bottom: 1px solid white;
 }
 
-/* line 3571, ../../resources/sass/lawhub.scss */
+/* line 3572, ../../resources/sass/lawhub.scss */
 .x-toolbar-scroller {
   padding-left: 0;
 }
 
-/* line 3574, ../../resources/sass/lawhub.scss */
+/* line 3575, ../../resources/sass/lawhub.scss */
 .x-toolbar-spacer {
   width: 2px;
 }
 
-/* line 3577, ../../resources/sass/lawhub.scss */
+/* line 3578, ../../resources/sass/lawhub.scss */
 .x-toolbar-more-icon {
   background-image: url("../../resources/themes/images/default/toolbar/more.gif") !important;
   background-position: 2px center !important;
   background-repeat: no-repeat;
 }
 
-/* line 3582, ../../resources/sass/lawhub.scss */
+/* line 3583, ../../resources/sass/lawhub.scss */
 .x-toolbar-default {
   border-color: #704214;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #704214), color-stop(100%, #b56b20));
@@ -4908,18 +4909,18 @@ input, textarea, select {
   background: linear-gradient(#704214, #b56b20);
 }
 
-/* line 3587, ../../resources/sass/lawhub.scss */
+/* line 3588, ../../resources/sass/lawhub.scss */
 .x-nlg .x-toolbar-default {
   background-image: url("../../resources/themes/images/default/toolbar/toolbar-default-bg.gif") !important;
   background-repeat: repeat-x;
 }
 
-/* line 3591, ../../resources/sass/lawhub.scss */
+/* line 3592, ../../resources/sass/lawhub.scss */
 .x-toolbar-plain {
   border: 0;
 }
 
-/* line 3594, ../../resources/sass/lawhub.scss */
+/* line 3595, ../../resources/sass/lawhub.scss */
 .x-surface {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -4929,12 +4930,12 @@ input, textarea, select {
   *display: inline;
 }
 
-/* line 3602, ../../resources/sass/lawhub.scss */
+/* line 3603, ../../resources/sass/lawhub.scss */
 .rvml {
   behavior: url(#default#VML);
 }
 
-/* line 3605, ../../resources/sass/lawhub.scss */
+/* line 3606, ../../resources/sass/lawhub.scss */
 .x-surface tspan {
   user-select: none;
   -o-user-select: none;
@@ -4943,7 +4944,7 @@ input, textarea, select {
   -webkit-user-select: none;
 }
 
-/* line 3612, ../../resources/sass/lawhub.scss */
+/* line 3613, ../../resources/sass/lawhub.scss */
 .x-vml-sprite {
   position: absolute;
   left: 0;
@@ -4952,7 +4953,7 @@ input, textarea, select {
   height: 1px;
 }
 
-/* line 3619, ../../resources/sass/lawhub.scss */
+/* line 3620, ../../resources/sass/lawhub.scss */
 .x-vml-group {
   position: absolute;
   left: 0;
@@ -4961,7 +4962,7 @@ input, textarea, select {
   height: 1000px;
 }
 
-/* line 3626, ../../resources/sass/lawhub.scss */
+/* line 3627, ../../resources/sass/lawhub.scss */
 .x-vml-measure-span {
   position: absolute;
   left: -9999em;
@@ -4971,7 +4972,7 @@ input, textarea, select {
   display: inline;
 }
 
-/* line 3634, ../../resources/sass/lawhub.scss */
+/* line 3635, ../../resources/sass/lawhub.scss */
 .x-vml-base {
   position: relative;
   top: 0;
@@ -4985,7 +4986,7 @@ input, textarea, select {
   display: inline-block;
 }
 
-/* line 3646, ../../resources/sass/lawhub.scss */
+/* line 3647, ../../resources/sass/lawhub.scss */
 .x-viewport {
   margin: 0;
   padding: 0;
@@ -4993,7 +4994,7 @@ input, textarea, select {
   overflow: hidden;
   height: 100%;
 }
-/* line 3652, ../../resources/sass/lawhub.scss */
+/* line 3653, ../../resources/sass/lawhub.scss */
 .x-viewport body {
   margin: 0;
   padding: 0;
@@ -5002,7 +5003,7 @@ input, textarea, select {
   height: 100%;
 }
 
-/* line 3659, ../../resources/sass/lawhub.scss */
+/* line 3660, ../../resources/sass/lawhub.scss */
 .x-view-selector {
   position: absolute;
   left: 0;
@@ -5016,7 +5017,7 @@ input, textarea, select {
   zoom: 1;
 }
 
-/* line 3671, ../../resources/sass/lawhub.scss */
+/* line 3672, ../../resources/sass/lawhub.scss */
 .x-resizable-handle {
   position: absolute;
   z-index: 100;
@@ -5030,7 +5031,7 @@ input, textarea, select {
   background-color: white;
 }
 
-/* line 3683, ../../resources/sass/lawhub.scss */
+/* line 3684, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-east {
   width: 6px;
   height: 100%;
@@ -5038,12 +5039,12 @@ input, textarea, select {
   top: 0;
 }
 
-/* line 3689, ../../resources/sass/lawhub.scss */
+/* line 3690, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-east {
   cursor: e-resize;
 }
 
-/* line 3692, ../../resources/sass/lawhub.scss */
+/* line 3693, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-south {
   width: 100%;
   height: 6px;
@@ -5051,12 +5052,12 @@ input, textarea, select {
   bottom: 0;
 }
 
-/* line 3698, ../../resources/sass/lawhub.scss */
+/* line 3699, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-south {
   cursor: s-resize;
 }
 
-/* line 3701, ../../resources/sass/lawhub.scss */
+/* line 3702, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-west {
   width: 6px;
   height: 100%;
@@ -5064,12 +5065,12 @@ input, textarea, select {
   top: 0;
 }
 
-/* line 3707, ../../resources/sass/lawhub.scss */
+/* line 3708, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-west {
   cursor: w-resize;
 }
 
-/* line 3710, ../../resources/sass/lawhub.scss */
+/* line 3711, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-north {
   width: 100%;
   height: 6px;
@@ -5077,12 +5078,12 @@ input, textarea, select {
   top: 0;
 }
 
-/* line 3716, ../../resources/sass/lawhub.scss */
+/* line 3717, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-north {
   cursor: n-resize;
 }
 
-/* line 3719, ../../resources/sass/lawhub.scss */
+/* line 3720, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-southeast {
   width: 6px;
   height: 6px;
@@ -5091,12 +5092,12 @@ input, textarea, select {
   z-index: 101;
 }
 
-/* line 3726, ../../resources/sass/lawhub.scss */
+/* line 3727, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-southeast {
   cursor: se-resize;
 }
 
-/* line 3729, ../../resources/sass/lawhub.scss */
+/* line 3730, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-northwest {
   width: 6px;
   height: 6px;
@@ -5105,12 +5106,12 @@ input, textarea, select {
   z-index: 101;
 }
 
-/* line 3736, ../../resources/sass/lawhub.scss */
+/* line 3737, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-northwest {
   cursor: nw-resize;
 }
 
-/* line 3739, ../../resources/sass/lawhub.scss */
+/* line 3740, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-northeast {
   width: 6px;
   height: 6px;
@@ -5119,12 +5120,12 @@ input, textarea, select {
   z-index: 101;
 }
 
-/* line 3746, ../../resources/sass/lawhub.scss */
+/* line 3747, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-northeast {
   cursor: ne-resize;
 }
 
-/* line 3749, ../../resources/sass/lawhub.scss */
+/* line 3750, ../../resources/sass/lawhub.scss */
 .x-resizable-handle-southwest {
   width: 6px;
   height: 6px;
@@ -5133,40 +5134,40 @@ input, textarea, select {
   z-index: 101;
 }
 
-/* line 3756, ../../resources/sass/lawhub.scss */
+/* line 3757, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-southwest {
   cursor: sw-resize;
 }
 
-/* line 3760, ../../resources/sass/lawhub.scss */
+/* line 3761, ../../resources/sass/lawhub.scss */
 .x-ie .x-resizable-handle-east {
   margin-right: -1px;
 }
-/* line 3762, ../../resources/sass/lawhub.scss */
+/* line 3763, ../../resources/sass/lawhub.scss */
 .x-ie .x-resizable-handle-south {
   margin-bottom: -1px;
 }
 
-/* line 3765, ../../resources/sass/lawhub.scss */
+/* line 3766, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle, .x-resizable-pinned .x-resizable-handle {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 3770, ../../resources/sass/lawhub.scss */
+/* line 3771, ../../resources/sass/lawhub.scss */
 .x-window .x-window-handle {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 
-/* line 3775, ../../resources/sass/lawhub.scss */
+/* line 3776, ../../resources/sass/lawhub.scss */
 .x-window-collapsed .x-window-handle {
   display: none;
 }
 
-/* line 3778, ../../resources/sass/lawhub.scss */
+/* line 3779, ../../resources/sass/lawhub.scss */
 .x-resizable-proxy {
   border: 1px dashed #3b5a82;
   position: absolute;
@@ -5176,7 +5177,7 @@ input, textarea, select {
   z-index: 50000;
 }
 
-/* line 3786, ../../resources/sass/lawhub.scss */
+/* line 3787, ../../resources/sass/lawhub.scss */
 .x-resizable-overlay {
   position: absolute;
   left: 0;
@@ -5191,55 +5192,55 @@ input, textarea, select {
   opacity: 0;
 }
 
-/* line 3800, ../../resources/sass/lawhub.scss */
+/* line 3801, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-east, .x-resizable-over .x-resizable-handle-west {
   background-position: left;
   background-image: url("../../resources/themes/images/default/sizer/e-handle.gif");
 }
 
-/* line 3805, ../../resources/sass/lawhub.scss */
+/* line 3806, ../../resources/sass/lawhub.scss */
 .x-resizable-pinned .x-resizable-handle-east, .x-resizable-pinned .x-resizable-handle-west {
   background-position: left;
   background-image: url("../../resources/themes/images/default/sizer/e-handle.gif");
 }
 
-/* line 3810, ../../resources/sass/lawhub.scss */
+/* line 3811, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-south, .x-resizable-over .x-resizable-handle-north {
   background-position: top;
   background-image: url("../../resources/themes/images/default/sizer/s-handle.gif");
 }
 
-/* line 3815, ../../resources/sass/lawhub.scss */
+/* line 3816, ../../resources/sass/lawhub.scss */
 .x-resizable-pinned .x-resizable-handle-south, .x-resizable-pinned .x-resizable-handle-north {
   background-position: top;
   background-image: url("../../resources/themes/images/default/sizer/s-handle.gif");
 }
 
-/* line 3819, ../../resources/sass/lawhub.scss */
+/* line 3820, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-southeast, .x-resizable-pinned .x-resizable-handle-southeast {
   background-position: top left;
   background-image: url("../../resources/themes/images/default/sizer/se-handle.gif");
 }
 
-/* line 3823, ../../resources/sass/lawhub.scss */
+/* line 3824, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-northwest, .x-resizable-pinned .x-resizable-handle-northwest {
   background-position: bottom right;
   background-image: url("../../resources/themes/images/default/sizer/nw-handle.gif");
 }
 
-/* line 3827, ../../resources/sass/lawhub.scss */
+/* line 3828, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-northeast, .x-resizable-pinned .x-resizable-handle-northeast {
   background-position: bottom left;
   background-image: url("../../resources/themes/images/default/sizer/ne-handle.gif");
 }
 
-/* line 3831, ../../resources/sass/lawhub.scss */
+/* line 3832, ../../resources/sass/lawhub.scss */
 .x-resizable-over .x-resizable-handle-southwest, .x-resizable-pinned .x-resizable-handle-southwest {
   background-position: top right;
   background-image: url("../../resources/themes/images/default/sizer/sw-handle.gif");
 }
 
-/* line 3835, ../../resources/sass/lawhub.scss */
+/* line 3836, ../../resources/sass/lawhub.scss */
 .x-splitter .x-collapse-el {
   position: absolute;
   cursor: pointer;
@@ -5247,7 +5248,7 @@ input, textarea, select {
   background-repeat: no-repeat !important;
 }
 
-/* line 3841, ../../resources/sass/lawhub.scss */
+/* line 3842, ../../resources/sass/lawhub.scss */
 .x-layout-split-left, .x-layout-split-right {
   top: 50%;
   margin-top: -17px;
@@ -5255,7 +5256,7 @@ input, textarea, select {
   height: 35px;
 }
 
-/* line 3847, ../../resources/sass/lawhub.scss */
+/* line 3848, ../../resources/sass/lawhub.scss */
 .x-layout-split-top, .x-layout-split-bottom {
   left: 50%;
   width: 35px;
@@ -5263,71 +5264,71 @@ input, textarea, select {
   margin-left: -17px;
 }
 
-/* line 3853, ../../resources/sass/lawhub.scss */
+/* line 3854, ../../resources/sass/lawhub.scss */
 .x-layout-split-left {
   background: no-repeat top right;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-left.gif");
 }
 
-/* line 3857, ../../resources/sass/lawhub.scss */
+/* line 3858, ../../resources/sass/lawhub.scss */
 .x-layout-split-right {
   background: no-repeat top left;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-right.gif");
 }
 
-/* line 3861, ../../resources/sass/lawhub.scss */
+/* line 3862, ../../resources/sass/lawhub.scss */
 .x-layout-split-top {
   background: no-repeat top left;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-top.gif");
 }
 
-/* line 3865, ../../resources/sass/lawhub.scss */
+/* line 3866, ../../resources/sass/lawhub.scss */
 .x-layout-split-bottom {
   background: no-repeat top left;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-bottom.gif");
 }
 
-/* line 3870, ../../resources/sass/lawhub.scss */
+/* line 3871, ../../resources/sass/lawhub.scss */
 .x-splitter-collapsed .x-layout-split-left {
   background: no-repeat top left;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-right.gif");
 }
-/* line 3873, ../../resources/sass/lawhub.scss */
+/* line 3874, ../../resources/sass/lawhub.scss */
 .x-splitter-collapsed .x-layout-split-right {
   background: no-repeat top right;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-left.gif");
 }
-/* line 3876, ../../resources/sass/lawhub.scss */
+/* line 3877, ../../resources/sass/lawhub.scss */
 .x-splitter-collapsed .x-layout-split-top {
   background: no-repeat top left;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-bottom.gif");
 }
-/* line 3879, ../../resources/sass/lawhub.scss */
+/* line 3880, ../../resources/sass/lawhub.scss */
 .x-splitter-collapsed .x-layout-split-bottom {
   background: no-repeat top left;
   background-image: url("../../resources/themes/images/default/util/splitter/mini-top.gif");
 }
 
-/* line 3883, ../../resources/sass/lawhub.scss */
+/* line 3884, ../../resources/sass/lawhub.scss */
 .x-splitter-horizontal {
   cursor: e-resize;
   cursor: row-resize;
   font-size: 1px;
 }
 
-/* line 3888, ../../resources/sass/lawhub.scss */
+/* line 3889, ../../resources/sass/lawhub.scss */
 .x-splitter-vertical {
   cursor: e-resize;
   cursor: col-resize;
   font-size: 1px;
 }
 
-/* line 3893, ../../resources/sass/lawhub.scss */
+/* line 3894, ../../resources/sass/lawhub.scss */
 .x-splitter-collapsed {
   cursor: default;
 }
 
-/* line 3896, ../../resources/sass/lawhub.scss */
+/* line 3897, ../../resources/sass/lawhub.scss */
 .x-splitter-active {
   z-index: 4;
   font-size: 1px;
@@ -5336,14 +5337,14 @@ input, textarea, select {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 3903, ../../resources/sass/lawhub.scss */
+/* line 3904, ../../resources/sass/lawhub.scss */
 .x-splitter-active .x-collapse-el {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
 
-/* line 3908, ../../resources/sass/lawhub.scss */
+/* line 3909, ../../resources/sass/lawhub.scss */
 .x-proxy-el {
   position: absolute;
   background: #b4b4b4;
@@ -5352,53 +5353,53 @@ input, textarea, select {
   opacity: 0.8;
 }
 
-/* line 3915, ../../resources/sass/lawhub.scss */
+/* line 3916, ../../resources/sass/lawhub.scss */
 .x-docked {
   position: absolute;
   z-index: 1;
 }
 
-/* line 3919, ../../resources/sass/lawhub.scss */
+/* line 3920, ../../resources/sass/lawhub.scss */
 .x-docked-top {
   border-bottom-width: 0 !important;
 }
 
-/* line 3922, ../../resources/sass/lawhub.scss */
+/* line 3923, ../../resources/sass/lawhub.scss */
 .x-docked-bottom {
   border-top-width: 0 !important;
 }
 
-/* line 3925, ../../resources/sass/lawhub.scss */
+/* line 3926, ../../resources/sass/lawhub.scss */
 .x-docked-left {
   border-right-width: 0 !important;
 }
 
-/* line 3928, ../../resources/sass/lawhub.scss */
+/* line 3929, ../../resources/sass/lawhub.scss */
 .x-docked-right {
   border-left-width: 0 !important;
 }
 
-/* line 3931, ../../resources/sass/lawhub.scss */
+/* line 3932, ../../resources/sass/lawhub.scss */
 .x-docked-noborder-top {
   border-top-width: 0 !important;
 }
 
-/* line 3934, ../../resources/sass/lawhub.scss */
+/* line 3935, ../../resources/sass/lawhub.scss */
 .x-docked-noborder-right {
   border-right-width: 0 !important;
 }
 
-/* line 3937, ../../resources/sass/lawhub.scss */
+/* line 3938, ../../resources/sass/lawhub.scss */
 .x-docked-noborder-bottom {
   border-bottom-width: 0 !important;
 }
 
-/* line 3940, ../../resources/sass/lawhub.scss */
+/* line 3941, ../../resources/sass/lawhub.scss */
 .x-docked-noborder-left {
   border-left-width: 0 !important;
 }
 
-/* line 3943, ../../resources/sass/lawhub.scss */
+/* line 3944, ../../resources/sass/lawhub.scss */
 .x-box-inner {
   overflow: hidden;
   zoom: 1;
@@ -5407,35 +5408,35 @@ input, textarea, select {
   top: 0;
 }
 
-/* line 3950, ../../resources/sass/lawhub.scss */
+/* line 3951, ../../resources/sass/lawhub.scss */
 .x-box-item {
   position: absolute !important;
   left: 0;
   top: 0;
 }
 
-/* line 3955, ../../resources/sass/lawhub.scss */
+/* line 3956, ../../resources/sass/lawhub.scss */
 .x-box-layout-ct, .x-border-layout-ct {
   overflow: hidden;
   zoom: 1;
 }
 
-/* line 3959, ../../resources/sass/lawhub.scss */
+/* line 3960, ../../resources/sass/lawhub.scss */
 .x-overflow-hidden {
   overflow: hidden !important;
 }
 
-/* line 3962, ../../resources/sass/lawhub.scss */
+/* line 3963, ../../resources/sass/lawhub.scss */
 .x-inline-children > * {
   display: inline-block !important;
 }
 
-/* line 3965, ../../resources/sass/lawhub.scss */
+/* line 3966, ../../resources/sass/lawhub.scss */
 .x-abs-layout-item {
   position: absolute;
 }
 
-/* line 3968, ../../resources/sass/lawhub.scss */
+/* line 3969, ../../resources/sass/lawhub.scss */
 .x-border-layout-ct {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfaf6), color-stop(100%, #ffffff));
   background: -webkit-linear-gradient(top, #fdfaf6, #ffffff);
@@ -5445,17 +5446,17 @@ input, textarea, select {
   background: linear-gradient(top, #fdfaf6, #ffffff);
 }
 
-/* line 3972, ../../resources/sass/lawhub.scss */
+/* line 3973, ../../resources/sass/lawhub.scss */
 .x-border-region-slide-in {
   z-index: 5;
 }
 
-/* line 3975, ../../resources/sass/lawhub.scss */
+/* line 3976, ../../resources/sass/lawhub.scss */
 .x-region-collapsed-placeholder {
   z-index: 4;
 }
 
-/* line 3978, ../../resources/sass/lawhub.scss */
+/* line 3979, ../../resources/sass/lawhub.scss */
 .x-accordion-hd {
   background: #d9e7f8 !important;
   -moz-box-shadow: inset 0 0 0 0 #d9e7f8;
@@ -5466,34 +5467,34 @@ input, textarea, select {
   padding: 4px 5px 5px 5px;
   border-top-color: #f3f7fb !important;
 }
-/* line 3979, ../../resources/sass/lawhub.scss */
+/* line 3980, ../../resources/sass/lawhub.scss */
 .x-accordion-hd .x-panel-header-text {
   color: black;
   font-weight: normal;
 }
-/* line 3987, ../../resources/sass/lawhub.scss */
+/* line 3988, ../../resources/sass/lawhub.scss */
 .x-accordion-hd .x-tool-collapse-top, .x-accordion-hd .x-tool-collapse-right, .x-accordion-hd .x-tool-collapse-bottom, .x-accordion-hd .x-tool-collapse-left {
   background-position: 0 -255px;
 }
-/* line 3989, ../../resources/sass/lawhub.scss */
+/* line 3990, ../../resources/sass/lawhub.scss */
 .x-accordion-hd .x-tool-expand-top, .x-accordion-hd .x-tool-expand-right, .x-accordion-hd .x-tool-expand-bottom, .x-accordion-hd .x-tool-expand-left {
   background-position: 0 -240px;
 }
-/* line 3992, ../../resources/sass/lawhub.scss */
+/* line 3993, ../../resources/sass/lawhub.scss */
 .x-accordion-hd .x-tool-over .x-tool-collapse-top, .x-accordion-hd .x-tool-over .x-tool-collapse-right, .x-accordion-hd .x-tool-over .x-tool-collapse-bottom, .x-accordion-hd .x-tool-over .x-tool-collapse-left {
   background-position: -15px -255px;
 }
-/* line 3994, ../../resources/sass/lawhub.scss */
+/* line 3995, ../../resources/sass/lawhub.scss */
 .x-accordion-hd .x-tool-over .x-tool-expand-top, .x-accordion-hd .x-tool-over .x-tool-expand-right, .x-accordion-hd .x-tool-over .x-tool-expand-bottom, .x-accordion-hd .x-tool-over .x-tool-expand-left {
   background-position: -15px -240px;
 }
 
-/* line 4000, ../../resources/sass/lawhub.scss */
+/* line 4001, ../../resources/sass/lawhub.scss */
 .x-accordion-body {
   border-width: 0 !important;
 }
 
-/* line 4003, ../../resources/sass/lawhub.scss */
+/* line 4004, ../../resources/sass/lawhub.scss */
 .x-accordion-hd-sibling-expanded {
   border-top-color: #704214 !important;
   -moz-box-shadow: inset 0 1px 0 0 #f3f7fb;
@@ -5502,36 +5503,36 @@ input, textarea, select {
   box-shadow: inset 0 1px 0 0 #f3f7fb;
 }
 
-/* line 4010, ../../resources/sass/lawhub.scss */
+/* line 4011, ../../resources/sass/lawhub.scss */
 .x-accordion-hd-last-collapsed {
   border-bottom-color: #d9e7f8 !important;
 }
 
-/* line 4013, ../../resources/sass/lawhub.scss */
+/* line 4014, ../../resources/sass/lawhub.scss */
 .x-frame-tl, .x-frame-tr, .x-frame-tc, .x-frame-bl, .x-frame-br, .x-frame-bc {
   overflow: hidden;
   background-repeat: no-repeat;
 }
 
-/* line 4017, ../../resources/sass/lawhub.scss */
+/* line 4018, ../../resources/sass/lawhub.scss */
 .x-frame-tc, .x-frame-bc {
   background-repeat: repeat-x;
 }
 
-/* line 4020, ../../resources/sass/lawhub.scss */
+/* line 4021, ../../resources/sass/lawhub.scss */
 .x-frame-mc {
   position: relative;
   background-repeat: repeat-x;
   overflow: hidden;
 }
 
-/* line 4025, ../../resources/sass/lawhub.scss */
+/* line 4026, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left {
   float: left;
   height: 100%;
   z-index: 5;
 }
-/* line 4029, ../../resources/sass/lawhub.scss */
+/* line 4030, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left, .x-box-scroller-left .x-tabbar-scroll-left {
   width: 18px;
   position: relative;
@@ -5540,11 +5541,11 @@ input, textarea, select {
   background: transparent no-repeat -18px 0;
   background-image: url("../../resources/themes/images/default/tab-bar/scroll-left.gif");
 }
-/* line 4036, ../../resources/sass/lawhub.scss */
+/* line 4037, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left-hover {
   background-position: 0 0;
 }
-/* line 4038, ../../resources/sass/lawhub.scss */
+/* line 4039, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left-disabled, .x-box-scroller-left .x-tabbar-scroll-left-disabled {
   background-position: -18px 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -5552,38 +5553,38 @@ input, textarea, select {
   opacity: 0.5;
   cursor: default;
 }
-/* line 4044, ../../resources/sass/lawhub.scss */
+/* line 4045, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left {
   background-image: url("../../resources/themes/images/default/toolbar/scroll-left.gif");
   background-position: -14px 0;
 }
-/* line 4047, ../../resources/sass/lawhub.scss */
+/* line 4048, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left-hover {
   background-position: 0 0;
 }
-/* line 4049, ../../resources/sass/lawhub.scss */
+/* line 4050, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left-disabled {
   background-position: -14px 0;
 }
-/* line 4051, ../../resources/sass/lawhub.scss */
+/* line 4052, ../../resources/sass/lawhub.scss */
 .x-box-scroller-left .x-toolbar-scroll-left {
   width: 14px;
   height: 22px;
   border-bottom: 1px solid #8db2e3;
 }
 
-/* line 4056, ../../resources/sass/lawhub.scss */
+/* line 4057, ../../resources/sass/lawhub.scss */
 .x-horizontal-box-overflow-body {
   float: left;
 }
 
-/* line 4059, ../../resources/sass/lawhub.scss */
+/* line 4060, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right {
   float: right;
   height: 100%;
   z-index: 5;
 }
-/* line 4063, ../../resources/sass/lawhub.scss */
+/* line 4064, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right, .x-box-scroller-right .x-tabbar-scroll-right {
   width: 18px;
   position: relative;
@@ -5592,11 +5593,11 @@ input, textarea, select {
   background: transparent no-repeat 0 0;
   background-image: url("../../resources/themes/images/default/tab-bar/scroll-right.gif");
 }
-/* line 4070, ../../resources/sass/lawhub.scss */
+/* line 4071, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right-hover {
   background-position: -18px 0;
 }
-/* line 4072, ../../resources/sass/lawhub.scss */
+/* line 4073, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right-disabled, .x-box-scroller-right .x-tabbar-scroll-right-disabled {
   background-position: 0 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -5604,31 +5605,31 @@ input, textarea, select {
   opacity: 0.5;
   cursor: default;
 }
-/* line 4078, ../../resources/sass/lawhub.scss */
+/* line 4079, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right {
   background-image: url("../../resources/themes/images/default/toolbar/scroll-right.gif");
 }
-/* line 4080, ../../resources/sass/lawhub.scss */
+/* line 4081, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right-hover {
   background-position: -14px 0;
 }
-/* line 4082, ../../resources/sass/lawhub.scss */
+/* line 4083, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right-disabled {
   background-position: 0 0;
 }
-/* line 4084, ../../resources/sass/lawhub.scss */
+/* line 4085, ../../resources/sass/lawhub.scss */
 .x-box-scroller-right .x-toolbar-scroll-right {
   width: 14px;
   height: 22px;
   border-bottom: 1px solid #8db2e3;
 }
 
-/* line 4090, ../../resources/sass/lawhub.scss */
+/* line 4091, ../../resources/sass/lawhub.scss */
 .x-box-scroller-top .x-box-scroller {
   line-height: 0;
   font-size: 0;
 }
-/* line 4093, ../../resources/sass/lawhub.scss */
+/* line 4094, ../../resources/sass/lawhub.scss */
 .x-box-scroller-top .x-menu-scroll-top {
   background: transparent no-repeat center center;
   background-image: url("../../resources/themes/images/default/layout/mini-top.gif");
@@ -5636,12 +5637,12 @@ input, textarea, select {
   cursor: pointer;
 }
 
-/* line 4100, ../../resources/sass/lawhub.scss */
+/* line 4101, ../../resources/sass/lawhub.scss */
 .x-box-scroller-bottom .x-box-scroller {
   line-height: 0;
   font-size: 0;
 }
-/* line 4103, ../../resources/sass/lawhub.scss */
+/* line 4104, ../../resources/sass/lawhub.scss */
 .x-box-scroller-bottom .x-menu-scroll-bottom {
   background: transparent no-repeat center center;
   background-image: url("../../resources/themes/images/default/layout/mini-bottom.gif");
@@ -5649,27 +5650,27 @@ input, textarea, select {
   cursor: pointer;
 }
 
-/* line 4109, ../../resources/sass/lawhub.scss */
+/* line 4110, ../../resources/sass/lawhub.scss */
 .x-box-menu-right {
   float: right;
   padding-right: 2px;
 }
 
-/* line 4113, ../../resources/sass/lawhub.scss */
+/* line 4114, ../../resources/sass/lawhub.scss */
 .x-column {
   float: left;
 }
 
-/* line 4116, ../../resources/sass/lawhub.scss */
+/* line 4117, ../../resources/sass/lawhub.scss */
 .x-ie6 .x-column {
   display: inline;
 }
 
-/* line 4119, ../../resources/sass/lawhub.scss */
+/* line 4120, ../../resources/sass/lawhub.scss */
 .x-tool {
   height: 15px;
 }
-/* line 4121, ../../resources/sass/lawhub.scss */
+/* line 4122, ../../resources/sass/lawhub.scss */
 .x-tool img {
   overflow: hidden;
   width: 15px;
@@ -5681,326 +5682,326 @@ input, textarea, select {
   margin: 0;
 }
 
-/* line 4131, ../../resources/sass/lawhub.scss */
+/* line 4132, ../../resources/sass/lawhub.scss */
 .x-panel-header-horizontal .x-tool, .x-window-header-horizontal .x-tool {
   margin-left: 2px;
 }
 
-/* line 4134, ../../resources/sass/lawhub.scss */
+/* line 4135, ../../resources/sass/lawhub.scss */
 .x-panel-header-vertical .x-tool, .x-window-header-vertical .x-tool {
   margin-bottom: 2px;
 }
 
-/* line 4137, ../../resources/sass/lawhub.scss */
+/* line 4138, ../../resources/sass/lawhub.scss */
 .x-tool-placeholder {
   visibility: hidden;
 }
 
-/* line 4140, ../../resources/sass/lawhub.scss */
+/* line 4141, ../../resources/sass/lawhub.scss */
 .x-tool-toggle {
   background-position: 0 -60px;
 }
 
-/* line 4143, ../../resources/sass/lawhub.scss */
+/* line 4144, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-toggle {
   background-position: -15px -60px;
 }
 
-/* line 4146, ../../resources/sass/lawhub.scss */
+/* line 4147, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-tool-toggle, .x-fieldset-collapsed .x-tool-toggle {
   background-position: 0 -75px;
 }
 
-/* line 4149, ../../resources/sass/lawhub.scss */
+/* line 4150, ../../resources/sass/lawhub.scss */
 .x-panel-collapsed .x-tool-over .x-tool-toggle, .x-fieldset-collapsed .x-tool-over .x-tool-toggle {
   background-position: -15px -75px;
 }
 
-/* line 4152, ../../resources/sass/lawhub.scss */
+/* line 4153, ../../resources/sass/lawhub.scss */
 .x-tool-close {
   background-position: 0 0;
 }
 
-/* line 4155, ../../resources/sass/lawhub.scss */
+/* line 4156, ../../resources/sass/lawhub.scss */
 .x-tool-minimize {
   background-position: 0 -15px;
 }
 
-/* line 4158, ../../resources/sass/lawhub.scss */
+/* line 4159, ../../resources/sass/lawhub.scss */
 .x-tool-maximize {
   background-position: 0 -30px;
 }
 
-/* line 4161, ../../resources/sass/lawhub.scss */
+/* line 4162, ../../resources/sass/lawhub.scss */
 .x-tool-restore {
   background-position: 0 -45px;
 }
 
-/* line 4164, ../../resources/sass/lawhub.scss */
+/* line 4165, ../../resources/sass/lawhub.scss */
 .x-tool-gear {
   background-position: 0 -90px;
 }
 
-/* line 4167, ../../resources/sass/lawhub.scss */
+/* line 4168, ../../resources/sass/lawhub.scss */
 .x-tool-prev {
   background-position: 0 -105px;
 }
 
-/* line 4170, ../../resources/sass/lawhub.scss */
+/* line 4171, ../../resources/sass/lawhub.scss */
 .x-tool-next {
   background-position: 0 -120px;
 }
 
-/* line 4173, ../../resources/sass/lawhub.scss */
+/* line 4174, ../../resources/sass/lawhub.scss */
 .x-tool-pin {
   background-position: 0 -135px;
 }
 
-/* line 4176, ../../resources/sass/lawhub.scss */
+/* line 4177, ../../resources/sass/lawhub.scss */
 .x-tool-unpin {
   background-position: 0 -150px;
 }
 
-/* line 4179, ../../resources/sass/lawhub.scss */
+/* line 4180, ../../resources/sass/lawhub.scss */
 .x-tool-right {
   background-position: 0 -165px;
 }
 
-/* line 4182, ../../resources/sass/lawhub.scss */
+/* line 4183, ../../resources/sass/lawhub.scss */
 .x-tool-left {
   background-position: 0 -180px;
 }
 
-/* line 4185, ../../resources/sass/lawhub.scss */
+/* line 4186, ../../resources/sass/lawhub.scss */
 .x-tool-help {
   background-position: 0 -300px;
 }
 
-/* line 4188, ../../resources/sass/lawhub.scss */
+/* line 4189, ../../resources/sass/lawhub.scss */
 .x-tool-save {
   background-position: 0 -285px;
 }
 
-/* line 4191, ../../resources/sass/lawhub.scss */
+/* line 4192, ../../resources/sass/lawhub.scss */
 .x-tool-search {
   background-position: 0 -270px;
 }
 
-/* line 4194, ../../resources/sass/lawhub.scss */
+/* line 4195, ../../resources/sass/lawhub.scss */
 .x-tool-minus {
   background-position: 0 -255px;
 }
 
-/* line 4197, ../../resources/sass/lawhub.scss */
+/* line 4198, ../../resources/sass/lawhub.scss */
 .x-tool-plus {
   background-position: 0 -240px;
 }
 
-/* line 4200, ../../resources/sass/lawhub.scss */
+/* line 4201, ../../resources/sass/lawhub.scss */
 .x-tool-refresh {
   background-position: 0 -225px;
 }
 
-/* line 4203, ../../resources/sass/lawhub.scss */
+/* line 4204, ../../resources/sass/lawhub.scss */
 .x-tool-up {
   background-position: 0 -210px;
 }
 
-/* line 4206, ../../resources/sass/lawhub.scss */
+/* line 4207, ../../resources/sass/lawhub.scss */
 .x-tool-down {
   background-position: 0 -195px;
 }
 
-/* line 4209, ../../resources/sass/lawhub.scss */
+/* line 4210, ../../resources/sass/lawhub.scss */
 .x-tool-move {
   background-position: 0 -375px;
 }
 
-/* line 4212, ../../resources/sass/lawhub.scss */
+/* line 4213, ../../resources/sass/lawhub.scss */
 .x-tool-resize {
   background-position: 0 -360px;
 }
 
-/* line 4215, ../../resources/sass/lawhub.scss */
+/* line 4216, ../../resources/sass/lawhub.scss */
 .x-tool-collapse {
   background-position: 0 -345px;
 }
 
-/* line 4218, ../../resources/sass/lawhub.scss */
+/* line 4219, ../../resources/sass/lawhub.scss */
 .x-tool-expand {
   background-position: 0 -330px;
 }
 
-/* line 4221, ../../resources/sass/lawhub.scss */
+/* line 4222, ../../resources/sass/lawhub.scss */
 .x-tool-print {
   background-position: 0 -315px;
 }
 
-/* line 4224, ../../resources/sass/lawhub.scss */
+/* line 4225, ../../resources/sass/lawhub.scss */
 .x-tool-expand-bottom, .x-tool-collapse-bottom {
   background-position: 0 -195px;
 }
 
-/* line 4227, ../../resources/sass/lawhub.scss */
+/* line 4228, ../../resources/sass/lawhub.scss */
 .x-tool-expand-top, .x-tool-collapse-top {
   background-position: 0 -210px;
 }
 
-/* line 4230, ../../resources/sass/lawhub.scss */
+/* line 4231, ../../resources/sass/lawhub.scss */
 .x-tool-expand-left, .x-tool-collapse-left {
   background-position: 0 -180px;
 }
 
-/* line 4233, ../../resources/sass/lawhub.scss */
+/* line 4234, ../../resources/sass/lawhub.scss */
 .x-tool-expand-right, .x-tool-collapse-right {
   background-position: 0 -165px;
 }
 
-/* line 4237, ../../resources/sass/lawhub.scss */
+/* line 4238, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-close {
   background-position: -15px 0;
 }
-/* line 4239, ../../resources/sass/lawhub.scss */
+/* line 4240, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-minimize {
   background-position: -15px -15px;
 }
-/* line 4241, ../../resources/sass/lawhub.scss */
+/* line 4242, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-maximize {
   background-position: -15px -30px;
 }
-/* line 4243, ../../resources/sass/lawhub.scss */
+/* line 4244, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-restore {
   background-position: -15px -45px;
 }
-/* line 4245, ../../resources/sass/lawhub.scss */
+/* line 4246, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-gear {
   background-position: -15px -90px;
 }
-/* line 4247, ../../resources/sass/lawhub.scss */
+/* line 4248, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-prev {
   background-position: -15px -105px;
 }
-/* line 4249, ../../resources/sass/lawhub.scss */
+/* line 4250, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-next {
   background-position: -15px -120px;
 }
-/* line 4251, ../../resources/sass/lawhub.scss */
+/* line 4252, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-pin {
   background-position: -15px -135px;
 }
-/* line 4253, ../../resources/sass/lawhub.scss */
+/* line 4254, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-unpin {
   background-position: -15px -150px;
 }
-/* line 4255, ../../resources/sass/lawhub.scss */
+/* line 4256, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-right {
   background-position: -15px -165px;
 }
-/* line 4257, ../../resources/sass/lawhub.scss */
+/* line 4258, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-left {
   background-position: -15px -180px;
 }
-/* line 4259, ../../resources/sass/lawhub.scss */
+/* line 4260, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-down {
   background-position: -15px -195px;
 }
-/* line 4261, ../../resources/sass/lawhub.scss */
+/* line 4262, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-up {
   background-position: -15px -210px;
 }
-/* line 4263, ../../resources/sass/lawhub.scss */
+/* line 4264, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-refresh {
   background-position: -15px -225px;
 }
-/* line 4265, ../../resources/sass/lawhub.scss */
+/* line 4266, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-plus {
   background-position: -15px -240px;
 }
-/* line 4267, ../../resources/sass/lawhub.scss */
+/* line 4268, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-minus {
   background-position: -15px -255px;
 }
-/* line 4269, ../../resources/sass/lawhub.scss */
+/* line 4270, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-search {
   background-position: -15px -270px;
 }
-/* line 4271, ../../resources/sass/lawhub.scss */
+/* line 4272, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-save {
   background-position: -15px -285px;
 }
-/* line 4273, ../../resources/sass/lawhub.scss */
+/* line 4274, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-help {
   background-position: -15px -300px;
 }
-/* line 4275, ../../resources/sass/lawhub.scss */
+/* line 4276, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-print {
   background-position: -15px -315px;
 }
-/* line 4277, ../../resources/sass/lawhub.scss */
+/* line 4278, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-expand {
   background-position: -15px -330px;
 }
-/* line 4279, ../../resources/sass/lawhub.scss */
+/* line 4280, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-collapse {
   background-position: -15px -345px;
 }
-/* line 4281, ../../resources/sass/lawhub.scss */
+/* line 4282, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-resize {
   background-position: -15px -360px;
 }
-/* line 4283, ../../resources/sass/lawhub.scss */
+/* line 4284, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-move {
   background-position: -15px -375px;
 }
-/* line 4285, ../../resources/sass/lawhub.scss */
+/* line 4286, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-expand-bottom, .x-tool-over .x-tool-collapse-bottom {
   background-position: -15px -195px;
 }
-/* line 4287, ../../resources/sass/lawhub.scss */
+/* line 4288, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-expand-top, .x-tool-over .x-tool-collapse-top {
   background-position: -15px -210px;
 }
-/* line 4289, ../../resources/sass/lawhub.scss */
+/* line 4290, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-expand-left, .x-tool-over .x-tool-collapse-left {
   background-position: -15px -180px;
 }
-/* line 4291, ../../resources/sass/lawhub.scss */
+/* line 4292, ../../resources/sass/lawhub.scss */
 .x-tool-over .x-tool-expand-right, .x-tool-over .x-tool-collapse-right {
   background-position: -15px -165px;
 }
 
-/* line 4294, ../../resources/sass/lawhub.scss */
+/* line 4295, ../../resources/sass/lawhub.scss */
 .x-horizontal-scroller-present .x-grid-body {
   border-bottom-width: 0px;
 }
 
-/* line 4297, ../../resources/sass/lawhub.scss */
+/* line 4298, ../../resources/sass/lawhub.scss */
 .x-vertical-scroller-present .x-grid-body {
   border-right-width: 0px;
 }
 
-/* line 4300, ../../resources/sass/lawhub.scss */
+/* line 4301, ../../resources/sass/lawhub.scss */
 .x-scroller {
   overflow: hidden;
 }
 
-/* line 4303, ../../resources/sass/lawhub.scss */
+/* line 4304, ../../resources/sass/lawhub.scss */
 .x-scroller-vertical {
   border: 1px solid #704214;
   border-top-color: #c5c5c5;
 }
 
-/* line 4307, ../../resources/sass/lawhub.scss */
+/* line 4308, ../../resources/sass/lawhub.scss */
 .x-scroller-horizontal {
   border: 1px solid #704214;
 }
 
-/* line 4310, ../../resources/sass/lawhub.scss */
+/* line 4311, ../../resources/sass/lawhub.scss */
 .x-vertical-scroller-present .x-scroller-horizontal {
   border-right-width: 0px;
 }
 
-/* line 4313, ../../resources/sass/lawhub.scss */
+/* line 4314, ../../resources/sass/lawhub.scss */
 .x-scroller-ct {
   overflow: hidden;
   position: absolute;
@@ -6015,237 +6016,259 @@ input, textarea, select {
   -webkit-box-sizing: content-box !important;
 }
 
-/* line 4326, ../../resources/sass/lawhub.scss */
+/* line 4327, ../../resources/sass/lawhub.scss */
 .x-scroller-vertical .x-scroller-ct {
   overflow-y: scroll;
 }
 
-/* line 4329, ../../resources/sass/lawhub.scss */
+/* line 4330, ../../resources/sass/lawhub.scss */
 .x-scroller-horizontal .x-scroller-ct {
   overflow-x: scroll;
 }
 
-/* line 4333, ../../resources/sass/lawhub.scss */
+/* line 4334, ../../resources/sass/lawhub.scss */
 .x-html html, .x-html address, .x-html blockquote, .x-html body, .x-html dd, .x-html div, .x-html dl, .x-html dt, .x-html fieldset, .x-html form, .x-html frame, .x-html frameset, .x-html h1, .x-html h2, .x-html h3, .x-html h4, .x-html h5, .x-html h6, .x-html noframes, .x-html ol, .x-html p, .x-html ul, .x-html center, .x-html dir, .x-html hr, .x-html menu, .x-html pre {
   display: block;
 }
-/* line 4335, ../../resources/sass/lawhub.scss */
+/* line 4336, ../../resources/sass/lawhub.scss */
 .x-html li {
   display: list-item;
   list-style: disc;
 }
-/* line 4338, ../../resources/sass/lawhub.scss */
+/* line 4339, ../../resources/sass/lawhub.scss */
 .x-html head {
   display: none;
 }
-/* line 4340, ../../resources/sass/lawhub.scss */
+/* line 4341, ../../resources/sass/lawhub.scss */
 .x-html table {
   display: table;
 }
-/* line 4342, ../../resources/sass/lawhub.scss */
+/* line 4343, ../../resources/sass/lawhub.scss */
 .x-html tr {
   display: table-row;
 }
-/* line 4344, ../../resources/sass/lawhub.scss */
+/* line 4345, ../../resources/sass/lawhub.scss */
 .x-html thead {
   display: table-header-group;
 }
-/* line 4346, ../../resources/sass/lawhub.scss */
+/* line 4347, ../../resources/sass/lawhub.scss */
 .x-html tbody {
   display: table-row-group;
 }
-/* line 4348, ../../resources/sass/lawhub.scss */
+/* line 4349, ../../resources/sass/lawhub.scss */
 .x-html tfoot {
   display: table-footer-group;
 }
-/* line 4350, ../../resources/sass/lawhub.scss */
+/* line 4351, ../../resources/sass/lawhub.scss */
 .x-html col {
   display: table-column;
 }
-/* line 4352, ../../resources/sass/lawhub.scss */
+/* line 4353, ../../resources/sass/lawhub.scss */
 .x-html colgroup {
   display: table-column-group;
 }
-/* line 4354, ../../resources/sass/lawhub.scss */
+/* line 4355, ../../resources/sass/lawhub.scss */
 .x-html td, .x-html th {
   display: table-cell;
 }
-/* line 4356, ../../resources/sass/lawhub.scss */
+/* line 4357, ../../resources/sass/lawhub.scss */
 .x-html caption {
   display: table-caption;
 }
-/* line 4358, ../../resources/sass/lawhub.scss */
+/* line 4359, ../../resources/sass/lawhub.scss */
 .x-html th {
   font-weight: bolder;
   text-align: center;
 }
-/* line 4361, ../../resources/sass/lawhub.scss */
+/* line 4362, ../../resources/sass/lawhub.scss */
 .x-html caption {
   text-align: center;
 }
-/* line 4363, ../../resources/sass/lawhub.scss */
+/* line 4364, ../../resources/sass/lawhub.scss */
 .x-html body {
   margin: 8px;
 }
-/* line 4365, ../../resources/sass/lawhub.scss */
+/* line 4366, ../../resources/sass/lawhub.scss */
 .x-html h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 4368, ../../resources/sass/lawhub.scss */
+/* line 4369, ../../resources/sass/lawhub.scss */
 .x-html h2 {
   font-size: 1.5em;
   margin: 0.75em 0;
 }
-/* line 4371, ../../resources/sass/lawhub.scss */
+/* line 4372, ../../resources/sass/lawhub.scss */
 .x-html h3 {
   font-size: 1.17em;
   margin: 0.83em 0;
 }
-/* line 4374, ../../resources/sass/lawhub.scss */
+/* line 4375, ../../resources/sass/lawhub.scss */
 .x-html h4, .x-html p, .x-html blockquote, .x-html ul, .x-html fieldset, .x-html form, .x-html ol, .x-html dl, .x-html dir, .x-html menu {
   margin: 1.12em 0;
 }
-/* line 4376, ../../resources/sass/lawhub.scss */
+/* line 4377, ../../resources/sass/lawhub.scss */
 .x-html h5 {
   font-size: 0.83em;
   margin: 1.5em 0;
 }
-/* line 4379, ../../resources/sass/lawhub.scss */
+/* line 4380, ../../resources/sass/lawhub.scss */
 .x-html h6 {
   font-size: 0.75em;
   margin: 1.67em 0;
 }
-/* line 4382, ../../resources/sass/lawhub.scss */
+/* line 4383, ../../resources/sass/lawhub.scss */
 .x-html h1, .x-html h2, .x-html h3, .x-html h4, .x-html h5, .x-html h6, .x-html b, .x-html strong {
   font-weight: bolder;
 }
-/* line 4384, ../../resources/sass/lawhub.scss */
+/* line 4385, ../../resources/sass/lawhub.scss */
 .x-html blockquote {
   margin-left: 40px;
   margin-right: 40px;
 }
-/* line 4387, ../../resources/sass/lawhub.scss */
+/* line 4388, ../../resources/sass/lawhub.scss */
 .x-html i, .x-html cite, .x-html em, .x-html var, .x-html address {
   font-style: italic;
 }
-/* line 4389, ../../resources/sass/lawhub.scss */
+/* line 4390, ../../resources/sass/lawhub.scss */
 .x-html pre, .x-html tt, .x-html code, .x-html kbd, .x-html samp {
   font-family: monospace;
 }
-/* line 4391, ../../resources/sass/lawhub.scss */
+/* line 4392, ../../resources/sass/lawhub.scss */
 .x-html pre {
   white-space: pre;
 }
-/* line 4393, ../../resources/sass/lawhub.scss */
+/* line 4394, ../../resources/sass/lawhub.scss */
 .x-html button, .x-html textarea, .x-html input, .x-html select {
   display: inline-block;
 }
-/* line 4395, ../../resources/sass/lawhub.scss */
+/* line 4396, ../../resources/sass/lawhub.scss */
 .x-html big {
   font-size: 1.17em;
 }
-/* line 4397, ../../resources/sass/lawhub.scss */
+/* line 4398, ../../resources/sass/lawhub.scss */
 .x-html small, .x-html sub, .x-html sup {
   font-size: 0.83em;
 }
-/* line 4399, ../../resources/sass/lawhub.scss */
+/* line 4400, ../../resources/sass/lawhub.scss */
 .x-html sub {
   vertical-align: sub;
 }
-/* line 4401, ../../resources/sass/lawhub.scss */
+/* line 4402, ../../resources/sass/lawhub.scss */
 .x-html sup {
   vertical-align: super;
 }
-/* line 4403, ../../resources/sass/lawhub.scss */
+/* line 4404, ../../resources/sass/lawhub.scss */
 .x-html table {
   border-spacing: 2px;
 }
-/* line 4405, ../../resources/sass/lawhub.scss */
+/* line 4406, ../../resources/sass/lawhub.scss */
 .x-html thead, .x-html tbody, .x-html tfoot {
   vertical-align: middle;
 }
-/* line 4407, ../../resources/sass/lawhub.scss */
+/* line 4408, ../../resources/sass/lawhub.scss */
 .x-html td, .x-html th {
   vertical-align: inherit;
 }
-/* line 4409, ../../resources/sass/lawhub.scss */
+/* line 4410, ../../resources/sass/lawhub.scss */
 .x-html s, .x-html strike, .x-html del {
   text-decoration: line-through;
 }
-/* line 4411, ../../resources/sass/lawhub.scss */
+/* line 4412, ../../resources/sass/lawhub.scss */
 .x-html hr {
   border: 1px inset;
 }
-/* line 4413, ../../resources/sass/lawhub.scss */
+/* line 4414, ../../resources/sass/lawhub.scss */
 .x-html ol, .x-html ul, .x-html dir, .x-html menu, .x-html dd {
   margin-left: 40px;
 }
-/* line 4415, ../../resources/sass/lawhub.scss */
+/* line 4416, ../../resources/sass/lawhub.scss */
 .x-html ul, .x-html menu, .x-html dir {
   list-style-type: disc;
 }
-/* line 4417, ../../resources/sass/lawhub.scss */
+/* line 4418, ../../resources/sass/lawhub.scss */
 .x-html ol {
   list-style-type: decimal;
 }
-/* line 4419, ../../resources/sass/lawhub.scss */
+/* line 4420, ../../resources/sass/lawhub.scss */
 .x-html ol ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 4423, ../../resources/sass/lawhub.scss */
+/* line 4424, ../../resources/sass/lawhub.scss */
 .x-html ul ol, .x-html ul ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 4426, ../../resources/sass/lawhub.scss */
+/* line 4427, ../../resources/sass/lawhub.scss */
 .x-html ol ol {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 4429, ../../resources/sass/lawhub.scss */
+/* line 4430, ../../resources/sass/lawhub.scss */
 .x-html u, .x-html ins {
   text-decoration: underline;
 }
-/* line 4431, ../../resources/sass/lawhub.scss */
+/* line 4432, ../../resources/sass/lawhub.scss */
 .x-html br:before {
   content: "\A";
 }
-/* line 4433, ../../resources/sass/lawhub.scss */
+/* line 4434, ../../resources/sass/lawhub.scss */
 .x-html :before, .x-html :after {
   white-space: pre-line;
 }
-/* line 4435, ../../resources/sass/lawhub.scss */
+/* line 4436, ../../resources/sass/lawhub.scss */
 .x-html center {
   text-align: center;
 }
-/* line 4437, ../../resources/sass/lawhub.scss */
+/* line 4438, ../../resources/sass/lawhub.scss */
 .x-html :link, .x-html :visited {
   text-decoration: underline;
 }
-/* line 4439, ../../resources/sass/lawhub.scss */
+/* line 4440, ../../resources/sass/lawhub.scss */
 .x-html :focus {
   outline: invert dotted thin;
 }
-/* line 4442, ../../resources/sass/lawhub.scss */
+/* line 4443, ../../resources/sass/lawhub.scss */
 .x-html BDO[DIR="ltr"] {
   direction: ltr;
   unicode-bidi: bidi-override;
 }
-/* line 4445, ../../resources/sass/lawhub.scss */
+/* line 4446, ../../resources/sass/lawhub.scss */
 .x-html BDO[DIR="rtl"] {
   direction: rtl;
   unicode-bidi: bidi-override;
 }
 
 /* line 4450, ../../resources/sass/lawhub.scss */
+.governmentsummary {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background: linear-gradient(top, #ffffff, #eeeeee);
+}
+/* line 4452, ../../resources/sass/lawhub.scss */
+.governmentsummary .x-panel-body {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: bold;
+  background: none;
+}
+
+/* line 4460, ../../resources/sass/lawhub.scss */
 .lh-govt-strip .lh-govt {
   cursor: pointer;
   font-weight: bold;
   text-align: center;
 }
-/* line 4454, ../../resources/sass/lawhub.scss */
+/* line 4464, ../../resources/sass/lawhub.scss */
+.lh-govt-strip .lh-govt.active .x-panel-body {
+  background: white !important;
+  color: #704214;
+}
+/* line 4468, ../../resources/sass/lawhub.scss */
 .lh-govt-strip .lh-govt.labour .x-panel-body {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ce0808), color-stop(100%, #7f0505));
   background: -webkit-linear-gradient(top, #ce0808, #7f0505);
@@ -6254,7 +6277,7 @@ input, textarea, select {
   background: -ms-linear-gradient(top, #ce0808, #7f0505);
   background: linear-gradient(top, #ce0808, #7f0505);
 }
-/* line 4457, ../../resources/sass/lawhub.scss */
+/* line 4471, ../../resources/sass/lawhub.scss */
 .lh-govt-strip .lh-govt.national .x-panel-body {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6699cc), color-stop(100%, #3870a8));
   background: -webkit-linear-gradient(top, #6699cc, #3870a8);
@@ -6263,7 +6286,7 @@ input, textarea, select {
   background: -ms-linear-gradient(top, #6699cc, #3870a8);
   background: linear-gradient(top, #6699cc, #3870a8);
 }
-/* line 4460, ../../resources/sass/lawhub.scss */
+/* line 4474, ../../resources/sass/lawhub.scss */
 .lh-govt-strip .lh-govt .x-panel-body {
   color: white;
   line-height: 36px;
@@ -6275,7 +6298,7 @@ input, textarea, select {
   background: linear-gradient(top, #cecece, #a5a5a5);
 }
 
-/* line 4468, ../../resources/sass/lawhub.scss */
+/* line 4482, ../../resources/sass/lawhub.scss */
 .delta {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
   background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
@@ -6287,32 +6310,32 @@ input, textarea, select {
   padding: 1em;
   line-height: 1.4em;
 }
-/* line 4473, ../../resources/sass/lawhub.scss */
+/* line 4487, ../../resources/sass/lawhub.scss */
 .delta > div {
   padding: 1em;
 }
-/* line 4476, ../../resources/sass/lawhub.scss */
+/* line 4490, ../../resources/sass/lawhub.scss */
 .delta h2, .delta h3, .delta h4 {
   margin: 0.5em 0 0.2em;
 }
 
-/* line 4480, ../../resources/sass/lawhub.scss */
+/* line 4494, ../../resources/sass/lawhub.scss */
 .deleted {
   background-color: #FDD;
 }
 
-/* line 4483, ../../resources/sass/lawhub.scss */
+/* line 4497, ../../resources/sass/lawhub.scss */
 .inserted {
   background-color: #DFD;
 }
 
-/* line 4487, ../../resources/sass/lawhub.scss */
+/* line 4501, ../../resources/sass/lawhub.scss */
 body {
   min-height: 400px;
   background: white url(/images/lawhub.png) no-repeat center center;
 }
 
-/* line 4493, ../../resources/sass/lawhub.scss */
+/* line 4507, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body {
   font-size: 20px;
   line-height: 1.6;
@@ -6325,12 +6348,12 @@ body {
   background: -ms-linear-gradient(#fdfaf6, #f7e5d3);
   background: linear-gradient(#fdfaf6, #f7e5d3);
 }
-/* line 4499, ../../resources/sass/lawhub.scss */
+/* line 4513, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body h1 {
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-/* line 4503, ../../resources/sass/lawhub.scss */
+/* line 4517, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body p {
   margin: 0 0 1em;
 }

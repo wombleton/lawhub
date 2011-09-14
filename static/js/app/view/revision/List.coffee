@@ -53,7 +53,7 @@ Ext.define('LH.view.revision.List',
     _.each(records, (record) ->
       @panel.add(
         html: record.get('html')
-        title: "#{record.get('title')} @ #{Ext.Date.format(record.get('updated'), 'j M Y')}"
+        title: "#{record.get('title')} @ #{Ext.Date.format(record.get('updated'), 'j M Y')} <a href=\"#{record.get('file_path')}\">source</a>"
         xtype: 'revisionview'
       )
     , @)
