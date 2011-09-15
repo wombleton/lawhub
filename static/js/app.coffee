@@ -7,6 +7,7 @@ Ext.application(
     'overview'
   ]
   launch: ->
+    Ext.History.init()
     Ext.create('Ext.container.Viewport',
       items: [
         {

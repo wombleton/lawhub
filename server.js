@@ -1,5 +1,8 @@
 cs = require('coffee-script')
 cluster = require('cluster')
 
-cluster('app').listen(80)
-//require('./app').listen(3000)
+if (process.env.NODE_ENV === 'production') {
+  cluster('app').listen(80);
+} else {
+  require('./app').listen(3000);
+}

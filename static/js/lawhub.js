@@ -403,7 +403,7 @@
     border: false,
     doTitleSearch: function(el) {
       this.layout.setActiveItem(2);
-      return this.query('revisionlist')[0].doSearch("title:\"" + (el.lastSelected.get('title').replace(/\(.*\)/, '')) + "\"");
+      return this.query('revisionlist')[0].doSearch("title:\"" + (el.lastSelected.get('title')) + "\"");
     },
     doSearch: function(el) {
       this.layout.setActiveItem(2);
@@ -656,6 +656,7 @@
   Ext.define('LH.view.revision.View', {
     alias: 'widget.revisionview',
     border: false,
+    cls: 'revisionview',
     extend: 'Ext.panel.Panel',
     layout: {
       align: 'stretch',
@@ -723,6 +724,7 @@
     controllers: ['Governments', 'Revisions'],
     views: ['overview'],
     launch: function() {
+      Ext.History.init();
       return Ext.create('Ext.container.Viewport', {
         items: [
           {

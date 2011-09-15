@@ -6291,77 +6291,75 @@ input, textarea, select {
   background: linear-gradient(top, #cecece, #a5a5a5);
 }
 
-/* line 4470, ../../resources/sass/lawhub.scss */
+/* line 4472, ../../resources/sass/lawhub.scss */
 .delta {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
-  background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
-  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
-  background: -o-linear-gradient(top, #ffffff, #eeeeee);
-  background: -ms-linear-gradient(top, #ffffff, #eeeeee);
-  background: linear-gradient(top, #ffffff, #eeeeee);
-  margin: 0 0 0.5em;
+  background-color: #fff;
+  -moz-box-shadow: 3px 3px 5px #704214;
+  -webkit-box-shadow: 3px 3px 5px #704214;
+  -o-box-shadow: 3px 3px 5px #704214;
+  box-shadow: 3px 3px 5px #704214;
+  margin: 0 2em 2em;
   padding: 1em;
   line-height: 1.4em;
 }
-/* line 4475, ../../resources/sass/lawhub.scss */
+/* line 4478, ../../resources/sass/lawhub.scss */
 .delta .inserted, .delta .deleted, .delta .preamble, .delta .postscript {
   padding: 1em;
 }
-/* line 4478, ../../resources/sass/lawhub.scss */
+/* line 4481, ../../resources/sass/lawhub.scss */
 .delta ul {
   margin-left: 1em;
 }
-/* line 4481, ../../resources/sass/lawhub.scss */
+/* line 4484, ../../resources/sass/lawhub.scss */
 .delta h2, .delta h3, .delta h4 {
   margin: 0.5em 0 0.2em;
 }
 
-/* line 4485, ../../resources/sass/lawhub.scss */
+/* line 4488, ../../resources/sass/lawhub.scss */
 .deleted {
   background-color: #FDD;
 }
 
-/* line 4488, ../../resources/sass/lawhub.scss */
+/* line 4491, ../../resources/sass/lawhub.scss */
 .inserted {
   background-color: #DFD;
 }
 
-/* line 4492, ../../resources/sass/lawhub.scss */
+/* line 4495, ../../resources/sass/lawhub.scss */
 body {
   min-height: 400px;
   background: white url(/images/lawhub.png) no-repeat center center;
 }
 
-/* line 4498, ../../resources/sass/lawhub.scss */
+/* line 4501, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   line-height: 1.6;
-  margin: 8px;
-  padding: 1em;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #fdfaf6), color-stop(100%, #f7e5d3));
-  background: -webkit-radial-gradient(#fdfaf6, #f7e5d3);
-  background: -moz-radial-gradient(#fdfaf6, #f7e5d3);
-  background: -o-radial-gradient(#fdfaf6, #f7e5d3);
-  background: -ms-radial-gradient(#fdfaf6, #f7e5d3);
-  background: radial-gradient(#fdfaf6, #f7e5d3);
+  margin: 3em;
+  padding: 2em;
+  background: #f7f4d3;
+  -moz-box-shadow: 3px 3px 5px #704214;
+  -webkit-box-shadow: 3px 3px 5px #704214;
+  -o-box-shadow: 3px 3px 5px #704214;
+  box-shadow: 3px 3px 5px #704214;
 }
-/* line 4505, ../../resources/sass/lawhub.scss */
+/* line 4509, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body em {
   color: black;
   font-size: 1.1em;
 }
-/* line 4509, ../../resources/sass/lawhub.scss */
+/* line 4513, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body h1 {
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-/* line 4513, ../../resources/sass/lawhub.scss */
+/* line 4517, ../../resources/sass/lawhub.scss */
 .introduction .x-panel-body p {
   margin: 0 0 1em;
 }
 
-/* line 4521, ../../resources/sass/lawhub.scss */
+/* line 4525, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #head {
   color: white;
   padding: 6px;
@@ -6373,32 +6371,32 @@ body {
   background: -ms-linear-gradient(top, #004c66, #002e3d);
   background: linear-gradient(top, #004c66, #002e3d);
 }
-/* line 4526, ../../resources/sass/lawhub.scss */
+/* line 4530, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #head #back {
   top: 0;
   right: 8px;
   position: absolute;
 }
-/* line 4532, ../../resources/sass/lawhub.scss */
+/* line 4536, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content {
   padding: 6px;
 }
-/* line 4534, ../../resources/sass/lawhub.scss */
+/* line 4538, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content #print-ss {
   display: none;
 }
-/* line 4537, ../../resources/sass/lawhub.scss */
+/* line 4541, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content #hero-ss {
   float: right;
   margin: 12px;
   width: 180px;
   td-line-height: 1px;
 }
-/* line 4544, ../../resources/sass/lawhub.scss */
+/* line 4548, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content #hero-ss img {
   width: 100%;
 }
-/* line 4547, ../../resources/sass/lawhub.scss */
+/* line 4551, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content #hero-ss p {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #004c66), color-stop(100%, #002e3d));
   background: -webkit-linear-gradient(top, #004c66, #002e3d);
@@ -6412,17 +6410,17 @@ body {
   text-align: center;
   padding: 3px 6px;
 }
-/* line 4556, ../../resources/sass/lawhub.scss */
+/* line 4560, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content h3 {
   font-size: 1.2em;
   margin: 0.5em 0 0.2em;
 }
-/* line 4561, ../../resources/sass/lawhub.scss */
+/* line 4565, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content p {
   line-height: 1.6em;
   margin: 0.5em 0 0.2em;
 }
-/* line 4565, ../../resources/sass/lawhub.scss */
+/* line 4569, ../../resources/sass/lawhub.scss */
 .teara .x-panel-body .container #content #footer-citation {
   padding: 6px;
   font-size: 0.85em;

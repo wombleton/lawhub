@@ -36,8 +36,10 @@ server.get('/revisions/:key.json', (req, res) ->
             $lt: end
         }
         if title
+          debugger
           find = _.extend(find,
-            title: new RegExp(title, 'i')
+            title:
+              $all: _.map(title.replace(/[^a-z0-9 ]/gi, '').split(' '), (tok) -> new RegExp(tok, 'i'))
           )
         if keywords
           find = _.extend(find,
@@ -70,7 +72,7 @@ server.get('/revisions/:key.json', (req, res) ->
                   postscript = md(_.flatten(delta.postscript).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
                   deleted = md(_.flatten(delta.deleted).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
                   inserted = md(_.flatten(delta.inserted).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
-                  h = ["<div class=\"preamble\">#{preamble}</div>", "<div class=\"inserted\">#{inserted}</div>", "<div class=\"deleted\">#{deleted}</div>", "<div class=\"postscript\">#{postscript}</div>"].join('')
+                  h = ["<div class=\"preamble\" title=\"context\">#{preamble}</div>", "<div class=\"inserted\" title=\"added\">#{inserted}</div>", "<div class=\"deleted\" title=\"removed\">#{deleted}</div>", "<div class=\"postscript\" title=\"context\">#{postscript}</div>"].join('')
                   "<div class=\"delta\">#{h}</div>"
                 )
 

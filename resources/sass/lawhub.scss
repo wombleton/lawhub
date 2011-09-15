@@ -4466,10 +4466,13 @@ input, textarea, select {
     }
   }
 }
+.revisionview {
+}
 
 .delta {
-  @include background(linear-gradient(top, #fff, #eee));
-  margin: 0 0 0.5em;
+  background-color: #fff;
+  @include box-shadow($dark-color, 3px, 3px, 5px);
+  margin: 0 2em 2em;
   padding: 1em;
   line-height: 1.4em;
   .inserted, .deleted, .preamble, .postscript {
@@ -4499,9 +4502,10 @@ body {
     font-family:Georgia, "Times New Roman", Times, serif;
     font-size: 20px;
     line-height: 1.6;
-    margin: 8px;
-    padding: 1em;
-    @include background(radial-gradient(lighten($dark-color, 72), lighten($dark-color, 64)));
+    margin: 3em;
+    padding: 2em;
+    background: adjust-hue(lighten($dark-color, 64), 24);
+    @include box-shadow($dark-color, 3px, 3px, 5px);
     em {
       color: black;
       font-size: 1.1em;
