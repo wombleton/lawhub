@@ -14,11 +14,10 @@ send_link = (links, res) ->
     links = links.splice(index, 1)
     href = link?.attribs.href.replace(/\d+$/, 'shortstory')
     url = "http://www.teara.govt.nz#{href}"
-    console.log("url: #{url}")
     request(url, (err, response, body) ->
       if err
         res.send('<div class="error">Oops! Something went wrong getting content from <a href="http://www.teara.govt.nz">Te Ara</a>. Hopefully it will sort itself out soon.')
-      else if response.status is 404
+      else if response.statusCode isnt 200
         send_link(links, res)
       else
         body_html = body.replace(/\r|\n/g, ' ').match(/(<body.+<\/body>)/m)[1]

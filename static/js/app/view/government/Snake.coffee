@@ -6,15 +6,18 @@ Ext.define('LH.view.government.Snake',
     {
       header: 'Act'
       dataIndex: 'title'
+      menuDisabled: true
       flex: 1
     }
     {
       header: 'Words Added'
       dataIndex: 'inserted'
+      menuDisabled: true
     }
     {
       header: 'Words Removed'
       dataIndex: 'deleted'
+      menuDisabled: true
     }
   ]
   extend: 'Ext.grid.Panel'

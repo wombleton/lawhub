@@ -1,6 +1,4 @@
-Ext.Loader.setConfig(enabled: true)
 Ext.application(
-  appFolder: 'js/app',
   controllers: [
     'Governments'
     'Revisions'

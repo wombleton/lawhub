@@ -635,20 +635,12 @@ input, textarea, select {
 }
 
 .x-btn-default-small-focus {
-  border-color: #b0ccf2;
-  background-image: none;
-  background-color: #e4f3ff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4f3ff), color-stop(48%, #d9edff), color-stop(52%, #c2d8f2), color-stop(100%, #c6dcf6));
-  background-image: -moz-linear-gradient(top, #e4f3ff, #d9edff 48%, #c2d8f2 52%, #c6dcf6);
-  background-image: linear-gradient(top, #e4f3ff, #d9edff 48%, #c2d8f2 52%, #c6dcf6); }
+  @include background(linear-gradient(top, lighten($dark-color, 16), $dark-color));
+}
 
 .x-btn-default-small-menu-active, .x-btn-default-small-pressed {
-  border-color: #9ebae1;
-  background-image: none;
-  background-color: #b6cbe4;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b6cbe4), color-stop(48%, #bfd2e6), color-stop(52%, #8dc0f5), color-stop(100%, #98c5f5));
-  background-image: -moz-linear-gradient(top, #b6cbe4, #bfd2e6 48%, #8dc0f5 52%, #98c5f5);
-  background-image: linear-gradient(top, #b6cbe4, #bfd2e6 48%, #8dc0f5 52%, #98c5f5); }
+  @include background(linear-gradient(top, lighten($dark-color, 16), $dark-color));
+}
 
 .x-btn-default-small-disabled {
   border-color: #e1e1e1;
@@ -1957,7 +1949,6 @@ input, textarea, select {
   cursor: default;
   zoom: 1;
   padding: 0;
-  border: 1px solid $dark-color;
   background-image: none;
   background-color: #c5c5c5;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #e3e4e6));
@@ -2343,8 +2334,6 @@ input, textarea, select {
 .x-tbar-page-first {
   background-image: url("../../resources/themes/images/default/grid/page-first.gif") !important; }
 
-.x-tbar-loading {
-  background-image: url("../../resources/themes/images/default/grid/refresh.gif") !important; }
 
 .x-tbar-page-last {
   background-image: url("../../resources/themes/images/default/grid/page-last.gif") !important; }
@@ -4302,7 +4291,6 @@ input, textarea, select {
   overflow: hidden; }
 
 .x-scroller-vertical {
-  border: 1px solid $dark-color;
   border-top-color: #c5c5c5; }
 
 .x-scroller-horizontal {
@@ -4484,8 +4472,11 @@ input, textarea, select {
   margin: 0 0 0.5em;
   padding: 1em;
   line-height: 1.4em;
-  & > div {
+  .inserted, .deleted, .preamble, .postscript {
     padding: 1em;
+  }
+  ul {
+    margin-left: 1em;
   }
   h2, h3, h4 {
     margin: 0.5em 0 0.2em;
@@ -4510,7 +4501,7 @@ body {
     line-height: 1.6;
     margin: 8px;
     padding: 1em;
-    @include background(linear-gradient(lighten($dark-color, 72), lighten($dark-color, 64)));
+    @include background(radial-gradient(lighten($dark-color, 72), lighten($dark-color, 64)));
     em {
       color: black;
       font-size: 1.1em;
@@ -4523,4 +4514,62 @@ body {
       margin: 0 0 1em;
     }
   }
+}
+
+.teara .x-panel-body {
+  .container {
+    #head {
+      color: white;
+      padding: 6px;
+      position: relative;
+      @include background(linear-gradient(top, #004C66, darken(#004C66, 8)));
+      #back {
+        top: 0;
+        right: 8px;
+        position: absolute;
+      }
+    }
+    #content {
+      padding: 6px;
+      #print-ss {
+        display: none;
+      }
+      #hero-ss {
+        float: right;
+        margin: 12px;
+        width: 180px;
+        td: {
+          line-height: 1px;
+        }
+        img {
+          width: 100%;
+        }
+        p {
+          @include background(linear-gradient(top, #004C66, darken(#004C66, 8)));
+          margin: 0;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+          padding: 3px 6px;
+        }
+      }
+      h3 {
+        font-size: 1.2em;
+        margin: 0.5em 0 0.2em;
+      }
+
+      p {
+        line-height: 1.6em;
+        margin: 0.5em 0 0.2em;
+      }
+      #footer-citation {
+        padding: 6px;
+        font-size: 0.85em;
+        @include background(linear-gradient(top, darken(#D5C37C, 48), darken(#D5C37C, 32)));
+        color: white;
+      }
+    }
+
+  }
+
 }

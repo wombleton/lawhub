@@ -1,7 +1,9 @@
 Ext.define('LH.view.government.TeAra',
   alias: 'widget.teara'
   autoScroll: true
-  border: true
+  border: false
+
+  cls: 'teara'
   extend: 'Ext.panel.Panel'
   fetch: (record) ->
     start = record.get('start')

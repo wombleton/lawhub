@@ -70,7 +70,7 @@ server.get('/revisions/:key.json', (req, res) ->
                   postscript = md(_.flatten(delta.postscript).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
                   deleted = md(_.flatten(delta.deleted).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
                   inserted = md(_.flatten(delta.inserted).join('\n').replace(/\[(.+)\]\(.+?\)/g, '$1'))
-                  h = [preamble, "<div class=\"inserted\">#{inserted}</div>", "<div class=\"deleted\">#{deleted}</div>", postscript].join('')
+                  h = ["<div class=\"preamble\">#{preamble}</div>", "<div class=\"inserted\">#{inserted}</div>", "<div class=\"deleted\">#{deleted}</div>", "<div class=\"postscript\">#{postscript}</div>"].join('')
                   "<div class=\"delta\">#{h}</div>"
                 )
 
