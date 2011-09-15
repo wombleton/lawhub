@@ -115,6 +115,13 @@
     border: false,
     extend: 'Ext.panel.Panel',
     flex: 1,
+    initComponent: function() {
+      this.callParent(arguments);
+      return this.on('activate', function() {
+        var _ref;
+        return (_ref = this.findParentByType('governmenttab')) != null ? _ref.updateHash(this) : void 0;
+      }, this);
+    },
     layout: {
       align: 'stretch',
       type: 'border'
@@ -252,7 +259,7 @@
     extend: 'Ext.panel.Panel',
     padding: '0 100',
     setActive: function(num) {
-      return this.get(1).setActiveTab(num);
+      return this.get(1).layout.setActiveItem(num);
     },
     items: [
       {
@@ -354,11 +361,14 @@
         }, this);
       }, this);
     },
-    react: function(record, c) {
+    react: function(record) {
       _.each(this.items.getRange(), function(item) {
-        return item.removeCls('active');
+        if (record === item.record) {
+          return item.addCls('active');
+        } else {
+          return item.removeCls('active');
+        }
       });
-      c.addCls('active');
       return this.fireEvent('governmentselect', record);
     },
     layout: {
@@ -410,12 +420,65 @@
       return this.query('revisionlist')[0].doSearch(el.text);
     },
     extend: 'Ext.panel.Panel',
+    initComponent: function() {
+      this.callParent(arguments);
+      return this.on('afterrender', function() {
+        var govt, store, tab, tabname, _ref;
+        _ref = _.compact((Ext.History.getToken() || '').split('/')), tabname = _ref[0], govt = _ref[1];
+        tab = this.query("#" + tabname)[0];
+        if (tab) {
+          this.layout.setActiveItem(tab);
+        }
+        if (tabname === 'govts' && govt) {
+          store = Ext.StoreManager.get('Governments');
+          return store.on('load', function() {
+            var govtsummaries, keywords, list, record, snake, strip, teara;
+            record = store.getAt(govt - 1);
+            if (record) {
+              strip = Ext.ComponentQuery.query('governmentstrip')[0];
+              strip.react(record);
+              list = Ext.ComponentQuery.query('revisionlist')[0];
+              list.setUrl(record);
+              teara = Ext.ComponentQuery.query('teara')[0];
+              if (teara != null) {
+                teara.fetch(record);
+              }
+              snake = Ext.ComponentQuery.query('snake')[0];
+              if (snake != null) {
+                snake.fetch(record);
+              }
+              keywords = Ext.ComponentQuery.query('keywords')[0];
+              if (keywords != null) {
+                keywords.fetch(record);
+              }
+              govtsummaries = Ext.ComponentQuery.query('governmentsummary');
+              return _.each(govtsummaries, function(summary) {
+                return summary.setText(record);
+              });
+            }
+          }, this, {
+            single: true
+          });
+        }
+      });
+    },
+    updateHash: function(tab) {
+      var oldToken, token;
+      oldToken = Ext.History.getToken() || '';
+      token = "/" + tab.id;
+      if (oldToken.indexOf(token) !== 0) {
+        return Ext.History.add(token);
+      }
+    },
     items: [
       {
+        id: 'intro',
         xtype: 'introduction'
       }, {
+        id: 'govts',
         xtype: 'governmentdetail'
       }, {
+        id: 'search',
         xtype: 'revisioncontainer'
       }
     ],
@@ -471,7 +534,11 @@
           xtype: 'revisionlist'
         }
       ];
-      return this.callParent(arguments);
+      this.callParent(arguments);
+      return this.on('activate', function() {
+        var _ref;
+        return (_ref = this.findParentByType('governmenttab')) != null ? _ref.updateHash(this) : void 0;
+      }, this);
     },
     layout: {
       align: 'stretch',
@@ -630,7 +697,7 @@
     alias: 'widget.acttab',
     border: false,
     doSearch: function(el) {
-      return this.layout.setActiveTab(3);
+      return this.layout.setActiveItem(3);
     },
     extend: 'Ext.panel.Panel',
     initComponent: function() {
@@ -669,29 +736,35 @@
       return this.control({
         'governmentstrip': {
           governmentselect: function(record) {
-            var govtsummaries, govttab, keywords, list, snake, teara;
-            list = Ext.ComponentQuery.query('revisionlist')[0];
-            list.setUrl(record);
-            govttab = Ext.ComponentQuery.query('governmenttab')[0];
-            if (govttab != null) {
-              govttab.layout.setActiveItem(1);
+            var govtsummaries, govttab, index, keywords, list, oldToken, snake, teara, token;
+            oldToken = Ext.History.getToken();
+            index = Ext.StoreManager.get('Governments').indexOf(record);
+            token = "/govts/" + (index + 1);
+            if (token !== oldToken) {
+              Ext.History.add(token);
+              list = Ext.ComponentQuery.query('revisionlist')[0];
+              list.setUrl(record);
+              govttab = Ext.ComponentQuery.query('governmenttab')[0];
+              if (govttab != null) {
+                govttab.layout.setActiveItem(1);
+              }
+              teara = Ext.ComponentQuery.query('teara')[0];
+              if (teara != null) {
+                teara.fetch(record);
+              }
+              snake = Ext.ComponentQuery.query('snake')[0];
+              if (snake != null) {
+                snake.fetch(record);
+              }
+              keywords = Ext.ComponentQuery.query('keywords')[0];
+              if (keywords != null) {
+                keywords.fetch(record);
+              }
+              govtsummaries = Ext.ComponentQuery.query('governmentsummary');
+              return _.each(govtsummaries, function(summary) {
+                return summary.setText(record);
+              });
             }
-            teara = Ext.ComponentQuery.query('teara')[0];
-            if (teara != null) {
-              teara.fetch(record);
-            }
-            snake = Ext.ComponentQuery.query('snake')[0];
-            if (snake != null) {
-              snake.fetch(record);
-            }
-            keywords = Ext.ComponentQuery.query('keywords')[0];
-            if (keywords != null) {
-              keywords.fetch(record);
-            }
-            govtsummaries = Ext.ComponentQuery.query('governmentsummary');
-            return _.each(govtsummaries, function(summary) {
-              return summary.setText(record);
-            });
           }
         },
         'keywords button': {

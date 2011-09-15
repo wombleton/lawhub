@@ -2,7 +2,7 @@ Ext.define('LH.view.act.Tab',
   alias: 'widget.acttab'
   border: false
   doSearch: (el) ->
-    @layout.setActiveTab(3)
+    @layout.setActiveItem(3)
   extend: 'Ext.panel.Panel'
   initComponent: ->
     @tbar = [

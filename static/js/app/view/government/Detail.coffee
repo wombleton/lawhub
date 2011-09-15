@@ -3,6 +3,11 @@ Ext.define('LH.view.government.Detail',
   border: false
   extend: 'Ext.panel.Panel'
   flex: 1
+  initComponent: ->
+    @callParent(arguments)
+    @on('activate', ->
+      @findParentByType('governmenttab')?.updateHash(@)
+    , @)
   layout:
     align: 'stretch'
     type: 'border'

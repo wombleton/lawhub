@@ -4,20 +4,25 @@ Ext.define('LH.controller.Governments',
     @control(
       'governmentstrip':
         governmentselect: (record) ->
-          list = Ext.ComponentQuery.query('revisionlist')[0]
-          list.setUrl(record)
-          govttab = Ext.ComponentQuery.query('governmenttab')[0]
-          govttab?.layout.setActiveItem(1)
-          teara = Ext.ComponentQuery.query('teara')[0]
-          teara?.fetch(record)
-          snake = Ext.ComponentQuery.query('snake')[0]
-          snake?.fetch(record)
-          keywords = Ext.ComponentQuery.query('keywords')[0]
-          keywords?.fetch(record)
-          govtsummaries = Ext.ComponentQuery.query('governmentsummary')
-          _.each(govtsummaries, (summary) ->
-            summary.setText(record)
-          )
+          oldToken = Ext.History.getToken()
+          index = Ext.StoreManager.get('Governments').indexOf(record)
+          token = "/govts/#{index + 1}"
+          if token isnt oldToken
+            Ext.History.add(token)
+            list = Ext.ComponentQuery.query('revisionlist')[0]
+            list.setUrl(record)
+            govttab = Ext.ComponentQuery.query('governmenttab')[0]
+            govttab?.layout.setActiveItem(1)
+            teara = Ext.ComponentQuery.query('teara')[0]
+            teara?.fetch(record)
+            snake = Ext.ComponentQuery.query('snake')[0]
+            snake?.fetch(record)
+            keywords = Ext.ComponentQuery.query('keywords')[0]
+            keywords?.fetch(record)
+            govtsummaries = Ext.ComponentQuery.query('governmentsummary')
+            _.each(govtsummaries, (summary) ->
+              summary.setText(record)
+            )
       'keywords button':
         'click': (el) ->
           govttab = Ext.ComponentQuery.query('governmenttab')[0]

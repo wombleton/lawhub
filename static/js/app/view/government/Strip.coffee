@@ -29,11 +29,13 @@ Ext.define('LH.view.government.Strip',
         @add(govt)
       , @)
     , @)
-  react: (record, c) ->
+  react: (record) ->
     _.each(@items.getRange(), (item) ->
-      item.removeCls('active')
+      if record is item.record
+        item.addCls('active')
+      else
+        item.removeCls('active')
     )
-    c.addCls('active')
     @fireEvent('governmentselect', record)
   layout:
     align: 'stretch'

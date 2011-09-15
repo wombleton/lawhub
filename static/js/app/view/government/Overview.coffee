@@ -4,7 +4,7 @@ Ext.define('LH.view.government.Overview'
   extend: 'Ext.panel.Panel'
   padding: '0 100'
   setActive: (num) ->
-    @get(1).setActiveTab(num)
+    @get(1).layout.setActiveItem(num)
   items: [
     {
       border: false
