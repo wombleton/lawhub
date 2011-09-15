@@ -534,11 +534,7 @@
           xtype: 'revisionlist'
         }
       ];
-      this.callParent(arguments);
-      return this.on('activate', function() {
-        var _ref;
-        return (_ref = this.findParentByType('governmenttab')) != null ? _ref.updateHash(this) : void 0;
-      }, this);
+      return this.callParent(arguments);
     },
     layout: {
       align: 'stretch',

@@ -15,9 +15,6 @@ Ext.define('LH.view.revision.Container',
       }
     ]
     @callParent(arguments)
-    @on('activate', ->
-      @findParentByType('governmenttab')?.updateHash(@)
-    , @)
   layout:
     align: 'stretch'
     type: 'vbox'
