@@ -4484,6 +4484,12 @@ input, textarea, select {
   h2, h3, h4 {
     margin: 0.5em 0 0.2em;
   }
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: bold;
+  }
 }
 .deleted {
   background-color: #FDD;
