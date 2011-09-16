@@ -42,9 +42,10 @@ renderItem = (item, result = [], depth = 1) ->
       result.push("#{heading(depth)} #{type}: #{item.heading}\n")
   if item.text
     if label
-      result.push("__#{label}.__ #{item.text}\n")
+      result.push("__#{label}.__ #{item.text}#{if item.repealed then ' [repealed]'}\n")
     else
       result.push("#{item.text}\n")
+
   items = item.items or []
   for itm in items
     unless type
@@ -130,6 +131,9 @@ module.exports.parse = (filename) ->
   parser.close()
 
   act.markdown = renderItem(act).join('\n')
-  saveAct(act, filename)
+  Revision.remove(
+    file_path: filename
+  ).run (err, removed) ->
+    saveAct(act, filename)
 
   return

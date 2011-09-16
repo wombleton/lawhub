@@ -19,8 +19,8 @@ class Act
   previousNode: ->
     @currentStack[@currentStack.length - 1]
   expand: (num, s = ' ') ->
-    result = [' ']
-    result.push(s) for i in [0..num]
+    result = []
+    result.push(s) for i in [1..num]
     result.join('')
   count: (s) ->
     vals = _.filter(@stack, (val) ->
@@ -41,35 +41,35 @@ class Act
           @addProvision(attributes.id, @previousNode() or @)
           @currentNode().repealed = true if attributes['deletion_status'] is 'repealed'
       when 'subprov'
-        @currentNode()?.addSubprovision(attributes.id) unless attributes['deletion-status'] is 'repealed'
-      when 'extref'
-        if @matches('extref::citation::heading')
-          @currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
-        else if @matches('extref::citation::text')
-          @currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
-      when 'intref'
-        if @matches('intref::citation::heading')
-          @currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
-        else if @matches('intref::citation::text')
-          @currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
-      when 'leg-title'
-        if @matches('leg-title::citation::text')
-          @currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
-      when 'atidlm:resourcepair'
-        if @contains('heading')
-          @currentNode()?.heading += "(/byid/#{attributes['atidlm_targetXmlId']})" if attributes['atidlm_targetXmlId']
-        else if @contains('para', 'text')
-          @currentNode()?.text += "(/byid/#{attributes['atidlm_targetXmlId']})" if attributes['atidlm_targetXmlId']
+        @currentNode()?.addSubprovision(attributes.id)
+        @currentNode().repealed = true if attributes['deletion_status'] is 'repealed'
+      #when 'extref'
+        #if @matches('extref::citation::heading')
+          #@currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
+        #else if @matches('extref::citation::text')
+          #@currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
+      #when 'intref'
+        #if @matches('intref::citation::heading')
+          #@currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
+        #else if @matches('intref::citation::text')
+          #@currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
+      #when 'leg-title'
+        #if @matches('leg-title::citation::text')
+          #@currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
+      #when 'atidlm:resourcepair'
+        #if @contains('heading')
+          #@currentNode()?.heading += "(/byid/#{attributes['atidlm_targetXmlId']})" if attributes['atidlm_targetXmlId']
+        #else if @contains('para', 'text')
+          #@currentNode()?.text += "(/byid/#{attributes['atidlm_targetXmlId']})" if attributes['atidlm_targetXmlId']
       when 'label-para'
         @currentNode()?.text += '\n' if @matches('label-para::para')
-      when 'def-term'
-        debugger
-        @currentNode()?.text += "(/byid/#{attributes.id})"
+      #when 'def-term'
+        #@currentNode()?.text += "(/byid/#{attributes.id})"
       when 'def-para'
         @currentNode()?.text += '\n * '
       when 'label'
         if attributes.denominator is 'yes' and @matches('label::label-para')
-          @currentNode()?.text += "\n#{@expand(@count('label'))}* "
+          @currentNode()?.text += "\n#{@expand(@count('label-para'))}* "
       when 'row'
         @currentNode()?.text += '\n' if @matches('row::tbody::tgroup::table')
   closeTag: (tag) ->
@@ -77,7 +77,7 @@ class Act
       when 'prov', 'subprov', 'part'
         @currentStack.pop()
       when 'text'
-        @currentNode()?.text += '\n\n'
+        @currentNode()?.text += '\n'
 
   acceptText: (s) ->
     if @matches('title::cover', 'insertwords::title::cover')
@@ -96,11 +96,12 @@ class Act
         else if @matches('quote.in::heading')
           node.heading += "__#{s}__"
         else if @matches('citation::text::para')
-          node.text += s.replace(/���/g, '—')
+          node.text += s.replace(/��/g, ' ').replace(/���/g, '—')
         else if @matches('text::para', 'insertwords::text::para')
-          node.text += s.replace(/���/g, '—')
+          node.text += s.replace(/��/g, ' ').replace(/���/g, '—')
         else if @matches('extref::citation', 'intref::citation', 'leg-title::citation::text::para', 'leg-title::citation::insertwords::text::para')
-          node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "[#{s}]$1")
+          node.text += s
+          #node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "[#{s}]$1")
         else if @matches('atidlm:linkcontent::atidlm:link')
           if @contains('heading')
             node.heading += "[#{s}]"
@@ -108,12 +109,13 @@ class Act
             node.text += "[#{s}]"
         else if @matches('quote.in::text::para', 'amend.in::text::para')
           node.text += "_#{s}_"
-        else if @matches('emphasis')
+        else if @matches('emphasis::text::para')
           node.text += "_#{s}_"
         else if @matches('label::label-para')
           node.text += "#{s}) "
         else if @matches('def-term')
-          node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "__[#{s}]$1__")
+          node.text += "__#{s}__"
+          #node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "__[#{s}]$1__")
         else if @matches('entry::row::tbody::tgroup::table')
           node.text += " #{s}"
 
