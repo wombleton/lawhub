@@ -12,7 +12,7 @@ waiting = []
 
 parseFile = ->
   if waiting.length > 0 and _.keys(in_progress).length < 5
-    file = waiting.shift()
+    file = waiting.splice(Math.floor(Math.random() * waiting.length), 1)[0]
     in_progress[file] = true
 
     console.log("Parsing #{file}...")
