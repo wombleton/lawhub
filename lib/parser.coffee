@@ -7,27 +7,28 @@ XML_FILE = /\.xml$/
 ACT_FILE = /\/raw\/act\//
 
 actsParsed = 0
+in_progress = {}
 waiting = []
 
 parseFile = ->
-  if waiting?.length > 0
-    [dirPath, file] = waiting[0]
+  if waiting.length > 0 and _.keys(in_progress).length < 5
+    file = waiting.shift()
+    in_progress[file] = true
 
-    if XML_FILE.test(file)
-      if ACT_FILE.test(dirPath)
-        console.log("Parsing #{file}...")
-        act.parse(file, ->
-          waiting.shift()
-          console.log("Successfully parsed #{file} (#{++actsParsed} successful; #{waiting.length} waiting)")
-          parseFile()
-        )
+    console.log("Parsing #{file}...")
+    act.parse(file, ->
+      delete in_progress[file]
+      console.log("Successfully parsed #{file} (#{++actsParsed} successful; #{waiting.length} waiting)")
+      parseFile()
+    )
 
 parse = ->
   file.walk(path.join(__dirname, '..', '/raw/act'), (e, dirPath, dirs, files) ->
     _.each(files, (file) ->
-      waiting.push([dirPath, file])
-      if waiting.length is 1
-        parseFile()
+      if XML_FILE.test(file) and ACT_FILE.test(file)
+        waiting.push(file)
+        if _.keys(in_progress).length < 5
+          parseFile()
     )
   )
 

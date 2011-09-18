@@ -42,7 +42,7 @@ renderItem = (item, result = [], depth = 1) ->
       result.push("#{heading(depth)} #{type}: #{item.heading}\n")
   if item.text
     if label
-      result.push("__#{label}.__ #{item.text}#{if item.repealed then ' [repealed]'}\n")
+      result.push("__#{label}.__ #{item.text}#{if item.repealed then ' [repealed]' else ''}\n")
     else
       result.push("#{item.text}\n")
 
@@ -104,7 +104,7 @@ saveAct = (act, filename, cb) ->
     setTimeout(->
       saveAct(revision, filename, cb)
     , wait)
-    wait = Math.floor(Math.random() * 2000) * 10
+    wait = 500
 
 module.exports.parse = (filename, cb) ->
   f = fs.readFileSync(filename, 'utf8')

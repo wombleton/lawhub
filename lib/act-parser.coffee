@@ -96,17 +96,17 @@ class Act
         else if @matches('quote.in::heading')
           node.heading += "__#{s}__"
         else if @matches('citation::text::para', 'citation::quote.in::text::para')
-          node.text += s.replace(/��/g, ' ').replace(/���/g, '—')
+          node.text += s.replace(/�{1,3}/g, '—')
         else if @matches('text::para', 'insertwords::text::para')
-          node.text += s.replace(/��/g, ' ').replace(/���/g, '—')
+          node.text += s.replace(/�{1,3}/g, '—')
         else if @matches('extref::citation', 'intref::citation', 'leg-title::citation::text::para', 'leg-title::citation::insertwords::text::para')
           node.text += s
           #node.text = node.text.replace(/(\(\/byid\/[^\)]+?\))$/, "[#{s}]$1")
         else if @matches('atidlm:linkcontent::atidlm:link')
           if @contains('heading')
-            node.heading += "[#{s}]"
+            node.heading += "#{s}"
           else if @contains('para', 'text')
-            node.text += "[#{s}]"
+            node.text += "#{s}"
         else if @matches('quote.in::text::para', 'amend.in::text::para')
           node.text += "_#{s}_"
         else if @matches('emphasis::text::para')
