@@ -17,7 +17,8 @@ parseFile = ->
       if ACT_FILE.test(dirPath)
         console.log("Parsing #{file}...")
         act.parse(file, ->
-          console.log("Successfully parsed #{file} (#{++actsParsed} successful)")
+          waiting.shift()
+          console.log("Successfully parsed #{file} (#{++actsParsed} successful; #{waiting.length} waiting)")
           parseFile()
         )
 
