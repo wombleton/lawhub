@@ -42,7 +42,7 @@ class Act
           @currentNode().repealed = true if attributes['deletion_status'] is 'repealed'
       when 'subprov'
         @currentNode()?.addSubprovision(attributes.id)
-        @currentNode().repealed = true if attributes['deletion_status'] is 'repealed'
+        @currentNode()?.repealed = true if attributes['deletion_status'] is 'repealed'
       #when 'extref'
         #if @matches('extref::citation::heading')
           #@currentNode()?.text += "(/byid/#{attributes['href']})" if attributes['href']
@@ -95,7 +95,7 @@ class Act
           node.heading += s
         else if @matches('quote.in::heading')
           node.heading += "__#{s}__"
-        else if @matches('citation::text::para')
+        else if @matches('citation::text::para', 'citation::quote.in::text::para')
           node.text += s.replace(/��/g, ' ').replace(/���/g, '—')
         else if @matches('text::para', 'insertwords::text::para')
           node.text += s.replace(/��/g, ' ').replace(/���/g, '—')

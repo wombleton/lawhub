@@ -56,7 +56,9 @@ renderItem = (item, result = [], depth = 1) ->
 
 activeSaves = {}
 
-saveAct = (act, filename) ->
+wait = 0
+
+saveAct = (act, filename, cb) ->
   revision = new Revision(act)
   title = act.title
   unless activeSaves[title]
@@ -93,17 +95,18 @@ saveAct = (act, filename) ->
         debugger if err
         throw err if err
       , ->
+        cb()
         delete activeSaves[title]
       )
     )
   else
-    console.log("Parse collision. Deferring parse five seconds for #{title}.")
+    console.log("Parse collision. Deferring parse #{wait}ms for #{title}.")
     setTimeout(->
-      saveAct(revision, filename)
-    , 5000)
+      saveAct(revision, filename, cb)
+    , wait)
+    wait = Math.floor(Math.random() * 2000) * 10
 
-
-module.exports.parse = (filename) ->
+module.exports.parse = (filename, cb) ->
   f = fs.readFileSync(filename, 'utf8')
   parser = sax.parser()
 
@@ -134,6 +137,6 @@ module.exports.parse = (filename) ->
   Revision.remove(
     file_path: filename
   ).run (err, removed) ->
-    saveAct(act, filename)
+    saveAct(act, filename, cb)
 
   return
